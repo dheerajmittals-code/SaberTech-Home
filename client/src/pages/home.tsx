@@ -30,7 +30,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 // Import the generated image
-import heroImage from "@assets/generated_images/clean_flat_isometric_vector_illustration_of_customer_support_elements_like_chat_bubbles_and_dashboards_in_blue_and_white.png";
+import heroImage from "@assets/generated_images/larger_scale_clean_flat_isometric_vector_illustration_of_customer_support_elements_like_chat_bubbles_and_dashboards_in_blue_and_white_expanded_composition.png";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -132,7 +132,7 @@ export default function Home() {
         <div className="absolute top-20 right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-12 items-center">
             <motion.div 
               initial="initial"
               animate="animate"
