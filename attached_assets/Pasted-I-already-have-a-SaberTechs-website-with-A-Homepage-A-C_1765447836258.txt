@@ -1,0 +1,300 @@
+I already have a SaberTechs website with:
+- A Homepage
+- A “Customer Support & CX” landing page
+- A “Revenue & Inside Sales” landing page
+
+Using the SAME design system (fonts, colors, buttons, sections, spacing, hero style, cards, gradient CTA, FAQ accordion), create a NEW landing page for the service:
+
+👉 “Back Office Operations”
+
+This page must be:
+- SEO-friendly and SEM (Google Ads) friendly
+- Built with clean, responsive HTML/CSS (mobile-first)
+- Using proper heading hierarchy (H1, H2, H3)
+- Fast-loading and easy to scan
+
+Also:
+- Add an SEO title + meta description
+- Add internal links to other relevant SaberTechs pages (Customer Support & CX, Revenue & Inside Sales, QA & Compliance, AI Automation, Gig Workforce) where naturally relevant.
+
+Use the following exact structure and content:
+
+==================================================
+1) HERO SECTION
+==================================================
+
+H1:
+“Streamline Your Back-Office Operations — Without Growing Headcount”
+
+Subheading:
+“Product listings, data entry, refunds, catalog hygiene, order processing and CRM updates — handled by a dedicated back-office team from SaberTechs.”
+
+Primary CTA button:
+“Book a Free Ops Consultation”
+
+Secondary CTA button:
+“See Pricing & Plans”
+
+Trust line under buttons:
+“No long-term contracts · Scale up or down · Fast onboarding”
+
+Below that, show a small horizontal list of trust metrics:
+- “99%+ data accuracy”
+- “24/7 coverage options”
+- “Process playbooks & SOPs”
+- “Dedicated Team Lead & QA”
+
+Right side hero illustration:
+Show a back-office operations team working with dashboards, spreadsheets, invoices, product catalogs and documents. Style must visually match the other illustrations on SaberTechs (blue 2D/3D style, clean and modern).
+
+==================================================
+2) PROBLEM → SOLUTION SECTION
+==================================================
+
+Section title (H2):
+“Ops Team Overloaded? We Take Care of the Back Office Work.”
+
+Layout:
+Two side-by-side cards/columns, similar to the CX and Inside Sales “Struggle vs Solution” section.
+
+LEFT CARD – Heading: “The Struggle”
+Bullets:
+- “Manual tasks slowing down your core team”
+- “Catalog, orders and refunds taking too long”
+- “Low data accuracy, duplicate or missing records”
+- “No time to build proper SOPs and QC”
+- “Difficult to hire and train reliable back-office staff”
+- “Costs increasing with seasonal volume spikes”
+
+RIGHT CARD – Heading: “Our Solution”
+Bullets:
+- “Dedicated back-office specialists mapped to your processes”
+- “Standardized SOPs, checklists and QA reviews”
+- “99%+ accuracy for data-heavy tasks”
+- “Support for daily, weekly and month-end operations”
+- “Scalable teams for seasonal peaks and campaigns”
+- “Transparent reporting and governance”
+
+Centered CTA button below the two cards:
+“Talk to an Operations Specialist”
+
+==================================================
+3) FEATURES / CAPABILITIES GRID
+==================================================
+
+Section title (H2):
+“Back-Office Operations We Manage for You”
+
+Display as a grid of 6 cards (like other service pages):
+
+Card 1:
+Title: “Product & Catalog Management”
+Text: “Product listings, attributes, pricing updates and catalog hygiene across marketplaces and platforms.”
+
+Card 2:
+Title: “Order & Refund Processing”
+Text: “Order verification, refund approvals, credit notes and status updates in your systems.”
+
+Card 3:
+Title: “Data Entry & Data Cleanup”
+Text: “High-volume data entry, de-duplication, validation and corrections for CRM and business tools.”
+
+Card 4:
+Title: “CRM & Record Maintenance”
+Text: “Contact updates, notes, tagging, custom field updates and list management.”
+
+Card 5:
+Title: “Document & Workflow Processing”
+Text: “Billing support, document verification, basic KYC checks and simple approvals as per SOPs.”
+
+Card 6:
+Title: “Operations Reporting”
+Text: “Daily/weekly/monthly reports, productivity metrics, SLA tracking and exception logs.”
+
+==================================================
+4) METRICS / PROOF STRIP
+==================================================
+
+Create a full-width horizontal metrics strip (like on other pages) with 4 numbers:
+
+- “99%+” 
+  Label: “Data accuracy across back-office tasks”
+
+- “60%”
+  Label: “Average reduction in internal ops workload”
+
+- “3×”
+  Label: “Faster turnaround on catalog and data requests”
+
+- “24/7”
+  Label: “Coverage available for global operations”
+
+==================================================
+5) CASE STUDY SECTION
+==================================================
+
+Small label above heading:
+“Success Story”
+
+H2:
+“Case Study: 60% Reduction in Backlog for an E-commerce Brand”
+
+Paragraph:
+“A fast-growing e-commerce brand was struggling with product updates, refunds and order status queries. Within 4 weeks, SaberTechs deployed a dedicated back-office team, cleared their backlog by 60%, standardized SOPs, and improved data accuracy to over 99% across their systems.”
+
+Client quote (styled as a quote block):
+“‘SaberTechs turned our messy back-office operations into a reliable engine. Our internal team finally got time to focus on growth.’”
+
+Signature line:
+“— COO, D2C E-commerce Brand”
+
+==================================================
+6) 4-STEP PROCESS TIMELINE
+==================================================
+
+Section title (H2):
+“How We Set Up and Run Your Back-Office Operations”
+
+Intro line:
+“Our framework helps you move from ad-hoc tasks to a predictable back-office engine.”
+
+Timeline with 4 numbered steps (like the dark timeline on other pages):
+
+Step 1 – Title: “Discovery & Mapping”
+Text: “We document your existing workflows, tools, volumes, edge cases and SLAs.”
+
+Step 2 – Title: “SOPs & Pilot Setup”
+Text: “We design playbooks, SOPs, checklists and build a small pilot team to validate quality.”
+
+Step 3 – Title: “Go-Live & Stabilization”
+Text: “We scale the team, finalize coverage hours, and stabilize SLAs and QA benchmarks.”
+
+Step 4 – Title: “Continuous Optimization”
+Text: “We monitor KPIs, reduce errors, add automations and constantly refine processes.”
+
+Centered CTA button under the timeline:
+“Start Your Ops Transformation with SaberTechs”
+
+==================================================
+7) INDUSTRY USE CASES
+==================================================
+
+Section title (H2):
+“Back-Office Support Tailored to Your Industry”
+
+4 cards:
+
+Card 1:
+Title: “SaaS & Tech”
+Text: “Billing support, license updates, CRM hygiene and renewal ops.”
+
+Card 2:
+Title: “E-commerce & D2C”
+Text: “Catalog, orders, refunds, coupon management and marketplace ops.”
+
+Card 3:
+Title: “Travel & Hospitality”
+Text: “Itinerary updates, booking changes, voucher issuance and partner coordination.”
+
+Card 4:
+Title: “EdTech & Assessments”
+Text: “Candidate data updates, exam record management, enrollment workflow support.”
+
+Inside this section, add subtle internal links like:
+- “Need customer support on top of back-office ops? Link to the Customer Support & CX page.”
+- “Running sales campaigns? Link to the Revenue & Inside Sales page.”
+
+==================================================
+8) PRICING OVERVIEW
+==================================================
+
+Section title (H2):
+“Flexible Back-Office Teams for Every Stage”
+
+Use 3 pricing cards similar to other pages.
+
+Card 1 – Starter:
+Subtitle: “For lean teams”
+Bullets:
+- “1–2 back-office specialists”
+- “Limited processes (e.g., data entry + basic catalog)”
+- “Business-hours coverage”
+- “Daily reporting”
+Button: “Inquire”
+
+Card 2 – Growth (mark as Popular):
+Subtitle: “For scaling operations”
+Bullets:
+- “3–10 specialists + Team Lead”
+- “Multi-process support (catalog, orders, CRM, reporting)”
+- “Extended support hours”
+- “QA reviews and SLA tracking”
+Button: “Inquire”
+
+Card 3 – Scale:
+Subtitle: “For high-volume operations”
+Bullets:
+- “10+ specialists across shifts”
+- “24/7 or multi-region coverage”
+- “Process design + automation suggestions”
+- “Governance calls and advanced reporting”
+Button: “Inquire”
+
+Line of text under the cards:
+“Pricing depends on process complexity, coverage hours and volume. Transparent, with no hidden fees.”
+
+Main button under the pricing section:
+“Request Custom Pricing”
+
+==================================================
+9) FAQ SECTION
+==================================================
+
+Section title (H2):
+“Back-Office Outsourcing FAQs”
+
+Create an accordion FAQ with these questions and short 2–3 line answers:
+
+1. “What is back-office outsourcing?”
+2. “Which back-office processes can SaberTechs manage?”
+3. “How do you ensure data accuracy and security?”
+4. “Which tools and platforms do you work with?”
+5. “Can you work inside our CRM, ERP or custom tools?”
+6. “How do you handle training and SOP updates?”
+7. “Can we start small and scale up later?”
+8. “Do you provide 24/7 support for back-office tasks?”
+9. “How is pricing structured for back-office teams?”
+
+==================================================
+10) FINAL CTA BANNER
+==================================================
+
+Use a gradient banner similar to other pages.
+
+Heading:
+“Ready to Take Back Control of Your Back Office?”
+
+Subheading:
+“Share your processes and volumes — we’ll send a tailored back-office proposal within 24 hours.”
+
+Button text:
+“Talk to an Ops Expert”
+
+Small text under button:
+“Combine Back-Office Ops with Customer Support & Inside Sales for an end-to-end operations stack.”
+
+==================================================
+SEO ELEMENTS
+==================================================
+
+Set the page <title> to:
+“Back Office Operations Outsourcing for SMBs | SaberTechs”
+
+Set the meta description to:
+“Outsource your back-office operations to SaberTechs. We handle product listings, data entry, refunds, catalog hygiene, order processing and CRM updates for SaaS, E-commerce, Travel and EdTech brands.”
+
+Ensure:
+- Clean, semantic HTML
+- Mobile responsiveness
+- Fast loading and accessible text contrast
+- Visual style fully consistent with other SaberTechs pages.

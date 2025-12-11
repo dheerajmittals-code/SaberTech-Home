@@ -9,6 +9,7 @@ import Home from "@/pages/home";
 import Services from "@/pages/services";
 import CustomerSupportCX from "@/pages/services/customer-support-cx";
 import RevenueInsideSales from "@/pages/services/revenue-inside-sales";
+import BackOfficeOperations from "@/pages/services/back-office-operations";
 
 function Router() {
   return (
@@ -17,6 +18,7 @@ function Router() {
       <Route path="/services" component={Services} />
       <Route path="/services/customer-support-cx" component={CustomerSupportCX} />
       <Route path="/services/revenue-inside-sales" component={RevenueInsideSales} />
+      <Route path="/services/back-office-operations" component={BackOfficeOperations} />
       <Route component={NotFound} />
     </Switch>
   );
