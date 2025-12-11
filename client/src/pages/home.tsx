@@ -126,7 +126,7 @@ export default function Home() {
       </header>
 
       {/* SECTION 1 — HERO (Avada Style with Diagonal Shape) */}
-      <section className="relative pt-32 pb-32 lg:pt-48 lg:pb-40 overflow-hidden bg-slate-50">
+      <section className="relative py-[120px] overflow-hidden bg-slate-50">
         {/* Abstract Background Shapes */}
         <div className="absolute top-0 right-0 w-2/3 h-full bg-blue-50/50 -skew-x-12 translate-x-1/4 z-0"></div>
         <div className="absolute top-20 right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
@@ -139,7 +139,7 @@ export default function Home() {
               variants={staggerContainer}
             >
               <motion.div variants={fadeIn} className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-primary font-bold text-xs uppercase tracking-widest mb-6">
-                Operational Excellence
+                CX & OPERATIONS OUTSOURCING FOR SMBs
               </motion.div>
               <motion.h1 
                 className="text-5xl lg:text-7xl font-heading font-extrabold text-slate-900 leading-[1.1] mb-6"
@@ -147,12 +147,12 @@ export default function Home() {
               >
                 Scale Your <span className="text-primary">Support</span> <br/>Without Limits
               </motion.h1>
-              <motion.p 
+              <motion.h3 
                 className="text-xl text-slate-600 mb-8 leading-relaxed max-w-lg font-light"
                 variants={fadeIn}
               >
-                Outsourced chat, email, voice, sales, and back-office operations built for high-growth SaaS and E-commerce brands.
-              </motion.p>
+                Outsourced chat, email, voice, sales, and back-office operations built for fast-growing SaaS, E-commerce, Travel & EdTech brands.
+              </motion.h3>
               <motion.div 
                 className="flex flex-wrap gap-4"
                 variants={fadeIn}
@@ -163,15 +163,6 @@ export default function Home() {
                 <Button variant="outline" size="lg" className="border-2 border-slate-300 text-slate-700 hover:border-slate-800 hover:bg-transparent font-bold rounded-full px-8 h-14 text-lg transition-all">
                   View Capabilities
                 </Button>
-              </motion.div>
-              
-              <motion.div variants={fadeIn} className="mt-10 flex items-center gap-4 text-sm text-slate-500 font-medium">
-                <div className="flex -space-x-2">
-                  {[1,2,3].map(i => (
-                    <div key={i} className="w-8 h-8 rounded-full bg-slate-200 border-2 border-white"></div>
-                  ))}
-                </div>
-                <p>Trusted by 500+ companies</p>
               </motion.div>
             </motion.div>
 
