@@ -30,7 +30,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 // Import the generated image
-import heroImage from "@assets/generated_images/larger_scale_clean_flat_isometric_vector_illustration_of_customer_support_elements_like_chat_bubbles_and_dashboards_in_blue_and_white_expanded_composition.png";
+import heroImage from "@assets/generated_images/hero-illustration-large.png";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
