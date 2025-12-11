@@ -34,7 +34,7 @@ import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { StickyCTA } from "@/components/StickyCTA";
 
-import heroImage from "@assets/generated_images/modern_isometric_cx_operations_dashboard_illustration.png";
+import heroImage from "@assets/generated_images/minimalist_isometric_support_team_illustration.png";
 
 // Reusing the same header/footer structure as Home for consistency
 export default function Services() {
@@ -327,20 +327,22 @@ export default function Services() {
             </motion.div>
 
             <motion.div 
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
               className="relative hidden lg:block"
             >
-              {/* Illustration Placeholder - Abstract Composition */}
-              <div className="relative w-full aspect-square max-w-[600px] mx-auto">
-                 <div className="absolute inset-0 bg-blue-500/5 blur-3xl transform scale-110 -z-10 rounded-full"></div>
-                 <img 
-                   src={heroImage} 
-                   alt="Modern CX Operations Dashboard" 
-                   className="w-full h-auto object-contain drop-shadow-2xl hover:scale-[1.02] transition-transform duration-500"
-                 />
+              {/* Soft blue gradient background behind the hero illustration */}
+              <div className="absolute inset-0 bg-blue-500/10 blur-3xl transform scale-110 -z-10 rounded-full"></div>
+               <div className="relative z-10 rounded-[24px] overflow-hidden shadow-2xl shadow-slate-200 border border-slate-100 bg-gradient-to-br from-blue-50 to-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                <img 
+                  src={heroImage} 
+                  alt="SaberTechs Dashboard" 
+                  className="w-full h-auto object-cover mix-blend-multiply"
+                />
               </div>
+              {/* Decorative elements behind image */}
+              <div className="absolute -bottom-6 -left-6 w-full h-full border-2 border-dashed border-primary/20 rounded-[24px] -z-10"></div>
             </motion.div>
           </div>
         </div>
