@@ -1,0 +1,53 @@
+Please restyle the “Services” dropdown menu in the navbar so it looks like a polished SaaS / enterprise site, instead of a plain white list.
+
+Keep the same items and links, but improve the DESIGN and POSITION:
+
+1) POSITION & SIZE
+- The dropdown should be left-aligned with the “Services” menu item (not floating far away).
+- Set a max-width around 260–280px so it looks compact, not huge.
+- Add generous internal padding (16–20px).
+- Add spacing (10–12px) between each menu item.
+
+2) CONTAINER STYLE
+- Background: #ffffff
+- Border-radius: 12px
+- Box-shadow: soft, e.g. 0 18px 45px rgba(15, 23, 42, 0.12)
+- Slight top margin below the “Services” label so it doesn’t touch the navbar.
+- Make sure it doesn’t overlap the “Get a Quote” button.
+
+3) ITEM STYLE
+Each dropdown item should be a small row with an icon + text:
+
+- Icon on the left (simple line/outline icon), text on the right.
+- Icons should use the primary blue color.
+- Text style:
+  - Service title: medium weight
+  - No long descriptions in the dropdown, just the titles.
+- Add a subtle separator line between groups if needed (for example between AI Automation and Gig Workforce).
+
+Menu items (same order):
+- Customer Support & CX
+- Revenue & Inside Sales
+- Back Office Operations
+- QA & Compliance
+- AI Automation
+- Gig Workforce (On-Demand)
+
+4) HOVER EFFECT
+- On hover over an item:
+  - Background: very light blue (#f3f6ff or similar)
+  - Text color slightly darker
+  - Cursor: pointer
+- The icon can slightly change shade on hover.
+
+5) INTERACTION
+- Dropdown opens on hover over “Services” (desktop).
+- Closes when the mouse leaves the dropdown area.
+- Clicking on “Services” itself still goes to /services/index.html.
+- On mobile, keep the current tap-to-expand behavior (no hover).
+
+6) CONSISTENCY
+- Use the same font as the rest of the site (Inter / Poppins).
+- Keep the overall look minimal, clean and professional.
+- Do NOT change the layout or style of other navbar items or the hero section – only improve the Services dropdown styling.
+

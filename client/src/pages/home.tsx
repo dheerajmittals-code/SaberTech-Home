@@ -95,21 +95,25 @@ export default function Home() {
                 </Link>
                 
                 {/* Dropdown Menu */}
-                <div className="absolute top-full left-0 pt-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 w-72">
-                  <div className="bg-white rounded-lg shadow-xl border border-slate-100 overflow-hidden py-2">
+                <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 w-[280px]">
+                  <div className="bg-white rounded-xl shadow-[0_18px_45px_rgba(15,23,42,0.12)] border border-slate-100 overflow-hidden p-2">
                     {[
-                      { name: "Customer Support & CX", link: "/services/customer-support-cx" },
-                      { name: "Revenue & Inside Sales", link: "/services/revenue-inside-sales" },
-                      { name: "Back Office Operations", link: "/services/back-office-operations" },
-                      { name: "QA & Compliance", link: "/services/qa-compliance" },
-                      { name: "AI Automation", link: "/services/ai-automation" },
-                      { name: "Gig Workforce (On-Demand)", link: "/services/gig-workforce" }
-                    ].map((service) => (
-                      <Link key={service.name} href={service.link}>
-                        <a className="block px-6 py-3 text-slate-700 hover:bg-blue-50 hover:text-primary transition-colors text-sm font-medium border-l-4 border-transparent hover:border-primary">
-                          {service.name}
-                        </a>
-                      </Link>
+                      { name: "Customer Support & CX", link: "/services/customer-support-cx", icon: MessageSquare },
+                      { name: "Revenue & Inside Sales", link: "/services/revenue-inside-sales", icon: BadgeDollarSign },
+                      { name: "Back Office Operations", link: "/services/back-office-operations", icon: Database },
+                      { name: "QA & Compliance", link: "/services/qa-compliance", icon: ShieldCheck },
+                      { name: "AI Automation", link: "/services/ai-automation", icon: Bot },
+                      { name: "Gig Workforce (On-Demand)", link: "/services/gig-workforce", icon: Users }
+                    ].map((service, index, arr) => (
+                      <div key={service.name}>
+                        {index === arr.length - 1 && <div className="h-px bg-slate-100 my-1 mx-2" />}
+                        <Link href={service.link}>
+                          <a className="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-700 hover:bg-blue-50/80 hover:text-slate-900 transition-all group/item">
+                            <service.icon className="w-5 h-5 text-primary group-hover/item:text-blue-700 transition-colors" strokeWidth={1.5} />
+                            <span className="text-sm font-medium">{service.name}</span>
+                          </a>
+                        </Link>
+                      </div>
                     ))}
                   </div>
                 </div>
