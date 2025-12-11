@@ -1,0 +1,81 @@
+Please restyle the “Industries” dropdown menu so that it matches the same premium SaaS style as the improved “Services” dropdown.
+
+Goal:
+Both “Services” and “Industries” dropdowns should look visually consistent:
+- Same container style
+- Same fonts
+- Same hover effect
+- Same alignment under their menu label
+
+1) NAV STRUCTURE (KEEP)
+Keep these items in the navbar:
+- Home
+- Services ▾
+- Industries ▾
+- Why Us
+- Contact
+- Get a Quote
+
+The “Industries” dropdown should contain these items in this order:
+- SaaS & Tech
+- E-commerce & D2C
+- Travel & Hospitality
+- EdTech & Assessments
+
+Link targets (placeholder URLs are fine):
+- SaaS & Tech → /industries/saas-tech.html
+- E-commerce & D2C → /industries/ecommerce-d2c.html
+- Travel & Hospitality → /industries/travel-hospitality.html
+- EdTech & Assessments → /industries/edtech-assessments.html
+
+2) CONTAINER STYLE
+Match the styling of the Services dropdown container:
+
+- Left-aligned directly under the “Industries” nav item.
+- Max-width around 260–280px.
+- Background: #ffffff
+- Border-radius: 12px
+- Box-shadow: something like 0 18px 45px rgba(15, 23, 42, 0.12)
+- Internal padding: 16–20px
+- Spacing between items: 10–12px
+- Slight margin-top so it doesn’t touch the navbar.
+
+3) ITEM STYLE
+Each item should be a row with an icon + text, similar to Services:
+
+- Small icon on the left (outline/line icon):
+  - SaaS & Tech → monitor / code / app icon
+  - E-commerce & D2C → shopping bag / cart
+  - Travel & Hospitality → airplane / suitcase
+  - EdTech & Assessments → graduation cap / book
+- Icons should use the primary blue accent color.
+- Text on the right:
+  - Industry name, medium weight.
+- No long descriptions, just clean labels.
+
+4) HOVER EFFECT
+Use the same hover style as Services:
+
+- On hover:
+  - Background: very light blue (#f3f6ff or similar)
+  - Text color slightly darker
+  - Cursor: pointer
+- Icon may slightly darken or change shade on hover.
+
+5) INTERACTION (DESKTOP)
+- Dropdown opens on hover over “Industries”.
+- Closes when the mouse leaves the dropdown area.
+- Clicking directly on the word “Industries” (not a dropdown item) should go to the parent Industries page:
+  /industries/index.html
+
+6) INTERACTION (MOBILE)
+- In the mobile / hamburger menu:
+  - “Industries” should behave like “Services”: tap to expand/collapse a sub-menu.
+  - Show all four items (SaaS & Tech, E-commerce & D2C, Travel & Hospitality, EdTech & Assessments) as sub-links.
+- Make sure tap targets are large enough and spacing is comfortable.
+
+7) CONSISTENCY
+- Use the same font as the rest of the site (Inter / Poppins).
+- Use the same blue accent and hover styles as the Services dropdown.
+- Do NOT change the rest of the layout or any other sections; only restyle the Industries dropdown to visually match the Services dropdown.
+

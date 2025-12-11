@@ -128,17 +128,18 @@ export default function Home() {
                 </Link>
                 
                 {/* Dropdown Menu */}
-                <div className="absolute top-full left-0 pt-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 w-72">
-                  <div className="bg-white rounded-lg shadow-xl border border-slate-100 overflow-hidden py-2">
+                <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 w-[280px]">
+                  <div className="bg-white rounded-xl shadow-[0_18px_45px_rgba(15,23,42,0.12)] border border-slate-100 overflow-hidden p-2">
                     {[
-                      { name: "SaaS & Tech", link: "/industries/saas-tech" },
-                      { name: "E-commerce & D2C", link: "/industries/ecommerce-d2c" },
-                      { name: "Travel & Hospitality", link: "/industries/travel-hospitality" },
-                      { name: "EdTech & Assessments", link: "/industries/edtech-assessments" }
+                      { name: "SaaS & Tech", link: "/industries/saas-tech", icon: Monitor },
+                      { name: "E-commerce & D2C", link: "/industries/ecommerce-d2c", icon: ShoppingBag },
+                      { name: "Travel & Hospitality", link: "/industries/travel-hospitality", icon: Plane },
+                      { name: "EdTech & Assessments", link: "/industries/edtech-assessments", icon: GraduationCap }
                     ].map((industry) => (
                       <Link key={industry.name} href={industry.link}>
-                        <a className="block px-6 py-3 text-slate-700 hover:bg-blue-50 hover:text-primary transition-colors text-sm font-medium border-l-4 border-transparent hover:border-primary">
-                          {industry.name}
+                        <a className="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-700 hover:bg-blue-50/80 hover:text-slate-900 transition-all group/item">
+                          <industry.icon className="w-5 h-5 text-primary group-hover/item:text-blue-700 transition-colors" strokeWidth={1.5} />
+                          <span className="text-sm font-medium">{industry.name}</span>
                         </a>
                       </Link>
                     ))}
