@@ -1,0 +1,79 @@
+I already have a Customer Support & CX Outsourcing landing page designed.
+KEEP the current layout, fonts, colors, spacing, and structure exactly as they are.
+Just make the following content and micro-UX improvements section by section:
+1) HERO SECTION (top)
+Keep the main H1 exactly as it is:
+“Build Your Customer Support Team in 7 Days — Without Hiring”
+Under the two CTA buttons, add one line of reassurance micro-copy in a smaller, lighter font, like:
+“No long-term contracts · Flexible plans · Fast onboarding”
+Change the secondary button text from “See Pricing & Plans” to:
+“View Packages & Rates”
+Do not change the illustration or layout.
+2) PROBLEM VS SOLUTION SECTION
+Keep the headline and two-column layout as it is.
+Below the two cards (“The Struggle” and “Our Solution”), add a short centered sentence and a small CTA button:
+Text:
+“Want to reduce your ticket backlog and response times?”
+Button text:
+“Talk to a CX Specialist”
+Style the button to match the existing secondary buttons.
+3) FEATURE GRID (“Everything You Need in an Outsourced CX Partner”)
+Keep the existing 6 cards.
+Add one more feature card in the grid about AI, so there are 7 items total (adjust layout sensibly on desktop and mobile).
+New card:
+Title: “AI-Assisted Efficiency”
+Text: “Use AI for suggested replies, summaries and workflows to boost agent productivity.”
+Icon: use a simple “spark” or “robot” style icon matching the other icons.
+Under the “Tools We Work With” card, add a small row of tool logos or text labels (no need for real logos if not available, simple badges are fine):
+Zendesk · Freshdesk · Intercom · Gorgias · Salesforce
+4) METRICS STRIP (70% / 98% / 40% / 50k+)
+Keep the current 4 metric blocks.
+If there is space, add one more metric (optional, as a text-only placeholder):
+Number: “40%”
+Label: “Lower cost vs in-house teams (approx.)”
+Make sure all metrics still fit nicely on one or two rows on mobile.
+5) CASE STUDY SECTION
+Keep the case study title and paragraph as they are.
+Just above the quote, add a small “company label” line in a subtle style, for example:
+“Client: US-based Online Travel Company (Name Confidential)”
+Keep the testimonial quote as it is.
+6) “HOW WE BUILD AND RUN YOUR SUPPORT TEAM” (4-step process)
+Keep the 4 steps and timeline layout.
+Under the section headline, add a one-line intro in slightly lighter text:
+“Our proven onboarding framework helps you launch CX operations in days, not months.”
+Keep the existing CTA button (“Start Your CX Journey with SaberTechs”) as is.
+7) INDUSTRIES SECTION
+Keep the 4 industry cards as they are.
+In each card, make sure the text clearly starts with the typical type of support you provide, for example:
+SaaS & Tech: “Onboarding, troubleshooting and product support for software companies.”
+E-commerce & D2C: “Order status, returns, refunds and pre-sales queries.”
+Travel & Hospitality: “Booking changes, cancellations and itinerary support.”
+EdTech & Assessments: “Student queries, login issues and exam support.”
+(If they already match this, no change needed.)
+8) PRICING SECTION
+Keep the 3 columns: Starter, Growth, Scale.
+Under each plan name, add a small “ideal for” line in lighter text:
+Starter: “Ideal for early-stage teams”
+Growth: “Ideal for scaling CX operations”
+Scale: “Ideal for 24/7 or multi-region support”
+Below the three plans, just above the “Request Custom Pricing” button, add this short line in small text:
+“Pricing is customized by agent count, coverage hours and channels. Transparent, no hidden fees.”
+9) FAQ SECTION
+Keep the existing FAQ questions.
+Add two more questions at the bottom of the list:
+“How does outsourced support reduce our costs?”
+“Can you handle seasonal spikes and peak periods?”
+You can reuse existing FAQ answer styles and keep answers short and clear.
+10) FINAL CTA BANNER (“Ready to Build Your Customer Support Team?”)
+Keep the headline, sub-text and button text as they are.
+Under the main CTA button, add a small row of subtle text badges aligned center:
+“Trusted by 50+ businesses” · “98% CSAT” · “Fast onboarding in as little as 7 days”
+11) LIGHTWEIGHT CHATBOT ENTRY POINT (UI ONLY)
+Add a small, fixed chat bubble in the bottom-right corner of the screen (desktop and mobile).
+The bubble should use the same blue as the primary button and have a chat icon.
+When clicked, it should open a small chat panel with:
+Header title: “SaberBot”
+Sub-text: “Ask us anything about CX outsourcing or pricing.”
+Under that, a simple placeholder message like:
+“Hi! 👋 I can help with your support requirements. What are you looking for?”
+(You can leave the actual back-end / bot logic as a placeholder; just implement the UI and a dummy chat interface.)

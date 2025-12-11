@@ -43,6 +43,8 @@ import {
 
 import heroImage from "@assets/generated_images/isometric_customer_support_team_illustration_with_soft_edges.png";
 
+import { SaberBot } from "@/components/SaberBot";
+
 export default function CustomerSupportCX() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -318,15 +320,19 @@ export default function CustomerSupportCX() {
               </motion.h3>
               
               <motion.div 
-                className="flex flex-wrap gap-4 mb-8"
+                className="flex flex-wrap gap-4 mb-4"
                 variants={fadeIn}
               >
                 <Button size="lg" className="bg-primary hover:bg-blue-700 text-white font-bold rounded-lg px-8 h-14 text-lg shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
                   Book a Free Consultation
                 </Button>
                 <Button variant="outline" size="lg" className="border-2 border-slate-300 text-slate-700 hover:border-slate-800 hover:bg-transparent font-bold rounded-lg px-8 h-14 text-lg shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
-                  See Pricing & Plans
+                  View Packages & Rates
                 </Button>
+              </motion.div>
+              
+              <motion.div variants={fadeIn} className="text-sm text-slate-500 mb-8 font-medium">
+                No long-term contracts · Flexible plans · Fast onboarding
               </motion.div>
 
               <motion.div variants={fadeIn} className="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-500 items-center">
@@ -415,7 +421,8 @@ export default function CustomerSupportCX() {
           </div>
 
           <div className="text-center mt-12">
-            <Button className="bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-full px-8 h-12 shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
+            <p className="text-slate-600 mb-4 font-medium">Want to reduce your ticket backlog and response times?</p>
+            <Button variant="outline" className="border-2 border-slate-300 text-slate-700 hover:border-slate-800 hover:bg-transparent font-bold rounded-full px-8 h-12 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
               Talk to a CX Specialist
             </Button>
           </div>
@@ -429,7 +436,7 @@ export default function CustomerSupportCX() {
             <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">Everything You Need in an Outsourced CX Partner</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {[
               {
                 title: "Multichannel Support",
@@ -454,20 +461,35 @@ export default function CustomerSupportCX() {
               {
                 title: "Tools We Work With",
                 text: "Zendesk, Freshdesk, Intercom, Gorgias and other leading platforms.",
-                icon: Settings
+                icon: Settings,
+                badges: ["Zendesk", "Freshdesk", "Intercom", "Gorgias", "Salesforce"]
               },
               {
                 title: "Reporting & Dashboards",
                 text: "Daily/weekly reports, KPIs, CSAT and QA insights.",
                 icon: BarChart3
+              },
+              {
+                title: "AI-Assisted Efficiency",
+                text: "Use AI for suggested replies, summaries and workflows to boost agent productivity.",
+                icon: Zap
               }
             ].map((feature, i) => (
-              <div key={i} className="bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <div key={i} className={`bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ${i === 6 ? 'md:col-span-2 lg:col-span-3 xl:col-span-1' : ''}`}>
                 <div className="w-12 h-12 rounded-lg bg-blue-50 text-primary flex items-center justify-center mb-6">
                   <feature.icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-xl font-heading font-bold text-slate-900 mb-3">{feature.title}</h3>
-                <p className="text-slate-600 leading-relaxed">{feature.text}</p>
+                <p className="text-slate-600 leading-relaxed mb-4">{feature.text}</p>
+                {feature.badges && (
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    {feature.badges.map((badge, idx) => (
+                      <span key={idx} className="inline-flex items-center px-2 py-1 rounded bg-slate-100 text-slate-600 text-xs font-medium">
+                        {badge}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -477,14 +499,15 @@ export default function CustomerSupportCX() {
       {/* SECTION 4 - METRICS STRIP */}
       <section className="py-16 bg-blue-50 border-y border-blue-100">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 text-center">
             {[
               { stat: "70%", label: "reduction in backlog" },
               { stat: "98%", label: "CSAT across channels" },
               { stat: "40%", label: "faster resolutions" },
-              { stat: "50k+", label: "monthly interactions" }
+              { stat: "50k+", label: "monthly interactions" },
+              { stat: "40%", label: "Lower cost vs in-house teams (approx.)" }
             ].map((item, i) => (
-              <div key={i}>
+              <div key={i} className={i === 4 ? "col-span-2 lg:col-span-1" : ""}>
                 <div className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-2">{item.stat}</div>
                 <div className="text-slate-600 font-medium uppercase tracking-wide text-sm">{item.label}</div>
               </div>
@@ -502,8 +525,9 @@ export default function CustomerSupportCX() {
             "A US-based travel company faced 2,000+ unresolved emails and rising complaints. Our CX team deployed within 7 days, implemented SLAs and workflow rules, and improved average response time from 48 hours to under 12 hours."
           </p>
           <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 relative">
-            <div className="text-6xl text-blue-200 absolute top-4 left-6 font-serif">"</div>
-            <blockquote className="relative z-10 text-lg text-slate-800 italic mb-6">
+            <div className="text-sm font-semibold text-slate-500 mb-4 uppercase tracking-wide">Client: US-based Online Travel Company (Name Confidential)</div>
+            <div className="text-6xl text-blue-200 absolute top-8 left-6 font-serif">"</div>
+            <blockquote className="relative z-10 text-lg text-slate-800 italic mb-6 pt-2">
               SaberTechs instantly felt like part of our internal team. They fixed our backlog and improved CSAT beyond expectations.
             </blockquote>
             <cite className="not-italic font-bold text-slate-900 block">— Growth Lead, Travel Company</cite>
@@ -516,6 +540,9 @@ export default function CustomerSupportCX() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-heading font-bold mb-4">How We Build and Run Your Support Team</h2>
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto font-light">
+              Our proven onboarding framework helps you launch CX operations in days, not months.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8 relative">
@@ -615,16 +642,19 @@ export default function CustomerSupportCX() {
             {[
               {
                 name: "Starter",
+                idealFor: "Ideal for early-stage teams",
                 features: ["1–2 dedicated agents", "Chat & email support", "Daily reporting"],
                 highlight: false
               },
               {
                 name: "Growth",
+                idealFor: "Ideal for scaling CX operations",
                 features: ["3–10 agents", "Multichannel support", "Team lead + QA support", "SLA-based performance"],
                 highlight: true
               },
               {
                 name: "Scale",
+                idealFor: "Ideal for 24/7 or multi-region support",
                 features: ["10+ agents", "24/7 coverage", "AI + automation workflows", "Custom reporting & governance"],
                 highlight: false
               }
@@ -635,7 +665,8 @@ export default function CustomerSupportCX() {
                     Popular
                   </div>
                 )}
-                <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">{plan.name}</h3>
+                <h3 className="text-2xl font-bold text-slate-900 mb-2 text-center">{plan.name}</h3>
+                <p className="text-sm text-slate-500 text-center mb-6 font-medium">{plan.idealFor}</p>
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-3 text-slate-700 text-sm">
@@ -654,6 +685,7 @@ export default function CustomerSupportCX() {
           </div>
 
           <div className="text-center">
+             <p className="text-slate-500 text-sm mb-4">Pricing is customized by agent count, coverage hours and channels. Transparent, no hidden fees.</p>
             <Button size="lg" className="bg-slate-900 text-white hover:bg-slate-800 font-bold rounded-full px-8">
               Request Custom Pricing
             </Button>
@@ -697,6 +729,14 @@ export default function CustomerSupportCX() {
               {
                 q: "What are your pricing models?",
                 a: "We offer flexible pricing options including hourly rates, monthly dedicated agent fees, and pay-per-ticket models depending on your needs."
+              },
+              {
+                q: "How does outsourced support reduce our costs?",
+                a: "You save on hiring, training, benefits, software licenses, and management overhead. Outsourcing typically reduces support costs by 40-60% compared to in-house teams."
+              },
+              {
+                q: "Can you handle seasonal spikes and peak periods?",
+                a: "Yes, we specialize in scalable support. We can quickly ramp up agent headcount during your busy seasons (like BFCM or holidays) and scale down afterward."
               }
             ].map((faq, i) => (
               <AccordionItem key={i} value={`item-${i}`}>
@@ -719,13 +759,22 @@ export default function CustomerSupportCX() {
           <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
             Get a tailored CX proposal within 24 hours. No hiring. No overhead. Just scalable support.
           </p>
-          <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50 font-bold rounded-full px-10 h-14 text-lg shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1">
+          <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50 font-bold rounded-full px-10 h-14 text-lg shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 mb-6">
             Book a Consultation
           </Button>
+          
+          <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center text-blue-100 text-sm font-medium">
+            <span className="flex items-center gap-2"><Check className="w-4 h-4" /> Trusted by 50+ businesses</span>
+            <span className="hidden sm:inline opacity-50">•</span>
+            <span className="flex items-center gap-2"><Check className="w-4 h-4" /> 98% CSAT</span>
+            <span className="hidden sm:inline opacity-50">•</span>
+            <span className="flex items-center gap-2"><Check className="w-4 h-4" /> Fast onboarding in as little as 7 days</span>
+          </div>
         </div>
       </section>
 
       <StickyCTA />
+      <SaberBot />
       
       {/* FOOTER - Identical to Services */}
       <footer className="bg-slate-950 text-slate-400 pt-20 pb-10">
