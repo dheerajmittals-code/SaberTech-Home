@@ -1,0 +1,75 @@
+Please update the top navigation to include a professional “Services” menu with BOTH hover-triggered dropdown behavior AND a clickable parent menu item.
+
+Requirements:
+
+==========================
+1. NAVIGATION STRUCTURE
+==========================
+Navigation items:
+- Home
+- Services ▾
+- Why Us
+- Industries
+- Contact
+- Get a Quote (button-style on the right)
+
+==========================
+2. SERVICES DROPDOWN (ON HOVER)
+==========================
+When the user hovers over “Services,” show a dropdown menu with these items:
+
+- Customer Support & CX
+- Revenue & Inside Sales
+- Back Office Operations
+- QA & Compliance
+- AI Automation
+- Gig Workforce
+
+Each should link to its own individual service landing page.
+
+Design style:
+- Light background (#ffffff or #f8f9fb)
+- Soft shadow
+- Rounded corners (8px)
+- Vertical list with spacing
+- Hover effect on each item (light blue background + slight lift)
+
+==========================
+3. CLICK BEHAVIOR (PARENT PAGE)
+==========================
+If the user CLICKS on the word “Services” (not the dropdown items), it should open the parent Services page:
+
+URL example:
+services.html
+
+This page already exists or will be generated as the full “Services Overview” page containing all 6 offerings in a grid layout.
+
+==========================
+4. RESPONSIVE BEHAVIOR (MOBILE)
+==========================
+On mobile:
+- The “Services” menu should become a collapsible accordion item.
+- Clicking it should reveal the sub-menu items (no hover on mobile).
+- The parent “Services” page should still open if the user taps the main label (not the dropdown arrow).
+
+==========================
+5. INTERACTION BEHAVIOR
+==========================
+- Dropdown should open on hover (desktop)
+- Dropdown should close when mouse leaves the menu
+- Smooth fade/slide animation (150–200ms)
+- No jumpy transitions
+
+==========================
+6. VISUAL DESIGN
+==========================
+Match the site’s existing modern SaaS style:
+- Font: Inter or Poppins
+- Blue accent (#2563eb or similar)
+- Minimal, clean, professional
+
+==========================
+7. DO NOT CHANGE OTHER SECTIONS
+==========================
+Only modify the navigation bar and its dropdown behavior.
+Keep the rest of the homepage layout exactly as it is.

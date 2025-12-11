@@ -22,7 +22,8 @@ import {
   Instagram,
   Menu,
   X,
-  Phone
+  Phone,
+  ChevronDown
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -35,6 +36,7 @@ import heroImage from "@assets/hero-image_1765426959274.png";
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isServicesMobileOpen, setIsServicesMobileOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,17 +79,51 @@ export default function Home() {
 
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-8">
-              {["Home", "Services", "Why Us", "Industries"].map((item) => (
-                <a 
-                  key={item} 
-                  href="#" 
-                  className={`text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors ${
-                    isScrolled ? "text-slate-600" : "text-slate-700"
-                  }`}
-                >
-                  {item}
+              <Link href="/">
+                <a className={`text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors ${isScrolled ? "text-slate-600" : "text-slate-700"}`}>
+                  Home
                 </a>
-              ))}
+              </Link>
+              
+              {/* Services Dropdown */}
+              <div className="relative group">
+                <Link href="/services">
+                  <a className={`flex items-center gap-1 text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors ${isScrolled ? "text-slate-600" : "text-slate-700"}`}>
+                    Services <ChevronDown className="w-4 h-4" />
+                  </a>
+                </Link>
+                
+                {/* Dropdown Menu */}
+                <div className="absolute top-full left-0 pt-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 w-72">
+                  <div className="bg-white rounded-lg shadow-xl border border-slate-100 overflow-hidden py-2">
+                    {[
+                      "Customer Support & CX",
+                      "Revenue & Inside Sales",
+                      "Back Office Operations",
+                      "QA & Compliance",
+                      "AI Automation",
+                      "Gig Workforce"
+                    ].map((service) => (
+                      <Link key={service} href="/services">
+                        <a className="block px-6 py-3 text-slate-700 hover:bg-blue-50 hover:text-primary transition-colors text-sm font-medium border-l-4 border-transparent hover:border-primary">
+                          {service}
+                        </a>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <a href="#" className={`text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors ${isScrolled ? "text-slate-600" : "text-slate-700"}`}>
+                Why Us
+              </a>
+              <a href="#" className={`text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors ${isScrolled ? "text-slate-600" : "text-slate-700"}`}>
+                Industries
+              </a>
+              <a href="#" className={`text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors ${isScrolled ? "text-slate-600" : "text-slate-700"}`}>
+                Contact
+              </a>
+
               <Button className="bg-primary hover:bg-blue-700 text-white font-bold rounded-full px-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
                 Get a Quote
               </Button>
@@ -113,11 +149,58 @@ export default function Home() {
               className="lg:hidden bg-white border-t border-slate-100 overflow-hidden"
             >
               <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
-                {["Home", "Services", "Why Us", "Industries"].map((item) => (
-                  <a key={item} href="#" className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50">
-                    {item}
-                  </a>
-                ))}
+                <Link href="/">
+                  <a className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50">Home</a>
+                </Link>
+
+                {/* Mobile Services Accordion */}
+                <div className="border-b border-slate-50">
+                  <div className="flex items-center justify-between py-2">
+                    <Link href="/services">
+                      <a className="text-lg font-medium text-slate-800 flex-1">Services</a>
+                    </Link>
+                    <button 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setIsServicesMobileOpen(!isServicesMobileOpen);
+                      }} 
+                      className="p-2 text-slate-500"
+                    >
+                      <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isServicesMobileOpen ? "rotate-180" : ""}`} />
+                    </button>
+                  </div>
+                  
+                  <AnimatePresence>
+                    {isServicesMobileOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="overflow-hidden pl-4 pb-2 bg-slate-50/50 rounded-lg mb-2"
+                      >
+                        {[
+                          "Customer Support & CX",
+                          "Revenue & Inside Sales",
+                          "Back Office Operations",
+                          "QA & Compliance",
+                          "AI Automation",
+                          "Gig Workforce"
+                        ].map((service) => (
+                          <Link key={service} href="/services">
+                            <a className="block py-3 text-slate-600 hover:text-primary text-base border-b border-slate-100 last:border-0">
+                              {service}
+                            </a>
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                <a href="#" className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50">Why Us</a>
+                <a href="#" className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50">Industries</a>
+                <a href="#" className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50">Contact</a>
+                
                 <Button className="w-full bg-primary text-white mt-4">Get a Quote</Button>
               </div>
             </motion.div>
