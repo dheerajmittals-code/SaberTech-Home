@@ -1,0 +1,53 @@
+Update the existing top navigation so that “Gig Workforce” appears INSIDE the Services dropdown menu, not as a separate top-level item.
+
+Current expected structure of the main navbar:
+- Home
+- Services ▾
+- Industries ▾
+- Why Us
+- Contact
+- Get a Quote (button on the right)
+
+1) SERVICES DROPDOWN ITEMS
+Inside the Services dropdown, the items should appear in this order:
+
+- Customer Support & CX
+- Revenue & Inside Sales
+- Back Office Operations
+- QA & Compliance
+- AI Automation
+- Gig Workforce (On-Demand)
+
+Each item should be a clickable link. Use these URLs (placeholders are fine if pages are not built yet):
+
+- Customer Support & CX → /services/customer-support-cx.html
+- Revenue & Inside Sales → /services/revenue-inside-sales.html
+- Back Office Operations → /services/back-office-operations.html
+- QA & Compliance → /services/qa-compliance.html
+- AI Automation → /services/ai-automation.html
+- Gig Workforce (On-Demand) → /services/gig-workforce.html
+
+2) VISUAL STYLE
+- Match the existing dropdown styling (background color, font, padding, hover state).
+- On hover over each item:
+  - Slight background highlight (light blue or light grey).
+  - Text color changes subtly (darker blue).
+- Ensure “Gig Workforce (On-Demand)” looks visually identical to the other items (same font size, padding, icon style if icons are used).
+
+3) BEHAVIOR (DESKTOP)
+- The Services dropdown should still:
+  - Open on hover over “Services”.
+  - Close when the mouse leaves the dropdown area.
+- Clicking directly on the word “Services” (not an item) should still go to the parent Services page:
+  /services/index.html
+
+4) BEHAVIOR (MOBILE)
+- In the mobile/hamburger menu:
+  - “Services” should expand/collapse to show all 6 sub-items.
+  - Include “Gig Workforce (On-Demand)” as the last sub-item in the Services list.
+  - All links should remain functional with taps.
+
+5) DO NOT CHANGE OTHER NAV ITEMS
+- Keep “Industries”, “Why Us”, “Contact” and the “Get a Quote” button exactly as they are.
+- Do not add Gig Workforce as a separate top-level nav item.
+- Only modify the Services dropdown content.

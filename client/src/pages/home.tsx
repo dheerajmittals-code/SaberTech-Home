@@ -98,16 +98,16 @@ export default function Home() {
                 <div className="absolute top-full left-0 pt-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 w-72">
                   <div className="bg-white rounded-lg shadow-xl border border-slate-100 overflow-hidden py-2">
                     {[
-                      "Customer Support & CX",
-                      "Revenue & Inside Sales",
-                      "Back Office Operations",
-                      "QA & Compliance",
-                      "AI Automation",
-                      "Gig Workforce"
+                      { name: "Customer Support & CX", link: "/services/customer-support-cx" },
+                      { name: "Revenue & Inside Sales", link: "/services/revenue-inside-sales" },
+                      { name: "Back Office Operations", link: "/services/back-office-operations" },
+                      { name: "QA & Compliance", link: "/services/qa-compliance" },
+                      { name: "AI Automation", link: "/services/ai-automation" },
+                      { name: "Gig Workforce (On-Demand)", link: "/services/gig-workforce" }
                     ].map((service) => (
-                      <Link key={service} href="/services">
+                      <Link key={service.name} href={service.link}>
                         <a className="block px-6 py-3 text-slate-700 hover:bg-blue-50 hover:text-primary transition-colors text-sm font-medium border-l-4 border-transparent hover:border-primary">
-                          {service}
+                          {service.name}
                         </a>
                       </Link>
                     ))}
@@ -204,16 +204,16 @@ export default function Home() {
                         className="overflow-hidden pl-4 pb-2 bg-slate-50/50 rounded-lg mb-2"
                       >
                         {[
-                          "Customer Support & CX",
-                          "Revenue & Inside Sales",
-                          "Back Office Operations",
-                          "QA & Compliance",
-                          "AI Automation",
-                          "Gig Workforce"
+                          { name: "Customer Support & CX", link: "/services/customer-support-cx" },
+                          { name: "Revenue & Inside Sales", link: "/services/revenue-inside-sales" },
+                          { name: "Back Office Operations", link: "/services/back-office-operations" },
+                          { name: "QA & Compliance", link: "/services/qa-compliance" },
+                          { name: "AI Automation", link: "/services/ai-automation" },
+                          { name: "Gig Workforce (On-Demand)", link: "/services/gig-workforce" }
                         ].map((service) => (
-                          <Link key={service} href="/services">
+                          <Link key={service.name} href={service.link}>
                             <a className="block py-3 text-slate-600 hover:text-primary text-base border-b border-slate-100 last:border-0">
-                              {service}
+                              {service.name}
                             </a>
                           </Link>
                         ))}
