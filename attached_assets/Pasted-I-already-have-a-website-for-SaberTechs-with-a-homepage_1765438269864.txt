@@ -1,0 +1,182 @@
+I already have a website for SaberTechs with a homepage and a “Customer Support & CX” landing page.
+Create a new landing page for the service “Revenue & Inside Sales” following the same design system: same fonts, colors, buttons, spacing, and section style as the Customer Support & CX landing page.
+This page must be SEO & SEM friendly and optimized for Google Ads.
+Use proper HTML headings (H1, H2, H3), mobile-first layout, and fast-loading markup.
+GENERAL STRUCTURE
+Use the following sections, in this order:
+Hero section
+Problem → Solution two-column section
+Features / capabilities grid
+Metrics / proof strip
+Case study
+4-step process timeline
+Industry use cases
+Pricing overview
+FAQ
+Final CTA banner
+Also:
+Add internal links to other relevant SaberTechs services (Customer Support & CX, Back Office Ops, QA & Compliance, AI Automation, Gig Workforce).
+Add basic SEO meta tags (title & description) for this page.
+Make sure all text is readable and high-contrast.
+Now fill each section with this exact content:
+HERO SECTION
+H1:
+“Build a High-Performance Inside Sales Team in 7 Days — Without Hiring”
+Subheading:
+“Lead qualification, demo scheduling, renewals, win-back campaigns and pipeline acceleration — managed by trained Inside Sales Specialists.”
+Primary CTA button:
+“Book a Free Sales Consultation”
+Secondary CTA button:
+“See Pricing & Plans”
+Under the buttons add a small line in lighter text:
+“No long-term contracts · Flexible plans · Fast onboarding”
+Below or near the hero, show 3–4 trust points:
+“3× more qualified leads”
+“40% faster follow-ups”
+“65% higher conversion on warm leads”
+“Fully managed team”
+On the right side, use an illustration that visually represents an inside sales team: people at desks, CRM screens, charts, and call icons. Keep the 2D/blue style consistent with the other pages.
+PROBLEM → SOLUTION SECTION
+Section title (H2):
+“Stop Losing Revenue — We Build and Run Your Inside Sales Engine”
+Two cards/columns:
+Left card – heading: “The Struggle”
+Bullets:
+“Leads not being followed up quickly”
+“Pipeline stagnation and low sales bandwidth”
+“Reps spending too much time on admin work”
+“Missed demos, missed opportunities”
+“No predictable outbound engine”
+“High hiring and training costs”
+Right card – heading: “Our Solution”
+Bullets:
+“Trained Inside Sales Executives dedicated to your brand”
+“Fast follow-ups within 15–60 minutes”
+“Lead qualification using BANT, CHAMP or your custom framework”
+“Demo scheduling and calendar management”
+“Renewal and win-back campaigns”
+“Scripts, CRM updates and analytics included”
+Below the boxes, centered, add a CTA button:
+Text: “Talk to a Sales Specialist”
+FEATURES / CAPABILITIES GRID
+Section title (H2):
+“Everything You Need in a High-Velocity Inside Sales Team”
+Create 6 feature cards:
+Inbound Lead Qualification
+“We respond instantly to incoming leads, qualify them, and route them to your closers.”
+Outbound Prospecting
+“Structured outreach through email, LinkedIn and calls to build your sales pipeline.”
+Demo Scheduling
+“We coordinate time zones, calendars, reminders and sales handoffs.”
+CRM & Pipeline Hygiene
+“Daily updates in HubSpot, Salesforce, Zoho, Pipedrive and other CRMs.”
+Renewal & Win-Back Campaigns
+“Automated and manual workflows to re-activate dormant or at-risk customers.”
+Sales Analytics & Reporting
+“Daily and weekly reports with lead quality, funnel movement and conversion insights.”
+METRICS STRIP
+Create a horizontal metrics strip similar to the CX page:
+70% – “Faster response time to inbound leads”
+3× – “Increase in qualified demos”
+40% – “Increase in qualified pipeline”
+50k+ – “Monthly outreach interactions handled”
+CASE STUDY SECTION
+Small label: “Success Story”
+H2 title:
+“Case Study: 3× Increase in Qualified Pipeline in 45 Days”
+Paragraph:
+“A SaaS company needed a scalable inside sales engine. We deployed a team in 7 days, improved follow-up speed from 24 hours to under 60 minutes, and increased qualified demos by 320% in just 45 days.”
+Client quote:
+“‘SaberTechs acted like our in-house SDR team. Our pipeline exploded within weeks.’”
+Signature line under quote:
+“— VP Sales, B2B SaaS Company (Name Confidential)”
+4-STEP PROCESS TIMELINE
+Section title (H2):
+“How We Build and Run Your Inside Sales Team”
+Intro line under title:
+“Our proven onboarding framework launches sales operations in days, not months.”
+Timeline with 4 steps:
+Discovery
+“We analyze leads, CRM setup, ICP, scripts and current funnel performance.”
+Setup & Training
+“We build cadences, scripts, CRM workflows and train your dedicated SDR team.”
+Go-Live
+“Full inside sales operations: inbound qualification, outbound outreach and follow-ups.”
+Optimization
+“Weekly reviews, message testing, funnel optimization and reporting.”
+Add a centered CTA button below the timeline:
+“Start Your Sales Journey with SaberTechs”
+INDUSTRY USE CASES
+Section title (H2):
+“Inside Sales Expertise Across Industries”
+Create 4 cards:
+SaaS & Tech
+“Demo scheduling, product qualification and inbound response for software companies.”
+E-commerce & D2C
+“Abandoned cart recovery, reactivation campaigns and upsells.”
+Travel & Hospitality
+“Package inquiries, lead conversion and outbound follow-ups.”
+EdTech & Training
+“Student admissions, demo booking and course counseling.”
+In this section, add subtle internal links like:
+“Need customer support with your sales team? Link to the Customer Support & CX page.”
+PRICING OVERVIEW
+Section title (H2):
+“Flexible & Transparent Pricing for SMBs”
+Create 3 pricing cards:
+Starter – subtitle: “Ideal for early-stage sales teams”
+Bullets:
+“1–2 SDRs”
+“Inbound lead qualification”
+“CRM updates & basic reporting”
+Button: “Inquire”
+Growth (Popular) – subtitle: “Ideal for scaling pipeline”
+Bullets:
+“3–10 SDRs”
+“Outbound + inbound sales support”
+“Team lead + QA”
+“Multi-channel outreach (email, calls, LinkedIn)”
+Button: “Inquire”
+Scale – subtitle: “Ideal for multi-region and 24/7 coverage”
+Bullets:
+“10+ SDRs”
+“US/UK time-zone coverage”
+“Custom cadences & playbooks”
+“Governance, analytics and reporting”
+Button: “Inquire”
+Below the cards, add a line of text:
+“Pricing is customized by SDR count, markets, languages and coverage hours — transparent, with no hidden fees.”
+Main button under pricing section:
+“Request Custom Pricing”
+FAQ SECTION
+Section title (H2):
+“Revenue & Inside Sales Outsourcing FAQs”
+Create an accordion with these questions (answers can be 2–3 lines each):
+“What is inside sales outsourcing?”
+“How fast can you deploy a sales team?”
+“Do you support both outbound and inbound?”
+“Which CRMs do you work with?”
+“How do you ensure lead quality and qualification?”
+“Can we scale up or down based on campaigns or seasonality?”
+“Do you support US, UK and other time zones?”
+“How is pricing structured for SDRs?”
+FINAL CTA BANNER
+Use a gradient banner similar to other pages.
+Heading:
+“Ready to Build a Scalable Inside Sales Engine?”
+Subtext:
+“Get a tailored sales proposal within 24 hours. No hiring. No overhead. Just predictable pipeline.”
+Button text:
+“Book a Consultation”
+Under the button, in small text:
+“Trusted by growing SaaS, E-commerce, Travel and EdTech brands.”
+INTERNAL LINKING & SEO
+In the hero, features or FAQ, add at least 2 internal links to:
+Customer Support & CX landing page
+Back Office Operations page (when available)
+Set the page <title> tag to:
+“Revenue & Inside Sales Outsourcing for SMBs | SaberTechs”
+Set the meta description to:
+“Scale your pipeline with outsourced inside sales teams from SaberTechs. We handle lead qualification, demos, renewals and win-back campaigns for SaaS, E-commerce, Travel and EdTech brands.”
+Make sure the page is fully responsive, loads fast and follows the existing SaberTechs visual style.
+Use these instructions to create the new Revenue & Inside Sales landing page.
