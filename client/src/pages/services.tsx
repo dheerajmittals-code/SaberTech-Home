@@ -34,6 +34,8 @@ import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { StickyCTA } from "@/components/StickyCTA";
 
+import heroImage from "@assets/generated_images/modern_isometric_cx_operations_dashboard_illustration.png";
+
 // Reusing the same header/footer structure as Home for consistency
 export default function Services() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -331,35 +333,13 @@ export default function Services() {
               className="relative hidden lg:block"
             >
               {/* Illustration Placeholder - Abstract Composition */}
-              <div className="relative w-full aspect-square max-w-[500px] mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-tr from-blue-100 to-indigo-50 rounded-full opacity-50 blur-2xl"></div>
-                <div className="relative z-10 grid grid-cols-2 gap-4">
-                  <div className="bg-white p-6 rounded-2xl shadow-xl border border-slate-100 mt-12 transform -rotate-3 hover:rotate-0 transition-transform duration-500">
-                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-primary mb-4">
-                      <Users className="w-6 h-6" />
-                    </div>
-                    <div className="h-2 w-24 bg-slate-200 rounded mb-2"></div>
-                    <div className="h-2 w-16 bg-slate-100 rounded"></div>
-                  </div>
-                  <div className="bg-white p-6 rounded-2xl shadow-xl border border-slate-100 mb-12 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                    <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 mb-4">
-                      <BarChart3 className="w-6 h-6" />
-                    </div>
-                    <div className="h-2 w-24 bg-slate-200 rounded mb-2"></div>
-                    <div className="h-2 w-16 bg-slate-100 rounded"></div>
-                  </div>
-                  <div className="bg-white p-6 rounded-2xl shadow-xl border border-slate-100 transform rotate-2 hover:rotate-0 transition-transform duration-500 col-span-2 w-3/4 mx-auto">
-                    <div className="flex items-center gap-4 mb-3">
-                      <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-600">
-                        <Check className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <div className="h-2 w-32 bg-slate-200 rounded mb-1"></div>
-                        <div className="h-2 w-20 bg-slate-100 rounded"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div className="relative w-full aspect-square max-w-[600px] mx-auto">
+                 <div className="absolute inset-0 bg-blue-500/5 blur-3xl transform scale-110 -z-10 rounded-full"></div>
+                 <img 
+                   src={heroImage} 
+                   alt="Modern CX Operations Dashboard" 
+                   className="w-full h-auto object-contain drop-shadow-2xl hover:scale-[1.02] transition-transform duration-500"
+                 />
               </div>
             </motion.div>
           </div>
@@ -379,37 +359,46 @@ export default function Services() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
+                category: "CX / Support",
                 title: "Customer Support & CX",
                 description: "Multichannel chat, email, and voice support from trained CX specialists. We handle inquiries, complaints, and tickets with defined SLAs and daily reporting.",
                 icon: MessageSquare,
               },
               {
+                category: "Sales / Outreach",
                 title: "Revenue & Inside Sales",
                 description: "Lead qualification, demo scheduling, renewals and win-back campaigns. We help your sales team focus on closing while we handle outreach and follow-ups.",
                 icon: BadgeDollarSign,
               },
               {
+                category: "Operations",
                 title: "Back Office Operations",
                 description: "Data entry, catalog updates, refunds, order processing and CRM hygiene. We quietly run the processes that keep your business moving.",
                 icon: Database,
               },
               {
+                category: "Quality & Compliance",
                 title: "QA & Compliance",
                 description: "Call and chat QA, process compliance checks, mystery audits and retail evaluations. We ensure your customer interactions and operations stay on-standard.",
                 icon: ShieldCheck,
               },
               {
+                category: "Automation",
                 title: "AI Automation",
                 description: "Chatbots, workflows, routing rules and automated responses built using leading tools. We combine automation with human support so you get speed and reliability.",
                 icon: Bot,
               },
               {
+                category: "Flexible Staffing",
                 title: "Gig Workforce On-Demand",
                 description: "Flexible hourly or project-based staffing for CX, audits, proctoring and back-office spikes. Ideal for seasonal peaks, launches and one-off projects.",
                 icon: Users,
               }
             ].map((service, index) => (
-              <div key={index} className="group flex flex-col bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <div key={index} className="group flex flex-col bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300">
+                <div className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3 group-hover:text-primary/70 transition-colors">
+                  {service.category}
+                </div>
                 <div className="w-14 h-14 rounded-full bg-blue-50 text-primary group-hover:bg-primary group-hover:text-white flex items-center justify-center mb-6 transition-colors duration-300">
                   <service.icon className="w-7 h-7" />
                 </div>
@@ -429,9 +418,9 @@ export default function Services() {
       </section>
 
       {/* SECTION 3 — WHY BUSINESSES PREFER SABERTECHS */}
-      <section className="py-24 bg-slate-50/80">
+      <section className="py-32 bg-slate-50/80">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-20">
             <h2 className="text-3xl font-heading font-bold text-slate-900">Why Businesses Prefer SaberTechs</h2>
           </div>
 
@@ -458,11 +447,11 @@ export default function Services() {
                  icon: Zap
                }
              ].map((feature, i) => (
-               <div key={i} className="bg-white p-6 rounded-lg border border-slate-100 shadow-sm">
-                 <div className="mb-4 text-primary">
-                   <feature.icon className="w-8 h-8" />
+               <div key={i} className="group bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-all duration-300">
+                 <div className="mb-6 w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                   <feature.icon className="w-6 h-6" />
                  </div>
-                 <h3 className="text-lg font-heading font-bold text-slate-900 mb-2">{feature.title}</h3>
+                 <h3 className="text-lg font-heading font-bold text-slate-900 mb-3">{feature.title}</h3>
                  <p className="text-slate-600 text-sm leading-relaxed">{feature.description}</p>
                </div>
              ))}
@@ -471,7 +460,7 @@ export default function Services() {
       </section>
 
       {/* SECTION 4 — OUR ENGAGEMENT MODEL */}
-      <section className="py-24 bg-white">
+      <section className="py-32 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-heading font-bold text-slate-900">How We Work With You</h2>
@@ -562,15 +551,26 @@ export default function Services() {
       </section>
 
       {/* SECTION 6 — FINAL CTA BANNER */}
-      <section className="py-24 bg-gradient-to-br from-blue-600 to-blue-800 text-white text-center">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">Need a Custom Support or Ops Team?</h2>
-          <p className="text-lg text-blue-100 mb-10 max-w-2xl mx-auto">
-            Share your requirements and we’ll send a tailored proposal within 24 hours.
-          </p>
-          <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50 font-bold rounded-full px-10 h-14 text-lg shadow-xl">
-            Talk to an Expert <ArrowRight className="ml-2 w-5 h-5" />
-          </Button>
+      <section className="py-32 bg-slate-900 relative overflow-hidden">
+         {/* Abstract glow */}
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-blue-500/10 blur-3xl rounded-full translate-x-1/3"></div>
+        <div className="absolute bottom-0 left-0 w-1/3 h-full bg-indigo-500/10 blur-3xl rounded-full -translate-x-1/4"></div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <h2 className="text-3xl md:text-5xl font-heading font-bold text-white mb-4">
+            Ready to Scale Your Operations?
+          </h2>
+          <p className="text-blue-200/80 text-lg mb-8 font-light">Trusted by high-growth SaaS, E-commerce, and EdTech brands.</p>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 mx-auto rounded-full mb-10"></div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-white text-primary hover:bg-blue-50 font-bold h-14 px-8 rounded-full text-lg shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
+              Get a Proposal
+            </Button>
+            <Button variant="outline" size="lg" className="border-2 border-slate-700 text-white hover:bg-slate-800 hover:border-slate-600 font-bold h-14 px-8 rounded-full text-lg hover:-translate-y-1 transition-all">
+              Talk to an Expert
+            </Button>
+          </div>
         </div>
       </section>
 
