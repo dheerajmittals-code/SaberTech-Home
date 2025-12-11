@@ -30,7 +30,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 // Import the generated image
-import heroImage from "@assets/generated_images/hero-illustration-large.png";
+import heroImage from "@assets/hero-image_1765426959274.png";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -181,11 +181,11 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-slate-200 border border-slate-100 bg-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
+               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-slate-200 border border-slate-100 bg-gradient-to-br from-blue-50 to-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
                 <img 
                   src={heroImage} 
                   alt="SaberTechs Dashboard" 
-                  className="w-full h-auto object-cover"
+                  className="w-full h-auto object-cover mix-blend-multiply"
                 />
               </div>
               {/* Decorative elements behind image */}
