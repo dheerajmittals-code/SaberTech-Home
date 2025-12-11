@@ -1,0 +1,86 @@
+Create a modern, clean, minimal Home Page for “SaberTechs”, a CX and Operations outsourcing company.
+Use a light theme with blue accents.
+Build the page section-by-section exactly as described below.
+Use clean spacing, large headings, simple icons and a very professional B2B layout.
+No clutter, no long paragraphs.
+SECTION 1 — HERO (Full width, lots of whitespace)
+Main headline (H1):
+Customer Support & CX Teams for Growing SMBs
+Subheadline (H3):
+Outsourced chat, email, voice, sales, back-office & gig operations — built for SaaS, E-commerce, Travel & EdTech.
+Two buttons side-by-side:
+Book a Free Consultation (Primary, filled blue)
+Download Capability Deck (Secondary, outline)
+Right side: A clean illustration or icon of a support dashboard, chat bubbles, or remote team.
+SECTION 2 — OUR SERVICES (Grid of 6 cards)
+Use a 3×2 grid. Each card must have an icon, title, one-sentence description, and “Learn More →” link.
+Cards:
+Customer Support & CX
+Fast, reliable chat, email & voice support for global SMBs.
+Learn More →
+Revenue & Inside Sales Support
+Lead qualification, demos, renewals & customer win-back.
+Learn More →
+Back Office & Catalog Operations
+Product listings, data entry, refunds & CRM updates.
+Learn More →
+QA, Compliance & Audits
+Call QA, chat monitoring, mystery audits & SOP checks.
+Learn More →
+AI-Assisted CX Automation
+Chatbots, workflows, routing & automated replies.
+Learn More →
+Gig Workforce On-Demand
+Flexible hourly or project-based staffing for CX, audits & ops.
+Learn More →
+(Keep cards minimal, large spacing, rounded corners.)
+SECTION 3 — WHY SABERTECHS (4 columns, clean icons)
+Add a section header: Why Companies Choose SaberTechs
+Columns:
+Start Small, Scale Anytime
+Begin with 1–2 agents and expand as your business grows.
+CX + Ops + Sales Under One Roof
+One partner for support, back-office, sales & gig workforce.
+AI-Enhanced Efficiency
+Automated workflows, routing & knowledge-base responses.
+Fast Deployment (72 Hours)
+Launch customer support operations quickly.
+Each column has a small icon above it.
+SECTION 4 — INDUSTRIES WE SERVE (Row of 4 icons)
+Section header: Industries We Support
+Icons with labels:
+SaaS & Tech
+E-commerce & D2C
+Travel & Hospitality
+EdTech & Assessments
+Use uniform line icons.
+SECTION 5 — OUR IMPACT (Three statistic cards)
+Section header: Our Impact
+Three horizontal metric cards:
+Reduced 70% Email Backlog
+For a US travel company in 6 weeks.
+30% Conversion Increase
+For a SaaS startup using our SDR follow-ups.
+50,000+ Proctoring Sessions Managed
+For EdTech & university clients annually.
+Keep cards visually strong but minimal.
+SECTION 6 — FINAL CTA (Full width banner)
+Bold background (blue gradient).
+Headline: Ready to Build a Reliable Support Team?
+Subline: Get a custom proposal within 24 hours.
+Button: Talk to an Expert
+FOOTER (Light, simple)
+Include:
+SaberTechs logo
+Quick links: Home, Services, Industries, About, Contact
+Email: support@sabertechs.com
+Social icons
+Copyright line
+Overall Design Requirements:
+Large whitespace
+Minimalist blue + white palette
+Professional B2B SaaS-style layout
+Responsive mobile layout
+Clean typography (Inter, Roboto, or similar)
+Rounded cards, soft shadows
+Avoid clutter and long paragraphs.
