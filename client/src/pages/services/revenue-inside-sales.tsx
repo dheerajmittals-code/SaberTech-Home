@@ -294,75 +294,73 @@ export default function RevenueInsideSales() {
       </header>
 
       {/* SECTION 1 - HERO */}
-      <section className="relative pt-[220px] pb-[100px] bg-slate-50 overflow-hidden">
+      <section className="relative bg-slate-50 overflow-hidden min-h-[80vh] flex items-center">
         {/* Background Decoration */}
         <div className="absolute top-0 right-0 w-2/3 h-full bg-blue-50/30 -skew-x-12 translate-x-1/4 z-0"></div>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div 
-              initial="initial"
-              animate="animate"
-              variants={staggerContainer}
-              className="max-w-2xl"
+        <div className="relative z-10 w-full max-w-[1200px] mx-auto px-5 py-10 md:px-10 md:py-20 flex flex-col-reverse lg:flex-row items-center justify-between gap-[60px]">
+          <motion.div 
+            initial="initial"
+            animate="animate"
+            variants={staggerContainer}
+            className="w-full lg:w-[55%] text-center lg:text-left mt-8 lg:mt-0"
+          >
+            <motion.h1 
+              className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-slate-900 leading-[1.1] mb-4 max-w-[540px] mx-auto lg:mx-0"
+              variants={fadeIn}
             >
-              <motion.h1 
-                className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-slate-900 leading-[1.1] mb-6"
-                variants={fadeIn}
-              >
-                Build a High-Performance Inside Sales Team in 7 Days — <span className="text-primary">Without Hiring</span>
-              </motion.h1>
-              <motion.h3 
-                className="text-xl text-slate-600 mb-10 leading-relaxed font-light max-w-lg"
-                variants={fadeIn}
-              >
-                Lead qualification, demo scheduling, renewals, win-back campaigns and pipeline acceleration — managed by trained Inside Sales Specialists.
-              </motion.h3>
-              
-              <motion.div 
-                className="flex flex-wrap gap-4 mb-4"
-                variants={fadeIn}
-              >
-                <Button size="lg" className="bg-primary hover:bg-blue-700 text-white font-bold rounded-lg px-8 h-14 text-lg shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
-                  Book a Free Sales Consultation
-                </Button>
-                <Button variant="outline" size="lg" className="border-2 border-slate-300 text-slate-700 hover:border-slate-800 hover:bg-transparent font-bold rounded-lg px-8 h-14 text-lg shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
-                  See Pricing & Plans
-                </Button>
-              </motion.div>
-              
-              <motion.div variants={fadeIn} className="text-sm text-slate-500 mb-8 font-medium">
-                No long-term contracts · Flexible plans · Fast onboarding
-              </motion.div>
-
-              <motion.div variants={fadeIn} className="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-500 items-center">
-                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> 3× more qualified leads</span>
-                <span className="hidden sm:inline text-slate-300">•</span>
-                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> 40% faster follow-ups</span>
-                <span className="hidden sm:inline text-slate-300">•</span>
-                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> 65% higher conversion on warm leads</span>
-                <span className="hidden sm:inline text-slate-300">•</span>
-                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Fully managed team</span>
-              </motion.div>
+              Build a High-Performance Inside Sales Team in 7 Days — <span className="text-primary">Without Hiring</span>
+            </motion.h1>
+            <motion.h3 
+              className="text-xl text-slate-600 mb-0 leading-relaxed font-light max-w-lg mx-auto lg:mx-0"
+              variants={fadeIn}
+            >
+              Lead qualification, demo scheduling, renewals, win-back campaigns and pipeline acceleration — managed by trained Inside Sales Specialists.
+            </motion.h3>
+            
+            <motion.div 
+              className="flex flex-wrap gap-4 mt-6 justify-center lg:justify-start"
+              variants={fadeIn}
+            >
+              <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-blue-700 text-white font-bold rounded-lg px-8 h-14 text-lg shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
+                Book a Free Sales Consultation
+              </Button>
+              <Button variant="outline" size="lg" className="w-full sm:w-auto border-2 border-slate-300 text-slate-700 hover:border-slate-800 hover:bg-transparent font-bold rounded-lg px-8 h-14 text-lg shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
+                See Pricing & Plans
+              </Button>
+            </motion.div>
+            
+            <motion.div variants={fadeIn} className="text-sm text-slate-500 my-4 font-medium">
+              No long-term contracts · Flexible plans · Fast onboarding
             </motion.div>
 
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-              className="relative hidden lg:block"
-            >
-              <div className="absolute inset-0 bg-blue-500/10 blur-3xl transform scale-110 -z-10 rounded-full"></div>
-               <div className="relative z-10 rounded-[24px] overflow-hidden shadow-2xl shadow-slate-200 border border-slate-100 bg-gradient-to-br from-blue-50 to-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
-                <img 
-                  src={heroImage} 
-                  alt="Inside Sales Team" 
-                  className="w-full h-auto object-cover mix-blend-multiply"
-                />
-              </div>
-              <div className="absolute -bottom-6 -left-6 w-full h-full border-2 border-dashed border-primary/20 rounded-[24px] -z-10"></div>
+            <motion.div variants={fadeIn} className="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-500 items-center justify-center lg:justify-start">
+              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> 3× more qualified leads</span>
+              <span className="hidden sm:inline text-slate-300">•</span>
+              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> 40% faster follow-ups</span>
+              <span className="hidden sm:inline text-slate-300">•</span>
+              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> 65% higher conversion on warm leads</span>
+              <span className="hidden sm:inline text-slate-300">•</span>
+              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Fully managed team</span>
             </motion.div>
-          </div>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="w-full max-w-[480px] self-center relative"
+          >
+            <div className="absolute inset-0 bg-blue-500/10 blur-3xl transform scale-110 -z-10 rounded-full"></div>
+             <div className="relative z-10 rounded-[24px] overflow-hidden shadow-2xl shadow-slate-200 border border-slate-100 bg-gradient-to-br from-blue-50 to-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
+              <img 
+                src={heroImage} 
+                alt="Inside Sales Team" 
+                className="w-full h-auto object-cover mix-blend-multiply"
+              />
+            </div>
+            <div className="absolute -bottom-6 -left-6 w-full h-full border-2 border-dashed border-primary/20 rounded-[24px] -z-10"></div>
+          </motion.div>
         </div>
       </section>
 
