@@ -316,7 +316,7 @@ export default function CustomerSupportCX() {
                 className="text-xl text-slate-600 mb-10 leading-relaxed font-light max-w-lg"
                 variants={fadeIn}
               >
-                24/7 chat, email & voice support for SaaS, E-commerce, Travel and EdTech brands — managed entirely by trained CX experts.
+                24/7 chat, email and voice support for SaaS, E-commerce, Travel and EdTech brands — managed end-to-end by trained CX specialists.
               </motion.h3>
               
               <motion.div 
@@ -385,8 +385,8 @@ export default function CustomerSupportCX() {
                 {[
                   "Tickets piling up and customers waiting too long",
                   "No weekend or night coverage",
-                  "High hiring costs & agent turnover",
-                  "Internal team overloaded with support",
+                  "High hiring costs and agent turnover",
+                  "Internal team overloaded with support work",
                   "Training, QA and reporting taking too much time"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-slate-700">
@@ -405,11 +405,11 @@ export default function CustomerSupportCX() {
               </h3>
               <ul className="space-y-4">
                 {[
-                  "Dedicated CX agents trained on your product",
-                  "24/7 or extended-hour support for global customers",
+                  "Dedicated CX agents trained on your product and processes",
+                  "24/7 or extended-hours support for global customers",
                   "SLA-backed response and resolution times",
                   "We manage training, QA, reporting and performance",
-                  "Your team focuses on product and growth"
+                  "Your team focuses on product and growth — we take care of support"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-slate-700">
                     <Check className="w-5 h-5 text-primary shrink-0" />
@@ -460,7 +460,7 @@ export default function CustomerSupportCX() {
               },
               {
                 title: "Tools We Work With",
-                text: "Zendesk, Freshdesk, Intercom, Gorgias and other leading platforms.",
+                text: "Zendesk, Freshdesk, Intercom, Gorgias, Salesforce and other leading CX platforms.",
                 icon: Settings,
                 badges: ["Zendesk", "Freshdesk", "Intercom", "Gorgias", "Salesforce"]
               },
@@ -499,13 +499,12 @@ export default function CustomerSupportCX() {
       {/* SECTION 4 - METRICS STRIP */}
       <section className="py-16 bg-blue-50 border-y border-blue-100">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 text-center">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             {[
-              { stat: "70%", label: "reduction in backlog" },
+              { stat: "70%", label: "Reduction in email backlog" },
               { stat: "98%", label: "CSAT across channels" },
-              { stat: "40%", label: "faster resolutions" },
-              { stat: "50k+", label: "monthly interactions" },
-              { stat: "40%", label: "Lower cost vs in-house teams (approx.)" }
+              { stat: "40%", label: "Faster ticket resolutions" },
+              { stat: "50k+", label: "Monthly customer interactions handled" }
             ].map((item, i) => (
               <div key={i} className={i === 4 ? "col-span-2 lg:col-span-1" : ""}>
                 <div className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-2">{item.stat}</div>
@@ -522,10 +521,10 @@ export default function CustomerSupportCX() {
           <span className="text-primary font-bold uppercase tracking-widest text-sm mb-4 block">Success Story</span>
           <h2 className="text-3xl font-heading font-bold text-slate-900 mb-8">Case Study: Clearing a 3-Week Backlog in 6 Weeks</h2>
           <p className="text-xl text-slate-600 mb-12 leading-relaxed">
-            "A US-based travel company faced 2,000+ unresolved emails and rising complaints. Our CX team deployed within 7 days, implemented SLAs and workflow rules, and improved average response time from 48 hours to under 12 hours."
+            "A US-based travel company faced 2,000+ unresolved emails and rising complaints. Our CX team deployed within 7 days, implemented SLAs and workflow rules, and improved average response time from 48 hours to under 12 hours — while clearing the entire backlog in 6 weeks."
           </p>
           <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 relative">
-            <div className="text-sm font-semibold text-slate-500 mb-4 uppercase tracking-wide">Client: US-based Online Travel Company (Name Confidential)</div>
+            <div className="text-sm font-semibold text-slate-500 mb-4 uppercase tracking-wide">Client: US Online Travel Company (Name Confidential)</div>
             <div className="text-6xl text-blue-200 absolute top-8 left-6 font-serif">"</div>
             <blockquote className="relative z-10 text-lg text-slate-800 italic mb-6 pt-2">
               SaberTechs instantly felt like part of our internal team. They fixed our backlog and improved CSAT beyond expectations.
@@ -649,7 +648,7 @@ export default function CustomerSupportCX() {
               {
                 name: "Growth",
                 idealFor: "Ideal for scaling CX operations",
-                features: ["3–10 agents", "Multichannel support", "Team lead + QA support", "SLA-based performance"],
+                features: ["3–10 agents", "Multichannel support (chat, email, voice)", "Team lead + QA support", "SLA-based performance"],
                 highlight: true
               },
               {
@@ -685,7 +684,7 @@ export default function CustomerSupportCX() {
           </div>
 
           <div className="text-center">
-             <p className="text-slate-500 text-sm mb-4">Pricing is customized by agent count, coverage hours and channels. Transparent, no hidden fees.</p>
+             <p className="text-slate-500 text-sm mb-4">Pricing is customized by agent count, coverage hours and channels — transparent, with no hidden fees.</p>
             <Button size="lg" className="bg-slate-900 text-white hover:bg-slate-800 font-bold rounded-full px-8">
               Request Custom Pricing
             </Button>
@@ -711,7 +710,7 @@ export default function CustomerSupportCX() {
                 a: "We can typically launch a dedicated support team in as little as 7-14 days, depending on the complexity of your requirements and training needs."
               },
               {
-                q: "Do you offer 24/7 support?",
+                q: "Do you offer 24/7 support or weekend coverage?",
                 a: "Yes, we provide 24/7 coverage, as well as after-hours and weekend support to ensure your customers are always taken care of."
               },
               {
@@ -727,16 +726,12 @@ export default function CustomerSupportCX() {
                 a: "Absolutely. Our flexible staffing model allows you to scale your team size up or down to match your business fluctuations and seasonal peaks."
               },
               {
-                q: "What are your pricing models?",
-                a: "We offer flexible pricing options including hourly rates, monthly dedicated agent fees, and pay-per-ticket models depending on your needs."
-              },
-              {
                 q: "How does outsourced support reduce our costs?",
                 a: "You save on hiring, training, benefits, software licenses, and management overhead. Outsourcing typically reduces support costs by 40-60% compared to in-house teams."
               },
               {
-                q: "Can you handle seasonal spikes and peak periods?",
-                a: "Yes, we specialize in scalable support. We can quickly ramp up agent headcount during your busy seasons (like BFCM or holidays) and scale down afterward."
+                q: "What are your pricing models?",
+                a: "We offer flexible pricing options including hourly rates, monthly dedicated agent fees, and pay-per-ticket models depending on your needs."
               }
             ].map((faq, i) => (
               <AccordionItem key={i} value={`item-${i}`}>
@@ -768,7 +763,7 @@ export default function CustomerSupportCX() {
             <span className="hidden sm:inline opacity-50">•</span>
             <span className="flex items-center gap-2"><Check className="w-4 h-4" /> 98% CSAT</span>
             <span className="hidden sm:inline opacity-50">•</span>
-            <span className="flex items-center gap-2"><Check className="w-4 h-4" /> Fast onboarding in as little as 7 days</span>
+            <span className="flex items-center gap-2"><Check className="w-4 h-4" /> Onboarding in as little as 7 days</span>
           </div>
         </div>
       </section>

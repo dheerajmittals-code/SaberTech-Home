@@ -1,0 +1,204 @@
+I already have a “Customer Support & CX Outsourcing” landing page designed for SaberTechs.
+✅ IMPORTANT:
+Keep the existing layout, sections, fonts, colors, spacing and buttons exactly as they are.
+Do NOT redesign the page. Only update text content and small micro-copy as described below.
+This page is used for Google Ads (SEM) and SEO, so keep the structure fast and clean.
+Update each section with the following exact copy:
+HERO SECTION (top of page)
+Keep the same two-column layout and illustration.
+Replace the texts with this:
+Main H1:
+“Build Your Customer Support Team in 7 Days — Without Hiring”
+Subheading:
+“24/7 chat, email and voice support for SaaS, E-commerce, Travel and EdTech brands — managed end-to-end by trained CX specialists.”
+Primary CTA button text:
+“Book a Free Consultation”
+Secondary CTA button text:
+“View Packages & Rates”
+Under the buttons, add a small, lighter micro-trust line:
+“No long-term contracts · Flexible plans · Fast onboarding”
+Keep the trust bullets under the hero but update to:
+“98% CSAT”
+“70% backlog reduction”
+“24/7 coverage”
+“SLA-driven workflows”
+PROBLEM / SOLUTION SECTION
+Keep the layout with the two cards (“The Struggle” and “Our Solution”).
+Use this text:
+Section title:
+“Stop Struggling With Support — We Handle It End-to-End”
+Left card – heading:
+“The Struggle”
+Left card bullets:
+“Tickets piling up and customers waiting too long”
+“No weekend or night coverage”
+“High hiring costs and agent turnover”
+“Internal team overloaded with support work”
+“Training, QA and reporting taking too much time”
+Right card – heading:
+“Our Solution”
+Right card bullets:
+“Dedicated CX agents trained on your product and processes”
+“24/7 or extended-hours support for global customers”
+“SLA-backed response and resolution times”
+“We manage training, QA, reporting and performance”
+“Your team focuses on product and growth — we take care of support”
+Below the two cards, centered, add:
+Text: “Want to clear your backlog and improve response times?”
+Button: “Talk to a CX Specialist”
+Style that button like your existing secondary buttons.
+FEATURE GRID – “OUTSOURCED CX PARTNER”
+Keep the layout with the feature cards.
+Use this title and copy:
+Section title:
+“Everything You Need in an Outsourced CX Partner”
+Card 1 – title:
+“Multichannel Support”
+Text:
+“Chat, email and voice support tailored for your customers.”
+Card 2 – title:
+“SLA-Driven Ticket Management”
+Text:
+“Defined SLAs for response time, resolution time and escalation.”
+Card 3 – title:
+“Trained Support Specialists”
+Text:
+“Agents trained on your product, knowledge base and tone of voice.”
+Card 4 – title:
+“24/7 Global Coverage”
+Text:
+“Around-the-clock support for SaaS, E-commerce, Travel and EdTech brands.”
+Card 5 – title:
+“Tools We Work With”
+Text:
+“Zendesk, Freshdesk, Intercom, Gorgias, Salesforce and other leading CX platforms.”
+Card 6 – title:
+“Reporting & Dashboards”
+Text:
+“Daily/weekly reports, KPIs, CSAT and QA insights.”
+If there is room for a 7th card, add:
+Card 7 – title:
+“AI-Assisted Efficiency”
+Text:
+“Use AI for suggested replies, summaries and workflows to boost agent productivity.”
+METRICS STRIP
+Keep the strip design.
+Update the metrics to:
+Big number: “70%”
+Label: “Reduction in email backlog”
+Big number: “98%”
+Label: “CSAT across channels”
+Big number: “40%”
+Label: “Faster ticket resolutions”
+Big number: “50k+”
+Label: “Monthly customer interactions handled”
+(Optional, only if design allows another line below in small text:)
+“Approx. 40% lower cost compared to building an in-house team.”
+CASE STUDY SECTION
+Keep the layout, just change the texts.
+Small label above title:
+“Success Story”
+Main title:
+“Case Study: Clearing a 3-Week Backlog in 6 Weeks”
+Body paragraph:
+“A US-based travel company faced 2,000+ unresolved emails and rising complaints. Our CX team deployed within 7 days, implemented SLAs and workflow rules, and improved average response time from 48 hours to under 12 hours — while clearing the entire backlog in 6 weeks.”
+Above the quote, add a small client line:
+“Client: US Online Travel Company (Name Confidential)”
+Keep the quote block but update to:
+“SaberTechs instantly felt like part of our internal team. They fixed our backlog and improved CSAT beyond expectations.”
+Signature line:
+“— Growth Lead, Travel Company”
+PROCESS SECTION – 4 STEPS
+Keep the same 4-step timeline layout.
+Section title:
+“How We Build and Run Your Support Team”
+Add a short intro line below the title:
+“Our proven onboarding framework helps you launch CX operations in days, not months.”
+Then use these step labels and descriptions:
+Step 1 – “Discovery”
+“We analyze ticket volumes, channels, tools and support expectations.”
+Step 2 – “Setup & Training”
+“We build your support playbook, knowledge base and train agents.”
+Step 3 – “Go-Live”
+“CX operations start with SLAs, QA checks and live reporting.”
+Step 4 – “Continuous Improvement”
+“We review CSAT, QA scores and optimize scripts, workflows and staffing.”
+Keep the button under this section and set its text to:
+“Start Your CX Journey with SaberTechs”
+INDUSTRIES SECTION
+Keep the four cards and layout.
+Use this heading and copy:
+Section title:
+“Customer Support Expertise Across Industries”
+Card 1 – “SaaS & Tech”
+Text:
+“Onboarding, troubleshooting and product support for software companies.”
+Card 2 – “E-commerce & D2C”
+Text:
+“Order status, returns, refunds and pre-sales queries.”
+Card 3 – “Travel & Hospitality”
+Text:
+“Booking changes, cancellations and itinerary support.”
+Card 4 – “EdTech & Assessments”
+Text:
+“Student queries, login issues and exam support.”
+PRICING SECTION
+Keep the 3-column pricing layout.
+Section title:
+“Flexible & Transparent Pricing for SMBs”
+Starter column:
+Subtitle (small, under “Starter”): “Ideal for early-stage teams”
+Bullet points:
+“1–2 dedicated agents”
+“Chat & email support”
+“Daily reporting”
+Button: “Inquire”
+Growth column:
+Subtitle: “Ideal for scaling CX operations”
+Bullets:
+“3–10 agents”
+“Multichannel support (chat, email, voice)”
+“Team lead + QA support”
+“SLA-based performance”
+Button: “Inquire”
+Scale column:
+Subtitle: “Ideal for 24/7 or multi-region support”
+Bullets:
+“10+ agents”
+“24/7 coverage”
+“AI + automation workflows”
+“Custom reporting & governance”
+Button: “Inquire”
+Under the three cards but above the main button, add this line in small text:
+“Pricing is customized by agent count, coverage hours and channels — transparent, with no hidden fees.”
+Main button under the section:
+Text: “Request Custom Pricing”
+FAQ SECTION
+Keep the accordion style and add/update questions so this list appears:
+Section title:
+“Customer Support Outsourcing FAQs”
+Questions (with short answers in your existing style):
+“What is outsourced customer support?”
+“How fast can you deploy a support team?”
+“Do you offer 24/7 support or weekend coverage?”
+“Which tools and platforms do you work with?”
+“How do you ensure quality and CSAT?”
+“Can we scale up or down based on seasonality?”
+“How does outsourced support reduce our costs?”
+“What are your pricing models?”
+Use simple 2–3 line answers for each, following the current design.
+FINAL CTA BANNER
+Keep the gradient banner and button.
+Heading:
+“Ready to Build Your Customer Support Team?”
+Subtext:
+“Get a tailored CX proposal within 24 hours. No hiring. No overhead. Just scalable support.”
+Button text:
+“Book a Consultation”
+Under the button, in small centered text, add:
+“Trusted by 50+ businesses · 98% CSAT · Onboarding in as little as 7 days”
+GENERAL
+Do not change the navigation or footer structure.
+Keep all headings as proper H1/H2/H3 tags for SEO.
+Ensure all new text is responsive and fits nicely on mobile.
+Do not add any new pages, only update this existing Customer Support & CX landing page.
