@@ -126,10 +126,9 @@ export default function Home() {
       </header>
 
       {/* SECTION 1 — HERO (Avada Style with Diagonal Shape) */}
-      <section className="relative py-[120px] overflow-hidden bg-slate-50">
-        {/* Abstract Background Shapes */}
-        <div className="absolute top-0 right-0 w-2/3 h-full bg-blue-50/50 -skew-x-12 translate-x-1/4 z-0"></div>
-        <div className="absolute top-20 right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+      <section className="relative pt-[140px] pb-[80px] overflow-hidden bg-slate-50">
+        {/* Abstract Background Shapes - Removed generic blobs, kept subtle background */}
+        <div className="absolute top-0 right-0 w-2/3 h-full bg-blue-50/30 -skew-x-12 translate-x-1/4 z-0"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-12 items-center">
@@ -138,17 +137,17 @@ export default function Home() {
               animate="animate"
               variants={staggerContainer}
             >
-              <motion.div variants={fadeIn} className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-primary font-bold text-xs uppercase tracking-widest mb-6">
+              <motion.div variants={fadeIn} className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-primary font-bold text-xs uppercase tracking-widest mb-8">
                 CX & OPERATIONS OUTSOURCING FOR SMBs
               </motion.div>
               <motion.h1 
-                className="text-5xl lg:text-7xl font-heading font-extrabold text-slate-900 leading-[1.1] mb-6"
+                className="text-[56px] font-heading font-bold text-slate-900 leading-[1.1] mb-8"
                 variants={fadeIn}
               >
                 Scale Your <span className="text-primary">Support</span> <br/>Without Limits
               </motion.h1>
               <motion.h3 
-                className="text-xl text-slate-600 mb-8 leading-relaxed max-w-lg font-light"
+                className="text-[20px] font-sans font-normal text-slate-600 mb-10 leading-relaxed max-w-lg"
                 variants={fadeIn}
               >
                 Outsourced chat, email, voice, sales, and back-office operations built for fast-growing SaaS, E-commerce, Travel & EdTech brands.
@@ -157,11 +156,11 @@ export default function Home() {
                 className="flex flex-wrap gap-4"
                 variants={fadeIn}
               >
-                <Button size="lg" className="bg-primary hover:bg-blue-700 text-white font-bold rounded-full px-8 h-14 text-lg shadow-lg hover:shadow-primary/30 transition-all hover:-translate-y-1">
+                <Button size="lg" className="bg-primary hover:bg-blue-700 text-white font-bold rounded-lg px-8 h-14 text-lg shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
                   Book Consultation
                 </Button>
-                <Button variant="outline" size="lg" className="border-2 border-slate-300 text-slate-700 hover:border-slate-800 hover:bg-transparent font-bold rounded-full px-8 h-14 text-lg transition-all">
-                  View Capabilities
+                <Button variant="outline" size="lg" className="border-2 border-slate-300 text-slate-700 hover:border-slate-800 hover:bg-transparent font-bold rounded-lg px-8 h-14 text-lg shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
+                  See Our Services
                 </Button>
               </motion.div>
             </motion.div>
