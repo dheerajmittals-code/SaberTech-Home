@@ -267,118 +267,109 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 3 — WHY SABERTECHS (Dark Section for Contrast) */}
-      <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
+      {/* SECTION 3 — WHY SABERTECHS (Light Grey Section) */}
+      <section className="py-24 bg-slate-50 relative overflow-hidden">
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#000000 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <span className="text-blue-400 font-bold uppercase tracking-widest text-sm mb-2 block">Why Choose Us</span>
-              <h2 className="text-4xl font-heading font-bold mb-6">The SaberTechs Advantage</h2>
-              <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-                We don't just supply agents; we build high-performance teams that integrate seamlessly with your culture and workflows.
-              </p>
-              
-              <div className="space-y-6">
-                {[
-                  "Start Small, Scale Anytime (1-100+ agents)",
-                  "Unified Partner for CX, Sales & Ops",
-                  "AI-Enhanced Workflows & Routing",
-                  "Rapid 72-Hour Deployment"
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-4">
-                    <div className="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center shrink-0">
-                      <Check className="w-4 h-4 text-white" />
-                    </div>
-                    <span className="font-medium text-lg">{item}</span>
-                  </div>
-                ))}
-              </div>
-              
-              <Button className="mt-10 bg-white text-slate-900 hover:bg-blue-50 font-bold rounded-full px-8 h-12">
-                Discover Our Process
-              </Button>
-            </div>
-            
-            <div className="grid grid-cols-2 gap-6">
-               <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors">
-                 <Scaling className="w-10 h-10 text-blue-400 mb-4" />
-                 <h4 className="text-xl font-bold mb-2">Scalable</h4>
-                 <p className="text-slate-400 text-sm">Grow your team instantly without the HR headaches.</p>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2 block">Why Choose Us</span>
+            <h2 className="text-3xl font-heading font-bold text-slate-900 sm:text-4xl">Why Companies Choose SaberTechs</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+             {[
+               {
+                 title: "Start Small, Scale Anytime",
+                 description: "Begin with 1–2 agents and expand as your business grows.",
+                 icon: Scaling,
+                 color: "text-blue-600 bg-blue-50"
+               },
+               {
+                 title: "CX + Ops + Sales",
+                 description: "One partner for support, back-office, sales & gig workforce.",
+                 icon: Layers,
+                 color: "text-purple-600 bg-purple-50"
+               },
+               {
+                 title: "AI-Enhanced Efficiency",
+                 description: "Automated workflows, routing & knowledge-base responses.",
+                 icon: Zap,
+                 color: "text-amber-600 bg-amber-50"
+               },
+               {
+                 title: "Fast Deployment",
+                 description: "Launch customer support operations in as little as 72 hours.",
+                 icon: Clock,
+                 color: "text-emerald-600 bg-emerald-50"
+               }
+             ].map((feature, i) => (
+               <div key={i} className="flex flex-col items-center text-center p-6 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 group border border-transparent hover:border-slate-100">
+                 <div className={`w-16 h-16 rounded-full ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                   <feature.icon className="w-8 h-8" />
+                 </div>
+                 <h3 className="text-lg font-heading font-bold text-slate-900 mb-3">{feature.title}</h3>
+                 <p className="text-slate-600 text-sm leading-relaxed">{feature.description}</p>
                </div>
-               <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors mt-8">
-                 <Zap className="w-10 h-10 text-yellow-400 mb-4" />
-                 <h4 className="text-xl font-bold mb-2">Efficient</h4>
-                 <p className="text-slate-400 text-sm">AI-driven tools to maximize agent productivity.</p>
-               </div>
-               <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors -mt-8">
-                 <Layers className="w-10 h-10 text-purple-400 mb-4" />
-                 <h4 className="text-xl font-bold mb-2">Integrated</h4>
-                 <p className="text-slate-400 text-sm">All your operations managed under one roof.</p>
-               </div>
-               <div className="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-blue-500 transition-colors">
-                 <Clock className="w-10 h-10 text-green-400 mb-4" />
-                 <h4 className="text-xl font-bold mb-2">Fast</h4>
-                 <p className="text-slate-400 text-sm">Launch your new team in as little as 3 days.</p>
-               </div>
-            </div>
+             ))}
           </div>
         </div>
       </section>
 
-      {/* SECTION 4 — INDUSTRIES (Carousel Style Layout) */}
-      <section className="py-24 bg-slate-50">
+      {/* SECTION 4 — INDUSTRIES (Pill/Card Style) */}
+      <section className="py-24 bg-white border-y border-slate-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-heading font-bold text-slate-900">Industries We Specialize In</h2>
+            <h2 className="text-3xl font-heading font-bold text-slate-900">Industries We Support</h2>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="flex flex-wrap justify-center gap-6">
             {[
-              { name: "SaaS & Tech", icon: Monitor, color: "bg-blue-100 text-blue-600" },
-              { name: "E-commerce", icon: ShoppingBag, color: "bg-pink-100 text-pink-600" },
-              { name: "Travel", icon: Plane, color: "bg-orange-100 text-orange-600" },
-              { name: "EdTech", icon: GraduationCap, color: "bg-indigo-100 text-indigo-600" }
+              { name: "SaaS & Tech", icon: Monitor },
+              { name: "E-commerce & D2C", icon: ShoppingBag },
+              { name: "Travel & Hospitality", icon: Plane },
+              { name: "EdTech & Assessments", icon: GraduationCap }
             ].map((industry, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 text-center group cursor-pointer border border-slate-100">
-                <div className={`w-20 h-20 rounded-full ${industry.color} flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <industry.icon className="w-10 h-10" />
-                </div>
-                <h3 className="font-heading font-bold text-lg text-slate-900 group-hover:text-primary transition-colors">{industry.name}</h3>
+              <div key={index} className="flex items-center gap-4 bg-white border border-slate-200 rounded-full py-4 px-8 shadow-sm hover:shadow-md hover:border-primary/50 hover:text-primary transition-all cursor-default group min-w-[240px] justify-center">
+                <industry.icon className="w-6 h-6 text-slate-400 group-hover:text-primary transition-colors" />
+                <span className="font-heading font-semibold text-slate-700 group-hover:text-primary transition-colors">{industry.name}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SECTION 5 — IMPACT (Parallax Feel) */}
-      <section className="py-32 bg-primary relative overflow-hidden text-white">
-        <div className="absolute inset-0 bg-blue-900/20"></div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid md:grid-cols-3 gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-white/20">
+      {/* SECTION 5 — OUR IMPACT (Clean Minimal Stats) */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">Our Impact</h2>
+            <p className="text-slate-500 text-lg">We focus on measurable outcomes, not just headcount.</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 text-center">
             {[
               {
                 metric: "70%",
-                label: "Backlog Reduction",
-                sub: "Within 6 weeks"
+                label: "Reduced Email Backlog",
+                sub: "For a US travel company in 6 weeks."
               },
               {
                 metric: "30%",
-                label: "Conversion Boost",
-                sub: "Through SDR Support"
+                label: "Conversion Increase",
+                sub: "For a SaaS startup using our SDR follow-ups."
               },
               {
-                metric: "50K+",
-                label: "Sessions Managed",
-                sub: "Annually for Clients"
+                metric: "50,000+",
+                label: "Proctoring Sessions",
+                sub: "Managed for EdTech & university clients annually."
               }
             ].map((stat, index) => (
-              <div key={index} className="pt-8 md:pt-0 px-4">
-                <div className="text-6xl font-heading font-extrabold mb-2">{stat.metric}</div>
-                <div className="text-xl font-bold uppercase tracking-wider mb-2 text-blue-100">{stat.label}</div>
-                <p className="text-blue-200">{stat.sub}</p>
+              <div key={index} className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-primary/20 transition-colors">
+                <div className="text-5xl font-heading font-extrabold text-primary mb-2">{stat.metric}</div>
+                <div className="text-lg font-bold text-slate-900 mb-3">{stat.label}</div>
+                <p className="text-slate-500 text-sm leading-relaxed max-w-[250px] mx-auto">{stat.sub}</p>
               </div>
             ))}
           </div>

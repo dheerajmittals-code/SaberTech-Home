@@ -1,0 +1,108 @@
+Build a modern, responsive, single-page Home website for a CX and Operations outsourcing company called “SaberTechs”.
+Design style:
+Clean, minimal, professional B2B layout.
+Light theme with white background and blue accents.
+Use large whitespace, clear sections, soft shadows, and rounded cards.
+Visual style inspired by premium corporate multipurpose themes (enterprise SaaS / business consulting style), but make the design original.
+Avoid cartoonish or childish illustrations. Use modern, abstract shapes and subtle gradients for banners.
+Use a Google font such as Inter, Poppins, or Roboto.
+The page structure must be:
+TOP NAVBAR
+Left: SaberTechs logo text (just “SaberTechs” in bold text for now).
+Right: navigation links: Home, Services, Industries, Why SaberTechs, Contact.
+A small “Book Consultation” button on the right.
+Sticky navbar on scroll.
+HERO BANNER (full width, premium, like a modern corporate theme)
+Full-width section with a soft blue gradient background and abstract shapes in the corners.
+Split layout: left side text, right side illustration.
+Left side content:
+Main headline (H1): “Customer Support & CX Teams for Growing SMBs”
+Subheadline (H3): “Outsourced chat, email, voice, sales, back-office & gig operations — built for SaaS, E-commerce, Travel & EdTech.”
+Two buttons side-by-side:
+Primary (filled blue): “Book a Free Consultation”
+Secondary (outlined): “Download Capability Deck”
+Right side: a clean vector-style illustration or composition of cards showing chat bubbles, analytics, support agents, or dashboards. It should look like a premium business banner, not a generic stock photo.
+“OUR SERVICES” SECTION (grid of cards)
+White background, lots of whitespace.
+Section title centered: “Our Services”.
+Subtext: “CX, sales, back-office and workforce solutions for growing businesses.”
+Below, a 3×2 grid of service cards. Each card:
+Has an icon at the top (line icons or simple flat icons).
+A title.
+One short sentence description.
+A text link: “Learn More →”.
+Service cards:
+Customer Support & CX
+Text: “Fast, reliable chat, email & voice support for global SMBs.”
+Revenue & Inside Sales Support
+Text: “Lead qualification, demos, renewals & customer win-back.”
+Back Office & Catalog Operations
+Text: “Product listings, data entry, refunds & CRM updates.”
+QA, Compliance & Audits
+Text: “Call QA, chat monitoring, mystery audits & SOP checks.”
+AI-Assisted CX Automation
+Text: “Chatbots, workflows, routing & automated replies using AI tools.”
+Gig Workforce On-Demand
+Text: “Flexible hourly or project-based staffing for CX, audits & operations.”
+“WHY SABERTECHS” SECTION (4 columns with icons)
+Light grey or very subtle tinted background.
+Section title: “Why Companies Choose SaberTechs”.
+Four feature columns in a row. Each column has:
+A circular icon at the top.
+Short heading.
+Very short text below it.
+Content:
+Column 1:
+Heading: “Start Small, Scale Anytime”
+Text: “Begin with 1–2 agents and expand as your business grows.”
+Column 2:
+Heading: “CX + Ops + Sales Under One Roof”
+Text: “One partner for support, back-office, sales & gig workforce.”
+Column 3:
+Heading: “AI-Enhanced Efficiency”
+Text: “Automated workflows, routing & knowledge-base responses.”
+Column 4:
+Heading: “Fast Deployment”
+Text: “Launch customer support operations in as little as 72 hours.”
+“INDUSTRIES WE SUPPORT” SECTION
+White background.
+Title centered: “Industries We Support”.
+Underneath, four icon+label items horizontally aligned (on mobile, stack them vertically):
+SaaS & Tech
+E-commerce & D2C
+Travel & Hospitality
+EdTech & Assessments
+Each item should look like a pill or small card with an icon and label.
+“OUR IMPACT” SECTION (three statistic cards)
+Very clean, minimal, like a stats section on a SaaS website.
+Title centered: “Our Impact”.
+Subtext: “We focus on measurable outcomes, not just headcount.”
+Three cards in a row:
+Card 1:
+Large stat: “70%”
+Label: “Reduced Email Backlog”
+Text: “For a US travel company in 6 weeks.”
+Card 2:
+Large stat: “30%”
+Label: “Conversion Increase”
+Text: “For a SaaS startup using our SDR follow-ups.”
+Card 3:
+Large stat: “50,000+”
+Label: “Proctoring Sessions Managed”
+Text: “For EdTech & university clients annually.”
+FINAL CTA BANNER
+Full-width section with a blue gradient background and white text.
+Centered content:
+Heading: “Ready to Build a Reliable Support Team?”
+Subtext: “Get a custom proposal within 24 hours.”
+Button: “Talk to an Expert”.
+FOOTER
+Simple, dark or mid-grey footer.
+Left: SaberTechs logo text.
+Right: links: Home, Services, Industries, About, Contact.
+Below: small text with email placeholder and © SaberTechs.
+Additional requirements:
+Use modern HTML + CSS (and minimal JS if needed).
+Make the layout responsive for mobile and tablet.
+Keep typography and spacing clean and elegant, similar to premium corporate business templates.
+Avoid unnecessary animations or clutter.
