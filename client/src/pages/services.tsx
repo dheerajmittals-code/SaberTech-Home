@@ -32,6 +32,7 @@ import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
+import { StickyCTA } from "@/components/StickyCTA";
 
 // Reusing the same header/footer structure as Home for consistency
 export default function Services() {
@@ -568,6 +569,8 @@ export default function Services() {
         </div>
       </section>
 
+      <StickyCTA />
+      
       {/* FOOTER - Mega Footer Style (Identical to Home) */}
       <footer className="bg-slate-950 text-slate-400 pt-20 pb-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
