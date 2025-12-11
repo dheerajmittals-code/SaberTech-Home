@@ -298,15 +298,15 @@ export default function RevenueInsideSales() {
         {/* Background Decoration */}
         <div className="absolute top-0 right-0 w-2/3 h-full bg-blue-50/30 -skew-x-12 translate-x-1/4 z-0"></div>
 
-        <div className="relative z-10 w-full max-w-[1200px] mx-auto px-5 py-10 md:px-10 md:py-20 flex flex-col-reverse lg:flex-row items-center justify-between gap-[60px]">
+        <div className="relative z-10 w-full max-w-[1200px] mx-auto px-5 py-10 md:px-10 md:py-20 flex flex-col-reverse lg:flex-row items-center justify-between gap-10">
           <motion.div 
             initial="initial"
             animate="animate"
             variants={staggerContainer}
-            className="w-full lg:w-[50%] text-center lg:text-left mt-8 lg:mt-0"
+            className="w-full lg:basis-[45%] lg:w-[45%] text-center lg:text-left mt-8 lg:mt-0"
           >
             <motion.h1 
-              className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-slate-900 leading-[1.1] mb-4 max-w-[540px] mx-auto lg:mx-0"
+              className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-slate-900 leading-[1.1] mb-4 max-w-[520px] mx-auto lg:mx-0"
               variants={fadeIn}
             >
               Build a High-Performance Inside Sales Team in 7 Days — <span className="text-primary">Without Hiring</span>
@@ -349,7 +349,7 @@ export default function RevenueInsideSales() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="w-full lg:w-[50%] max-w-[620px] self-center relative"
+            className="w-full lg:basis-[55%] lg:w-[55%] max-w-[720px] self-center relative"
           >
             <div className="absolute inset-0 bg-blue-500/10 blur-3xl transform scale-110 -z-10 rounded-full"></div>
              <div className="relative z-10 rounded-[24px] overflow-hidden shadow-2xl shadow-slate-200 border border-slate-100 bg-gradient-to-br from-blue-50 to-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
