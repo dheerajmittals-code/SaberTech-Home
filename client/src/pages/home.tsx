@@ -126,7 +126,7 @@ export default function Home() {
       </header>
 
       {/* SECTION 1 — HERO (Avada Style with Diagonal Shape) */}
-      <section className="relative pt-[140px] pb-[80px] overflow-hidden bg-slate-50">
+      <section className="relative pt-[220px] pb-[80px] overflow-hidden bg-slate-50">
         {/* Abstract Background Shapes - Removed generic blobs, kept subtle background */}
         <div className="absolute top-0 right-0 w-2/3 h-full bg-blue-50/30 -skew-x-12 translate-x-1/4 z-0"></div>
 
@@ -141,7 +141,7 @@ export default function Home() {
                 CX & OPERATIONS OUTSOURCING FOR SMBs
               </motion.div>
               <motion.h1 
-                className="text-[56px] font-heading font-bold text-slate-900 leading-[1.1] mb-8"
+                className="text-[56px] font-heading font-bold text-slate-900 leading-[1.1] mb-12"
                 variants={fadeIn}
               >
                 Scale Your <span className="text-primary">Support</span> <br/>Without Limits
@@ -171,7 +171,9 @@ export default function Home() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-slate-200 border border-slate-100 bg-gradient-to-br from-blue-50 to-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
+              {/* Soft blue gradient background behind the hero illustration */}
+              <div className="absolute inset-0 bg-blue-500/10 blur-3xl transform scale-110 -z-10 rounded-full"></div>
+               <div className="relative z-10 rounded-[12px] overflow-hidden shadow-2xl shadow-slate-200 border border-slate-100 bg-gradient-to-br from-blue-50 to-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
                 <img 
                   src={heroImage} 
                   alt="SaberTechs Dashboard" 
@@ -179,7 +181,7 @@ export default function Home() {
                 />
               </div>
               {/* Decorative elements behind image */}
-              <div className="absolute -bottom-6 -left-6 w-full h-full border-2 border-dashed border-primary/20 rounded-2xl -z-10"></div>
+              <div className="absolute -bottom-6 -left-6 w-full h-full border-2 border-dashed border-primary/20 rounded-[12px] -z-10"></div>
             </motion.div>
           </div>
         </div>
@@ -193,9 +195,9 @@ export default function Home() {
       </section>
 
       {/* SECTION 2 — OUR SERVICES (Clean Grid with Hover Lift) */}
-      <section className="py-24 bg-white">
+      <section className="py-32 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-20">
+          <div className="text-center max-w-3xl mx-auto mb-20 pt-16">
             <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2 block">What We Do</span>
             <h2 className="text-4xl font-heading font-bold text-slate-900 mb-6">Comprehensive Operations Support</h2>
             <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
@@ -234,13 +236,13 @@ export default function Home() {
                 icon: Users,
               }
             ].map((service, index) => (
-              <div key={index} className="group relative bg-white p-8 rounded-xl border border-slate-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden">
+              <div key={index} className="group relative bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
                 <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity transform group-hover:scale-110 duration-500">
                   <service.icon className="w-32 h-32" />
                 </div>
                 
-                <div className="w-14 h-14 rounded-full bg-primary/5 group-hover:bg-primary text-primary group-hover:text-white flex items-center justify-center mb-6 transition-colors duration-300">
-                  <service.icon className="w-7 h-7" />
+                <div className="w-16 h-16 rounded-full bg-primary/5 group-hover:bg-primary text-primary group-hover:text-white flex items-center justify-center mb-6 transition-colors duration-300">
+                  <service.icon className="w-9 h-9" />
                 </div>
                 
                 <h3 className="text-xl font-heading font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors">{service.title}</h3>
@@ -258,9 +260,9 @@ export default function Home() {
       </section>
 
       {/* SECTION 3 — WHY SABERTECHS (Light Grey Section) */}
-      <section className="py-24 bg-slate-50 relative overflow-hidden">
+      <section className="pt-32 pb-40 bg-slate-50 relative overflow-hidden">
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#000000 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+        <div className="absolute inset-0 opacity-[0.018]" style={{ backgroundImage: 'radial-gradient(#000000 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -297,7 +299,7 @@ export default function Home() {
              ].map((feature, i) => (
                <div key={i} className="flex flex-col items-center text-center p-6 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 group border border-transparent hover:border-slate-100">
                  <div className={`w-16 h-16 rounded-full ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                   <feature.icon className="w-8 h-8" />
+                   <feature.icon className="w-8 h-8 stroke-[1.5]" />
                  </div>
                  <h3 className="text-lg font-heading font-bold text-slate-900 mb-3">{feature.title}</h3>
                  <p className="text-slate-600 text-sm leading-relaxed">{feature.description}</p>
@@ -308,20 +310,20 @@ export default function Home() {
       </section>
 
       {/* SECTION 4 — INDUSTRIES (Pill/Card Style) */}
-      <section className="py-24 bg-white border-y border-slate-100">
+      <section className="py-32 bg-white border-y border-slate-100">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-heading font-bold text-slate-900">Industries We Support</h2>
           </div>
           
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-8">
             {[
               { name: "SaaS & Tech", icon: Monitor },
               { name: "E-commerce & D2C", icon: ShoppingBag },
               { name: "Travel & Hospitality", icon: Plane },
               { name: "EdTech & Assessments", icon: GraduationCap }
             ].map((industry, index) => (
-              <div key={index} className="flex items-center gap-4 bg-white border border-slate-200 rounded-full py-4 px-8 shadow-sm hover:shadow-md hover:border-primary/50 hover:text-primary transition-all cursor-default group min-w-[240px] justify-center">
+              <div key={index} className="flex items-center gap-4 bg-white border border-slate-200 rounded-full py-4 px-8 shadow-sm hover:shadow-md hover:border-primary/50 hover:text-primary transition-all cursor-default group min-w-[240px] justify-center hover:-translate-y-[3px]">
                 <industry.icon className="w-6 h-6 text-slate-400 group-hover:text-primary transition-colors" />
                 <span className="font-heading font-semibold text-slate-700 group-hover:text-primary transition-colors">{industry.name}</span>
               </div>
@@ -331,14 +333,14 @@ export default function Home() {
       </section>
 
       {/* SECTION 5 — OUR IMPACT (Clean Minimal Stats) */}
-      <section className="py-24 bg-white">
+      <section className="py-32 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">Our Impact</h2>
             <p className="text-slate-500 text-lg">We focus on measurable outcomes, not just headcount.</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 text-center">
+          <div className="grid md:grid-cols-3 gap-12 text-center">
             {[
               {
                 metric: "70%",
@@ -356,8 +358,8 @@ export default function Home() {
                 sub: "Managed for EdTech & university clients annually."
               }
             ].map((stat, index) => (
-              <div key={index} className="p-8 rounded-2xl bg-slate-50 border border-slate-100 hover:border-primary/20 transition-colors">
-                <div className="text-5xl font-heading font-extrabold text-primary mb-2">{stat.metric}</div>
+              <div key={index} className="p-8 rounded-2xl bg-blue-50/30 border border-slate-100 hover:border-primary/20 transition-colors">
+                <div className="text-[3.5rem] font-heading font-extrabold text-primary mb-2 leading-none">{stat.metric}</div>
                 <div className="text-lg font-bold text-slate-900 mb-3">{stat.label}</div>
                 <p className="text-slate-500 text-sm leading-relaxed max-w-[250px] mx-auto">{stat.sub}</p>
               </div>
