@@ -38,6 +38,7 @@ export default function Services() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesMobileOpen, setIsServicesMobileOpen] = useState(false);
+  const [isIndustriesMobileOpen, setIsIndustriesMobileOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -117,11 +118,35 @@ export default function Services() {
                 </div>
               </div>
 
+              {/* Industries Dropdown */}
+              <div className="relative group">
+                <Link href="/industries">
+                  <a className={`flex items-center gap-1 text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors ${isScrolled ? "text-slate-600" : "text-slate-700"}`}>
+                    Industries <ChevronDown className="w-4 h-4" />
+                  </a>
+                </Link>
+                
+                {/* Dropdown Menu */}
+                <div className="absolute top-full left-0 pt-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 w-72">
+                  <div className="bg-white rounded-lg shadow-xl border border-slate-100 overflow-hidden py-2">
+                    {[
+                      { name: "SaaS & Tech", link: "/industries/saas-tech" },
+                      { name: "E-commerce & D2C", link: "/industries/ecommerce-d2c" },
+                      { name: "Travel & Hospitality", link: "/industries/travel-hospitality" },
+                      { name: "EdTech & Assessments", link: "/industries/edtech-assessments" }
+                    ].map((industry) => (
+                      <Link key={industry.name} href={industry.link}>
+                        <a className="block px-6 py-3 text-slate-700 hover:bg-blue-50 hover:text-primary transition-colors text-sm font-medium border-l-4 border-transparent hover:border-primary">
+                          {industry.name}
+                        </a>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
               <a href="#" className={`text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors ${isScrolled ? "text-slate-600" : "text-slate-700"}`}>
                 Why Us
-              </a>
-              <a href="#" className={`text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors ${isScrolled ? "text-slate-600" : "text-slate-700"}`}>
-                Industries
               </a>
               <a href="#" className={`text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors ${isScrolled ? "text-slate-600" : "text-slate-700"}`}>
                 Contact
@@ -200,8 +225,49 @@ export default function Services() {
                   </AnimatePresence>
                 </div>
 
+                {/* Mobile Industries Accordion */}
+                <div className="border-b border-slate-50">
+                  <div className="flex items-center justify-between py-2">
+                    <Link href="/industries">
+                      <a className="text-lg font-medium text-slate-800 flex-1">Industries</a>
+                    </Link>
+                    <button 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setIsIndustriesMobileOpen(!isIndustriesMobileOpen);
+                      }} 
+                      className="p-2 text-slate-500"
+                    >
+                      <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${isIndustriesMobileOpen ? "rotate-180" : ""}`} />
+                    </button>
+                  </div>
+                  
+                  <AnimatePresence>
+                    {isIndustriesMobileOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="overflow-hidden pl-4 pb-2 bg-slate-50/50 rounded-lg mb-2"
+                      >
+                        {[
+                          { name: "SaaS & Tech", link: "/industries/saas-tech" },
+                          { name: "E-commerce & D2C", link: "/industries/ecommerce-d2c" },
+                          { name: "Travel & Hospitality", link: "/industries/travel-hospitality" },
+                          { name: "EdTech & Assessments", link: "/industries/edtech-assessments" }
+                        ].map((industry) => (
+                          <Link key={industry.name} href={industry.link}>
+                            <a className="block py-3 text-slate-600 hover:text-primary text-base border-b border-slate-100 last:border-0">
+                              {industry.name}
+                            </a>
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
                 <a href="#" className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50">Why Us</a>
-                <a href="#" className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50">Industries</a>
                 <a href="#" className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50">Contact</a>
                 
                 <Button className="w-full bg-primary text-white mt-4">Get a Quote</Button>
