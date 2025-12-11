@@ -1,0 +1,112 @@
+Parent “Services” Page (Page 2)
+Build a dedicated “Services” landing page for SaberTechs (services.html).
+It should match the design style, colors, fonts, and navbar/footer of my existing homepage.
+Do not change the existing navbar or footer – just reuse them.
+The layout must be clean, modern, and B2B, with clear sections as specified below.
+🔹 SECTION 1 – HERO (Top of Services Page)
+Full-width section with light background (white or very light grey).
+Centered content (left-aligned on desktop, nicely stacked on mobile).
+Content:
+Heading (H1):
+Operations & CX Services Built for High-Growth Businesses
+Subheading (H3):
+Flexible, scalable, fully-managed customer support, sales, and back-office operations — designed for global SMBs.
+Buttons:
+Primary: Book Consultation
+Secondary: View Case Studies (placeholder link for now)
+Right side:
+A simple illustration or icon cluster related to operations / dashboards / teamwork (similar visual style to the homepage hero).
+Add comfortable vertical padding (top & bottom ~100–120px).
+🔹 SECTION 2 – CORE SERVICE GRID (6 Cards, Expanded)
+Add a section title centered:
+Title:
+Our Core Service Capabilities
+Subtitle (smaller text):
+From customer support to back-office ops, SaberTechs acts as an extension of your team.
+Below this, create a 3×2 grid of cards (or 2×3 on mobile).
+Each card with:
+Icon at top
+Service name
+2–3 sentence description
+“Learn More →” link (can point to /service-name.html placeholders)
+Cards:
+Customer Support & CX
+Multichannel chat, email, and voice support from trained CX specialists.
+We handle inquiries, complaints, and tickets with defined SLAs and daily reporting.
+Link text: Learn More →
+Revenue & Inside Sales Support
+Lead qualification, demo scheduling, renewals and win-back campaigns.
+We help your sales team focus on closing while we handle outreach and follow-ups.
+Link text: Learn More →
+Back Office & Catalog Operations
+Data entry, catalog updates, refunds, order processing and CRM hygiene.
+We quietly run the processes that keep your business moving.
+Link text: Learn More →
+QA, Compliance & Audits
+Call and chat QA, process compliance checks, mystery audits and retail evaluations.
+We ensure your customer interactions and operations stay on-standard.
+Link text: Learn More →
+AI-Assisted CX Automation
+Chatbots, workflows, routing rules and automated responses built using leading tools.
+We combine automation with human support so you get speed and reliability.
+Link text: Learn More →
+Gig Workforce On-Demand
+Flexible hourly or project-based staffing for CX, audits, proctoring and back-office spikes.
+Ideal for seasonal peaks, launches and one-off projects.
+Link text: Learn More →
+Add hover effects on cards (soft shadow, slight lift).
+🔹 SECTION 3 – WHY BUSINESSES PREFER SABERTECHS
+Background: very light tinted section (slight blue/grey).
+Title (centered):
+Why Businesses Prefer SaberTechs
+Create 4 horizontal feature blocks (icons + headings + short text):
+Scalable Teams On-Demand
+Start with just 1–2 agents and scale to a full CX operation as your business grows.
+CX, Sales & Ops Under One Roof
+One partner for customer support, sales support, back-office and gig workforce.
+Data-Driven Performance
+We work with SLAs, KPIs, QA scorecards and transparent reporting.
+AI-Enhanced Productivity
+Automations and workflows reduce cost per ticket and response times.
+Keep text short; use icons that match the site’s style.
+🔹 SECTION 4 – OUR ENGAGEMENT MODEL (4 Steps)
+Title:
+How We Work With You
+Below that, show a 4-step process in a horizontal row on desktop (stacked on mobile):
+Discovery & Scoping
+Understand your goals, volumes, tools and support expectations.
+Team Setup & Training
+Build the right team, define SOPs and train on your product/process.
+Go-Live & SLA Commitments
+Start operations with clear SLAs, coverage hours and reporting.
+Continuous Improvement
+Regular reviews, QA feedback and optimization of processes and scripts.
+Use numbered badges or timeline styling.
+🔹 SECTION 5 – INDUSTRIES WE SUPPORT (Mini Overview)
+Title:
+Industry-Focused Operations
+Create 4 compact cards or pills:
+SaaS & Tech
+Onboarding, product support, renewals and ticket management.
+E-commerce & D2C
+Order support, returns, refunds, catalog and review management.
+Travel & Hospitality
+Booking support, itinerary changes, cancellations and customer care.
+EdTech & Assessments
+Candidate support, proctoring coordination and exam operations.
+Each card gets 1–2 short lines.
+🔹 SECTION 6 – FINAL CTA BANNER
+Full-width, blue gradient background, white text, centered.
+Headline:
+Need a Custom Support or Ops Team?
+Subline:
+Share your requirements and we’ll send a tailored proposal within 24 hours.
+Button:
+Talk to an Expert
+🔹 GENERAL STYLING REQUIREMENTS
+Use the same font as homepage (Inter / Poppins).
+Maintain same navbar and footer as existing site.
+Maintain consistent button styles and colors.
+Plenty of whitespace, modern SaaS look.
+Responsive on mobile and tablet.
+Do not redesign the entire site. Only create this new Services page consistent with my current homepage.
