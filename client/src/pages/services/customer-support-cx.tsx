@@ -538,8 +538,8 @@ export default function CustomerSupportCX() {
       <section className="py-24 bg-slate-900 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-heading font-bold mb-4">How We Build and Run Your Support Team</h2>
-            <p className="text-slate-400 text-lg max-w-2xl mx-auto font-light">
+            <h2 className="text-3xl font-heading font-bold mb-4 text-white drop-shadow-[0_0_4px_rgba(0,0,0,0.4)]">How We Build and Run Your Support Team</h2>
+            <p className="text-[#F1F1F1] text-lg max-w-2xl mx-auto font-normal opacity-100 drop-shadow-[0_0_4px_rgba(0,0,0,0.4)]">
               Our proven onboarding framework helps you launch CX operations in days, not months.
             </p>
           </div>
@@ -571,11 +571,11 @@ export default function CustomerSupportCX() {
               }
             ].map((phase, i) => (
               <div key={i} className="relative z-10 text-center group">
-                <div className="w-12 h-12 mx-auto bg-slate-800 border-2 border-slate-600 rounded-full flex items-center justify-center text-xl font-bold mb-6 group-hover:bg-primary group-hover:border-primary transition-colors">
+                <div className="w-12 h-12 mx-auto bg-slate-800 border-2 border-slate-600 rounded-full flex items-center justify-center text-xl font-bold mb-6 text-white drop-shadow-[0_0_4px_rgba(0,0,0,0.4)] group-hover:bg-primary group-hover:border-primary transition-colors">
                   {phase.step}
                 </div>
-                <h3 className="text-xl font-bold mb-3">{phase.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed px-2">{phase.text}</p>
+                <h3 className="text-xl font-bold mb-3 text-white drop-shadow-[0_0_4px_rgba(0,0,0,0.4)]">{phase.title}</h3>
+                <p className="text-[#F1F1F1] text-sm leading-relaxed px-2 opacity-100 drop-shadow-[0_0_4px_rgba(0,0,0,0.4)]">{phase.text}</p>
               </div>
             ))}
           </div>
