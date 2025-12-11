@@ -1,0 +1,250 @@
+I already have a SaberTechs website with:
+- Homepage
+- Customer Support & CX landing page
+- Revenue & Inside Sales landing page
+- Back Office Operations landing page
+
+Using the SAME design system (fonts, colors, buttons, illustrations, spacing, layout), create a NEW landing page for:
+
+👉 “Gig Workforce (On-Demand)”
+
+❗ IMPORTANT:
+This Gig Workforce page is ONLY for CLIENTS.
+Remove ALL references to:
+- “Join Our Gig Network”
+- Gig workers applying
+- Talent signup
+- Forms for workers
+
+We will create a separate “Careers / Join Our Gig Network” page later.
+
+This page must be SEO + SEM friendly, fast, responsive, and consistent with existing SaberTechs pages.
+
+==================================================
+1) HERO SECTION
+==================================================
+
+H1:
+“Build an On-Demand Gig Workforce for CX, Audits & Ops”
+
+Subheading:
+“Flexible hourly or project-based staffing for customer support, audits, proctoring, data operations and field tasks — managed end-to-end by SaberTechs.”
+
+Primary CTA:
+“Talk to a Staffing Expert”
+
+Secondary CTA:
+“See Pricing & Plans”
+
+Trust line under CTAs:
+“Pre-vetted talent · Fast deployment · Coverage across India”
+
+Trust metrics (small row):
+- “2,000+ gig workers in our network”
+- “CX, audits, proctoring & operations”
+- “Pan-India coverage”
+- “Managed teams with SLAs”
+
+Right-side illustration:
+A workforce scene showing on-ground workers, support agents, field tasks, etc., in the SAME visual style as existing SaberTechs illustrations.
+
+==================================================
+2) PROBLEM → SOLUTION SECTION
+==================================================
+
+H2:
+“Scale Your Team Only When You Need To”
+
+LEFT CARD — “The Struggle”
+- Unpredictable volumes but fixed headcount
+- Peak seasons and campaigns needing extra staff
+- Hard to hire locally in every city
+- Freelancers without vetting or governance
+- High cost of full-time staff for short projects
+
+RIGHT CARD — “Our Solution”
+- Pre-vetted gig workforce ready for CX, audits, proctoring and ops
+- Scale by hours, days or full projects
+- Pan-India staffing coverage
+- Centralized governance, SLAs and reporting
+- We handle sourcing, training, scheduling and payouts
+
+CTA under section:
+“Get a Flexible Staffing Plan”
+
+==================================================
+3) USE CASES / APPLICATIONS
+==================================================
+
+H2:
+“Where Our Gig Workforce Fits Best”
+
+6 cards:
+
+1. Customer Support Surges  
+   “Add temporary agents for seasonal spikes and campaigns.”
+
+2. Retail & Mystery Audits  
+   “On-ground auditors for store compliance, branding and SOP checks.”
+
+3. Exam Proctoring & Invigilation  
+   “Online and offline proctors for assessments and exams.”
+
+4. Data & Back-Office Projects  
+   “Short-term teams for cataloging, tagging, data cleanup and entry.”
+
+5. Field & Verification Tasks  
+   “Simple visit-based tasks, surveys and document checks.”
+
+6. Pilot Projects & New Markets  
+   “Test new regions or programs without full-time hiring.”
+
+Add an internal link at bottom:
+“Need full-time managed teams? Explore our Customer Support & CX or Back Office Ops services.”
+
+==================================================
+4) GIG WORKFORCE MODEL EXPLAINER
+==================================================
+
+H2:
+“How Our Gig Workforce Model Works”
+
+3 columns:
+
+Column 1 — “We Source & Vet Talent”  
+“We screen gig workers based on location, skill, language and process requirements.”
+
+Column 2 — “We Train & Schedule”  
+“We handle training, evaluations, shift planning and project scheduling.”
+
+Column 3 — “We Manage Delivery”  
+“You get SLA governance, reporting, attendance tracking and single-point communication.”
+
+==================================================
+5) METRICS STRIP
+==================================================
+
+4 metrics:
+
+- “2,000+” — Gig workers in our network  
+- “100+” — Cities covered across India  
+- “72 hours” — Typical deployment time  
+- “95%+” — Retention on long-term gig programs  
+
+==================================================
+6) CASE STUDY SECTION
+==================================================
+
+Label:
+“Success Story”
+
+H2:
+“Case Study: Scaling Proctoring Capacity for National Exams”
+
+Paragraph:
+“An EdTech company needed large-scale exam proctoring across India. SaberTechs onboarded and managed gig workers nationwide, ensured compliance with client SOPs, enabled real-time reporting, and executed thousands of exam sessions flawlessly.”
+
+Quote:
+“‘SaberTechs became our execution engine. Their gig workforce solved problems we could not solve internally.’”
+
+Signature:
+“— Director of Operations, EdTech Company”
+
+==================================================
+7) 4-STEP DEPLOYMENT PROCESS
+==================================================
+
+H2:
+“How We Deploy Your Gig Workforce”
+
+Intro line:
+“A fast and flexible deployment model built for scale.”
+
+4 steps:
+
+1. Scope & Role Definition  
+2. Sourcing & Vetting  
+3. Training & Go-Live  
+4. Governance & Performance Tracking
+
+CTA under timeline:
+“Share Your Gig Requirement”
+
+==================================================
+8) PRICING MODELS
+==================================================
+
+H2:
+“Flexible Engagement Models for Gig Teams”
+
+3 cards:
+
+1. Hourly / Shift-Based  
+   “Best for CX, proctoring, supervision and operations roles.”
+
+2. Per-Task / Per-Audit  
+   “Ideal for retail checks, surveys, and on-ground verification tasks.”
+
+3. Project-Based  
+   “Great for one-time catalog, tagging or cleanup projects.”
+
+Line under cards:
+“We recommend the best model based on your goals, volumes and geography.”
+
+CTA:
+“Request a Custom Gig Proposal”
+
+==================================================
+9) FAQ SECTION
+==================================================
+
+H2:
+“Gig Workforce Outsourcing FAQs”
+
+Include these questions:
+
+1. What roles can your gig workforce cover?  
+2. How do you vet gig workers?  
+3. How fast can you deploy a team?  
+4. Which cities do you cover?  
+5. Who manages training and governance?  
+6. How do you ensure quality with gig workers?  
+7. Can I start with a small pilot?  
+8. Do you support exam-day or weekend-only deployment?  
+9. How is pricing structured?
+
+==================================================
+10) FINAL CTA BANNER
+==================================================
+
+Gradient banner:
+
+Heading:
+“Ready to Build Your On-Demand Workforce?”
+
+Subheading:
+“Get a flexible staffing plan tailored to your volume, timelines and locations.”
+
+Button:
+“Talk to a Staffing Expert”
+
+==================================================
+SEO METADATA
+==================================================
+
+<title>Gig Workforce & On-Demand Staffing in India | SaberTechs</title>
+
+<meta name="description" content="Build an on-demand gig workforce with SaberTechs. Flexible staffing for CX, audits, proctoring and back-office operations across India. Pre-vetted gig workers, fast deployment and full governance.">
+
+==================================================
+INTERNAL LINKING
+==================================================
+
+Add internal links to:
+- Customer Support & CX  
+- Back Office Operations  
+- Revenue & Inside Sales  
+- QA & Compliance  
+- AI Automation
+
+Maintain SaberTechs visual consistency across all pages.
