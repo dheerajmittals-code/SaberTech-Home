@@ -1,0 +1,167 @@
+Create a dedicated, high-conversion landing page for “Customer Support & CX Outsourcing” for SaberTechs.
+Use the SAME design system as my current website:
+Same navbar and footer (reuse existing)
+Same fonts (e.g., Inter / Poppins)
+Same button styles and color palette (blue accent)
+Same general spacing and card style as my Services page
+This landing page is for Google Ads and SEO, so it must be focused on ONE service: Customer Support & CX, with a clear CTA and no distractions.
+The page must contain the following sections, in this order:
+====================================================
+SECTION 1 – HERO (Above the fold, Leadinjection style)
+Layout: Two-column, left text + right illustration.
+Left side:
+H1 headline:
+“Build Your Customer Support Team in 7 Days — Without Hiring”
+Subheadline:
+“24/7 chat, email & voice support for SaaS, E-commerce, Travel and EdTech brands — managed entirely by trained CX experts.”
+Primary CTA button:
+“Book a Free Consultation”
+Secondary CTA link/button:
+“See Pricing & Plans”
+Below buttons, add a small trust row with inline items:
+“98% CSAT • 70% backlog reduction case study • 24/7 coverage • SLA-driven workflows”
+Right side:
+A clean, CX-themed illustration (support agents, dashboards, chats) that matches the visual style of my existing site (soft edges, isometric/SaaS style).
+Make this section full-width with generous padding and lots of whitespace.
+====================================================
+SECTION 2 – PROBLEM → SOLUTION (Two-column)
+Title:
+“Stop Struggling With Support — We Handle It End-to-End”
+Left column (Problems list, bullets):
+Tickets piling up and customers waiting too long
+No weekend or night coverage
+High hiring costs & agent turnover
+Internal team overloaded with support
+Training, QA and reporting taking too much time
+Right column (Our Solution list, bullets):
+Dedicated CX agents trained on your product and workflows
+24/7 or extended-hour support for global customers
+SLA-backed response and resolution times
+We manage training, QA, reporting and performance
+Your team focuses on product and growth, we handle support
+Add a small CTA button below this section:
+“Talk to a CX Specialist”
+====================================================
+SECTION 3 – WHAT YOU GET (Feature Grid – 6 cards)
+Title:
+“Everything You Need in an Outsourced CX Partner”
+Create a 2-row, 3-column grid of feature cards. Each card has an icon, a title, and 1–2 lines of text.
+Cards:
+Title: “Multichannel Support”
+Text: “Chat, email and voice support tailored for your customers.”
+Title: “SLA-Driven Ticket Management”
+Text: “Defined SLAs for response time, resolution time and escalation.”
+Title: “Trained Support Specialists”
+Text: “Agents trained on your product, knowledge base and tone of voice.”
+Title: “24/7 Global Coverage”
+Text: “Around-the-clock support for SaaS, E-commerce, Travel and EdTech brands.”
+Title: “Tools We Work With”
+Text: “Zendesk, Freshdesk, Intercom, Gorgias and other leading platforms.”
+Title: “Reporting & Dashboards”
+Text: “Daily/weekly reports, KPIs, CSAT and QA insights.”
+Add hover effects (slight lift + shadow) on these cards.
+====================================================
+SECTION 4 – SOCIAL PROOF / METRICS STRIP
+Create a full-width, light-tinted strip with 3–4 stats displayed horizontally.
+Stats:
+“70% reduction in email backlog in 6 weeks”
+“98% CSAT across channels”
+“40% faster ticket resolutions”
+“50,000+ support interactions handled monthly”
+Design this as a clean “metrics bar” with big numbers and small labels.
+====================================================
+SECTION 5 – MINI CASE STUDY
+Title:
+“Case Study: Clearing a 3-Week Backlog in 6 Weeks”
+Short paragraph:
+“A US-based travel company faced 2,000+ unresolved emails and rising complaints. Our CX team deployed within 7 days, implemented SLAs and workflow rules, and improved average response time from 48 hours to under 12 hours.”
+Below, add a testimonial-style quote:
+“‘SaberTechs instantly felt like part of our internal team. They fixed our backlog and improved CSAT beyond expectations.’
+— Growth Lead, Travel Company”
+====================================================
+SECTION 6 – HOW IT WORKS (4-Step Process)
+Title:
+“How We Build and Run Your Support Team”
+Show a 4-step horizontal process (timeline or numbered cards):
+“Discovery”
+Text: “We analyze ticket volumes, channels, tools and support expectations.”
+“Setup & Training”
+Text: “We build your support playbook, knowledge base and train agents.”
+“Go-Live”
+Text: “CX operations start with SLAs, QA checks and live reporting.”
+“Continuous Improvement”
+Text: “We review CSAT, QA scores and optimize scripts and workflows.”
+Add a small CTA under the steps:
+“Start Your CX Journey with SaberTechs”
+====================================================
+SECTION 7 – INDUSTRIES WE SERVE (Pills or cards)
+Title:
+“Customer Support Expertise Across Industries”
+Show 4 compact industry cards or pills:
+“SaaS & Tech”
+Text: “Onboarding, troubleshooting and product support for software companies.”
+“E-commerce & D2C”
+Text: “Order status, returns, refunds and pre-sales queries.”
+“Travel & Hospitality”
+Text: “Booking changes, cancellations and itinerary support.”
+“EdTech & Assessments”
+Text: “Student queries, login issues and exam support.”
+Each can be a card with an icon and 1–2 lines of text.
+====================================================
+SECTION 8 – PRICING SUMMARY (No specific numbers)
+Title:
+“Flexible & Transparent Pricing for SMBs”
+Three columns for pricing tiers (no exact numbers, just structure):
+“Starter”
+Text:
+1–2 dedicated agents
+Chat & email support
+Daily reporting
+“Growth”
+Text:
+3–10 agents
+Multichannel support (chat, email, voice)
+Team lead + QA support
+SLA-based performance
+“Scale”
+Text:
+10+ agents
+24/7 coverage
+AI + automation workflows
+Custom reporting & governance
+Below these, a CTA:
+“Request Custom Pricing”
+====================================================
+SECTION 9 – FAQ + FINAL CTA
+Create a two-part section:
+PART A: FAQ (accordions)
+Title:
+“Customer Support Outsourcing FAQs”
+Include at least these questions:
+“What is outsourced customer support?”
+“How fast can you deploy a support team?”
+“Do you offer 24/7 support?”
+“Which tools and platforms do you work with?”
+“How do you ensure quality and CSAT?”
+“Can we scale up or down based on seasonality?”
+“What are your pricing models?”
+PART B: Final CTA (high contrast)
+Below FAQ, add a bold final CTA band (like a gradient section):
+Headline:
+“Ready to Build Your Customer Support Team?”
+Subtext:
+“Get a tailored CX proposal within 24 hours. No hiring. No overhead. Just scalable support.”
+Button:
+“Book a Consultation”
+====================================================
+GENERAL REQUIREMENTS
+Keep the nav and footer consistent with the main site.
+Minimize extra links that distract from the main CTAs.
+Make all sections responsive and mobile-friendly.
+Use the same fonts and blue accent color as the main SaberTechs site.
+Optimize for readability (good line spacing, font sizes and white space).
+This page is meant to be used for:
+Google Ads landing (SEM)
+SEO for “customer support outsourcing” and related keywords
+High conversion rate lead generation
+Do not turn this into a generic multi-service page; it must stay focused on Customer Support & CX only.
