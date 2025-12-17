@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Automation Services | Simple Bots, Workflows & Human-First CX</title>
+  <meta name="description" content="Practical AI automation for customer support, sales and back office. Simple chat & WhatsApp bots, call flows and workflow automations that work with your human teams and existing tools." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0B1F3A;     /* Navy Blue */
+      --secondary: #22C55E;   /* Action Green */
+      --background: #F8FAFC;  /* Soft White */
+      --text-main: #1F2933;   /* Dark Charcoal */
+      --text-muted: #6B7280;  /* Grey */
+      --accent: #F59E0B;      /* Amber (rare) */
+      --border-soft: #E5E7EB;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
+
+      --radius-lg: 16px;
+      --radius-md: 10px;
+      --radius-pill: 999px;
+      --spacing-section: 64px;
+      --max-width: 1120px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--background);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 24px 16px 48px;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    /* Typography */
+
+    h1, h2, h3, h4 {
+      font-weight: 600;
+      color: --primary;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: clamp(30px, 5vw, 40px);
+      line-height: 1.2;
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+
+    h2 {
+      font-size: clamp(22px, 3vw, 26px);
+      margin-bottom: 6px;
+      color: var(--primary);
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 4px;
+      color: var(--primary);
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--text-main);
+    }
+
+    .text-muted {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* Layout / Sections */
+
+    .section {
+      margin-bottom: var(--spacing-section);
+    }
+
+    .section-header {
+      margin-bottom: 18px;
+    }
+
+    .section-header p {
+      max-width: 640px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    /* Hero */
+
+    .hero {
+      padding: 32px 0 32px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: rgba(34, 197, 94, 0.12);
+      color: var(--secondary);
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--secondary);
+    }
+
+    .hero-title {
+      font-size: clamp(30px, 5vw, 40px);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero-highlight {
+      color: var(--secondary);
+    }
+
+    .hero-subtitle {
+      max-width: 640px;
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .hero-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .metric-pill {
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-soft);
+      background: #FFFFFF;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .metric-pill span {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* Buttons */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: var(--radius-pill);
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #22C55E, #16A34A);
+      border-color: #16A34A;
+      color: #022C22;
+      box-shadow: 0 10px 30px rgba(34, 197, 94, 0.35);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.04);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: #FFFFFF;
+      border-color: var(--border-soft);
+      color: var(--primary);
+    }
+
+    .btn-outline:hover {
+      border-color: #CBD5F5;
+      background-color: #F9FAFB;
+    }
+
+    /* Cards & Pills */
+
+    .card {
+      background-color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 18px 18px 16px;
+      border: 1px solid #E5E7EB;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .card-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+
+    .card-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .card-text {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .pill {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: var(--radius-pill);
+      border: 1px solid #E5E7EB;
+      background: #F9FAFB;
+      color: var(--text-muted);
+    }
+
+    /* Lists */
+
+    .bullet-list {
+      list-style: none;
+      padding-left: 0;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .bullet-list li {
+      margin-bottom: 6px;
+      position: relative;
+      padding-left: 14px;
+    }
+
+    .bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--secondary);
+      font-size: 14px;
+    }
+
+    /* FAQ */
+
+    .faq-item {
+      border-bottom: 1px solid var(--border-soft);
+      padding: 10px 0;
+    }
+
+    .faq-q {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    .faq-a {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* CTA Footer */
+
+    .cta-footer {
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: var(--radius-lg);
+      border: 1px dashed rgba(148, 163, 184, 0.7);
+      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.08), #FFFFFF 50%);
+    }
+
+    .cta-footer-title {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--primary);
+    }
+
+    .cta-footer-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        padding: 18px 14px 32px;
+      }
+
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <main class="container" id="ai-automation">
+
+      <!-- HERO -->
+      <section class="hero">
+        <span class="badge">
+          <span class="badge-dot"></span>
+          Services · AI Automation
+        </span>
+
+        <h1 class="hero-title">
+          Practical <span class="hero-highlight">AI Automation</span> Around Your Human Teams
+        </h1>
+
+        <p class="hero-subtitle">
+          We don’t try to replace your people. Instead, we add simple, reliable automations around them – chat & WhatsApp flows, basic bots and workflows that reduce repeat work and speed up responses.
+        </p>
+
+        <div class="hero-metrics">
+          <div class="metric-pill"><span>Human-first</span> AI approach</div>
+          <div class="metric-pill"><span>Faster</span> responses & fewer tickets</div>
+          <div class="metric-pill"><span>Works</span> with your existing tools</div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="scrollToContact()">Discuss Automation Ideas</button>
+          <button class="btn btn-outline" onclick="scrollToContact()">Review a Small Pilot</button>
+        </div>
+      </section>
+
+      <!-- CORE AUTOMATION AREAS -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Where We Use AI & Automation</h2>
+          <p>
+            We focus on a few practical areas where automation makes an immediate difference – without needing a big AI project or a full rebuild of your tech stack.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Website & In-app Chat -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-label">Chat</div>
+                <h3 class="card-title">Website & In-App Chat Flows</h3>
+              </div>
+            </div>
+            <p class="card-text">
+              Guided flows that answer common questions, collect details and hand over to humans when needed.
+            </p>
+            <div class="pill-list">
+              <span class="pill">FAQ flows</span>
+              <span class="pill">Lead capture</span>
+              <span class="pill">Handover to agent</span>
+            </div>
+          </article>
+
+          <!-- WhatsApp -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-label">Messaging</div>
+                <h3 class="card-title">WhatsApp Journeys</h3>
+              </div>
+            </div>
+            <p class="card-text">
+              Simple WhatsApp experiences for order status, basic support, reminders and feedback collection.
+            </p>
+            <div class="pill-list">
+              <span class="pill">Order updates</span>
+              <span class="pill">Reminders</span>
+              <span class="pill">Feedback links</span>
+            </div>
+          </article>
+
+          <!-- Lead / Ticket Routing -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-label">Routing</div>
+                <h3 class="card-title">Lead & Ticket Routing</h3>
+              </div>
+            </div>
+            <p class="card-text">
+              Smart rules and simple AI classification to send leads and tickets to the right queues or teams.
+            </p>
+            <div class="pill-list">
+              <span class="pill">Priority tagging</span>
+              <span class="pill">Skill-based routing</span>
+              <span class="pill">Basic classification</span>
+            </div>
+          </article>
+
+          <!-- Knowledge Assist -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-label">Assist</div>
+                <h3 class="card-title">Agent Assist & Knowledge Help</h3>
+              </div>
+            </div>
+            <p class="card-text">
+              Tools that make it easier for agents to find the right answer or next step while they are on the call or chat.
+            </p>
+            <div class="pill-list">
+              <span class="pill">Searchable SOPs</span>
+              <span class="pill">Suggested responses</span>
+              <span class="pill">Next-step hints</span>
+            </div>
+          </article>
+
+          <!-- Notifications & Reminders -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-label">Follow-up</div>
+                <h3 class="card-title">Notifications & Reminders</h3>
+              </div>
+            </div>
+            <p class="card-text">
+              Automated reminders for payments, renewals, appointments, demo follow-ups and pending tasks.
+            </p>
+            <div class="pill-list">
+              <span class="pill">Payment nudges</span>
+              <span class="pill">Renewal alerts</span>
+              <span class="pill">Demo follow-ups</span>
+            </div>
+          </article>
+
+          <!-- Reports & Summaries -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-label">Insights</div>
+                <h3 class="card-title">Lightweight Reports & Summaries</h3>
+              </div>
+            </div>
+            <p class="card-text">
+              Simple automation to pull data from your systems and generate easy-to-read summaries for your teams.
+            </p>
+            <div class="pill-list">
+              <span class="pill">Daily snapshots</span>
+              <span class="pill">Exception lists</span>
+              <span class="pill">Team-level views</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- HUMAN + AI APPROACH -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Human + AI, Not AI Instead of Humans</h2>
+          <p>
+            Our automation work is grounded in operations – we already run support, sales and back office teams. We add AI where it makes their lives easier and your costs lighter.
+          </p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <h3 class="card-title">Where Automation Helps Most</h3>
+            <ul class="bullet-list">
+              <li>Very common questions that have clear, fixed answers.</li>
+              <li>Data collection – name, contact, order IDs, simple preferences.</li>
+              <li>Basic status updates or “where is my order / ticket / case?” queries.</li>
+              <li>Reminders and follow-ups that humans forget or delay.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Where Humans Stay in Control</h3>
+            <ul class="bullet-list">
+              <li>Complaints, edge cases and sensitive situations.</li>
+              <li>High-value customers and large-ticket deals.</li>
+              <li>Any decision with financial or regulatory impact.</li>
+              <li>Final resolution, approvals and goodwill gestures.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- IMPLEMENTATION MODEL -->
+      <section class="section">
+        <div class="section-header">
+          <h2>How We Implement Automation</h2>
+          <p>
+            No big-bang project. We pick one or two journeys, fix them, measure impact and then expand step by step.
+          </p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <h3 class="card-title">Simple Project Flow</h3>
+            <ul class="bullet-list">
+              <li>Identify 1–2 journeys with repeat questions or tasks.</li>
+              <li>Map the current process and define the “happy path”.</li>
+              <li>Configure flows using your existing platforms or light tools.</li>
+              <li>Run a pilot with a small segment of customers or traffic.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Tools & Integration</h3>
+            <ul class="bullet-list">
+              <li>We prefer using tools you already have licenses for.</li>
+              <li>If needed, we suggest lightweight, no-code or low-code platforms.</li>
+              <li>Integrations via APIs, webhooks, or simple CSV / file-based workflows.</li>
+              <li>Handover and documentation so your team can maintain it.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- USE CASES BY FUNCTION -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Sample Automation Ideas by Function</h2>
+          <p>
+            A few examples to spark ideas. We can help you shortlist what makes the most sense for your stage and stack.
+          </p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <h3 class="card-title">Customer Support & CX</h3>
+            <ul class="bullet-list">
+              <li>Chatbot that answers top 20 FAQs before reaching an agent.</li>
+              <li>WhatsApp flows for order status and basic troubleshooting.</li>
+              <li>Auto-tagging and triaging of tickets based on content.</li>
+              <li>CSAT survey triggers and simple dashboards.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Revenue & Inside Sales</h3>
+            <ul class="bullet-list">
+              <li>Lead capture on website and auto-assignment to sales reps.</li>
+              <li>Automated follow-up sequences for demo no-shows.</li>
+              <li>Warm leads priority list based on behaviour or responses.</li>
+              <li>Summary notes after calls to reduce manual typing.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section">
+        <div class="section-header">
+          <h2>AI Automation – FAQs</h2>
+          <p>
+            Plain answers, without the buzzwords.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="faq-item">
+            <div class="faq-q">Do we need a separate big AI platform to get started?</div>
+            <div class="faq-a">
+              Not necessarily. In many cases we can work with features already available in your CRM, helpdesk, telephony or messaging tools – or add a small specialised tool where useful.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Will this replace our agents or staff?</div>
+            <div class="faq-a">
+              Our approach is to remove repeat, low-value work and free your people to handle better conversations and decisions. Humans stay in control for complex or sensitive issues.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">How do we measure if automation is working?</div>
+            <div class="faq-a">
+              We look at simple, concrete metrics – reduced handle time, fewer tickets on common issues, faster responses, better CSAT / NPS on impacted journeys and lower cost per contact.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Can we start with a very small experiment?</div>
+            <div class="faq-a">
+              Yes. The best way is to pick one small but noisy process – for example order status queries – and design a quick automation around it. Once you see the benefit, we expand step by step.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FOOTER -->
+      <section class="cta-footer" id="ai-contact">
+        <h2 class="cta-footer-title">Have a Journey in Mind for Automation?</h2>
+        <p class="cta-footer-text">
+          Share 1–2 processes where your team is answering the same question again and again. We’ll suggest a small, practical automation pilot – scope, tools and effort.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="openContactEmail()">
+            Email Your Ideas
+          </button>
+          <button class="btn btn-outline" onclick="openWhatsApp()">
+            Chat on WhatsApp
+          </button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    function scrollToContact() {
+      const el = document.getElementById("ai-contact");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+
+    function openContactEmail() {
+      // change this to your real email
+      window.location.href = "mailto:info@sabertechs.com?subject=AI%20Automation%20Pilot&body=Hi%20Team,%0D%0A%0D%0AWe%20are%20exploring%20a%20small%20automation%20pilot.%20Here%20are%20some%20details:%0D%0A%0D%0A-%20Current%20process%2Fjourney%3A%0D%0A-%20Approx.%20volume%20per%20day%2Fmonth%3A%0D%0A-%20Systems%20involved%3A%0D%0A-%20What%20we%20want%20to%20improve%3A%0D%0A%0D%0ARegards,%0D%0A";
+    }
+
+    function openWhatsApp() {
+      // Replace with your business WhatsApp number in international format
+      const phone = "919999999999";
+      const text = encodeURIComponent("Hi, I want to discuss a small AI automation pilot.");
+      window.open("https://wa.me/" + phone + "?text=" + text, "_blank");
+    }
+  </script>
+</body>
+</html>
