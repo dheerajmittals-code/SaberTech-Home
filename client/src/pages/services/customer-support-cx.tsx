@@ -122,10 +122,10 @@ export default function CustomerSupportCX() {
                       <div key={service.name}>
                         {index === arr.length - 1 && <div className="h-px bg-slate-100 my-1 mx-2" />}
                         <Link href={service.link}>
-                          <a className="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-700 hover:bg-blue-50/80 hover:text-slate-900 transition-all group/item">
+                          <span className="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-700 hover:bg-blue-50/80 hover:text-slate-900 transition-all group/item cursor-pointer">
                             <service.icon className="w-5 h-5 text-primary group-hover/item:text-blue-700 transition-colors" strokeWidth={1.5} />
                             <span className="text-sm font-medium">{service.name}</span>
-                          </a>
+                          </span>
                         </Link>
                       </div>
                     ))}
@@ -151,10 +151,10 @@ export default function CustomerSupportCX() {
                       { name: "EdTech & Assessments", link: "/industries/edtech-assessments", icon: GraduationCap }
                     ].map((industry) => (
                       <Link key={industry.name} href={industry.link}>
-                        <a className="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-700 hover:bg-blue-50/80 hover:text-slate-900 transition-all group/item">
+                        <span className="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-700 hover:bg-blue-50/80 hover:text-slate-900 transition-all group/item cursor-pointer">
                           <industry.icon className="w-5 h-5 text-primary group-hover/item:text-blue-700 transition-colors" strokeWidth={1.5} />
                           <span className="text-sm font-medium">{industry.name}</span>
-                        </a>
+                        </span>
                       </Link>
                     ))}
                   </div>

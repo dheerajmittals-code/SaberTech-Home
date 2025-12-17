@@ -141,10 +141,10 @@ export default function GigWorkforce() {
                       <div key={service.name}>
                         {index === arr.length - 1 && <div className="h-px bg-slate-100 my-1 mx-2" />}
                         <Link href={service.link}>
-                          <a className="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-700 hover:bg-blue-50/80 hover:text-slate-900 transition-all group/item">
+                          <span className="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-700 hover:bg-blue-50/80 hover:text-slate-900 transition-all group/item cursor-pointer">
                             <service.icon className="w-5 h-5 text-primary group-hover/item:text-blue-700 transition-colors" strokeWidth={1.5} />
                             <span className="text-sm font-medium">{service.name}</span>
-                          </a>
+                          </span>
                         </Link>
                       </div>
                     ))}
@@ -170,10 +170,10 @@ export default function GigWorkforce() {
                       { name: "EdTech & Assessments", link: "/industries/edtech-assessments", icon: GraduationCap }
                     ].map((industry) => (
                       <Link key={industry.name} href={industry.link}>
-                        <a className="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-700 hover:bg-blue-50/80 hover:text-slate-900 transition-all group/item">
+                        <span className="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-700 hover:bg-blue-50/80 hover:text-slate-900 transition-all group/item cursor-pointer">
                           <industry.icon className="w-5 h-5 text-primary group-hover/item:text-blue-700 transition-colors" strokeWidth={1.5} />
                           <span className="text-sm font-medium">{industry.name}</span>
-                        </a>
+                        </span>
                       </Link>
                     ))}
                   </div>
@@ -813,11 +813,11 @@ export default function GigWorkforce() {
             <div>
               <h4 className="text-white font-bold mb-6">Services</h4>
               <ul className="space-y-3 text-sm">
-                <li><Link href="/services/customer-support-cx"><a className="hover:text-primary transition-colors">Customer Support & CX</a></Link></li>
-                <li><Link href="/services/revenue-inside-sales"><a className="hover:text-primary transition-colors">Revenue & Inside Sales</a></Link></li>
-                <li><Link href="/services/back-office-operations"><a className="hover:text-primary transition-colors">Back Office Operations</a></Link></li>
-                <li><Link href="/services/qa-compliance"><a className="hover:text-primary transition-colors">QA & Compliance</a></Link></li>
-                <li><Link href="/services/ai-automation"><a className="hover:text-primary transition-colors">AI Automation</a></Link></li>
+                <li><Link href="/services/customer-support-cx" className="hover:text-primary transition-colors">Customer Support & CX</Link></li>
+                <li><Link href="/services/revenue-inside-sales" className="hover:text-primary transition-colors">Revenue & Inside Sales</Link></li>
+                <li><Link href="/services/back-office-operations" className="hover:text-primary transition-colors">Back Office Operations</Link></li>
+                <li><Link href="/services/qa-compliance" className="hover:text-primary transition-colors">QA & Compliance</Link></li>
+                <li><Link href="/services/ai-automation" className="hover:text-primary transition-colors">AI Automation</Link></li>
               </ul>
             </div>
             

@@ -757,12 +757,12 @@ export default function AIAutomation() {
             <div>
               <h4 className="text-white font-bold mb-6">Services</h4>
               <ul className="space-y-3 text-sm">
-                <li><Link href="/services/customer-support-cx"><a className="hover:text-primary transition-colors">Customer Support & CX</a></Link></li>
-                <li><Link href="/services/revenue-inside-sales"><a className="hover:text-primary transition-colors">Revenue & Inside Sales</a></Link></li>
-                <li><Link href="/services/back-office-operations"><a className="hover:text-primary transition-colors">Back Office Operations</a></Link></li>
-                <li><Link href="/services/qa-compliance"><a className="hover:text-primary transition-colors">QA & Compliance</a></Link></li>
-                <li><Link href="/services/ai-automation"><a className="hover:text-primary transition-colors">AI Automation</a></Link></li>
-                <li><Link href="/services/gig-workforce"><a className="hover:text-primary transition-colors">Gig Workforce</a></Link></li>
+                <li><Link href="/services/customer-support-cx" className="hover:text-primary transition-colors">Customer Support & CX</Link></li>
+                <li><Link href="/services/revenue-inside-sales" className="hover:text-primary transition-colors">Revenue & Inside Sales</Link></li>
+                <li><Link href="/services/back-office-operations" className="hover:text-primary transition-colors">Back Office Operations</Link></li>
+                <li><Link href="/services/qa-compliance" className="hover:text-primary transition-colors">QA & Compliance</Link></li>
+                <li><Link href="/services/ai-automation" className="hover:text-primary transition-colors">AI Automation</Link></li>
+                <li><Link href="/services/gig-workforce" className="hover:text-primary transition-colors">Gig Workforce</Link></li>
               </ul>
             </div>
             
