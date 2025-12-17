@@ -294,451 +294,323 @@ export default function CustomerSupportCX() {
       </header>
 
       {/* SECTION 1 - HERO */}
-      <section className="relative pt-[220px] pb-[100px] bg-slate-50 overflow-hidden">
+      <section className="relative bg-slate-50 overflow-hidden min-h-[80vh] flex items-center">
         {/* Background Decoration */}
         <div className="absolute top-0 right-0 w-2/3 h-full bg-blue-50/30 -skew-x-12 translate-x-1/4 z-0"></div>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div 
-              initial="initial"
-              animate="animate"
-              variants={staggerContainer}
-              className="max-w-2xl"
+        <div className="relative z-10 w-full max-w-[1200px] mx-auto px-5 py-10 md:px-10 md:py-20 flex flex-col-reverse lg:flex-row items-center justify-between gap-10">
+          <motion.div 
+            initial="initial"
+            animate="animate"
+            variants={staggerContainer}
+            className="w-full lg:basis-[45%] lg:w-[45%] text-center lg:text-left mt-8 lg:mt-0"
+          >
+            <motion.h1 
+              className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-slate-900 leading-[1.1] mb-4 max-w-[540px] mx-auto lg:mx-0"
+              variants={fadeIn}
             >
-              <motion.h1 
-                className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-slate-900 leading-[1.1] mb-6"
-                variants={fadeIn}
-              >
-                Build Your Customer Support Team in 7 Days — <span className="text-primary">Without Hiring</span>
-              </motion.h1>
-              <motion.h3 
-                className="text-xl text-slate-600 mb-10 leading-relaxed font-light max-w-lg"
-                variants={fadeIn}
-              >
-                24/7 chat, email and voice support for SaaS, E-commerce, Travel and EdTech brands — managed end-to-end by trained CX specialists.
-              </motion.h3>
-              
-              <motion.div 
-                className="flex flex-wrap gap-4 mb-4"
-                variants={fadeIn}
-              >
-                <Button size="lg" className="bg-primary hover:bg-blue-700 text-white font-bold rounded-lg px-8 h-14 text-lg shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
-                  Book a Free Consultation
-                </Button>
-                <Button variant="outline" size="lg" className="border-2 border-slate-300 text-slate-700 hover:border-slate-800 hover:bg-transparent font-bold rounded-lg px-8 h-14 text-lg shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
-                  View Packages & Rates
-                </Button>
-              </motion.div>
-              
-              <motion.div variants={fadeIn} className="text-sm text-slate-500 mb-8 font-medium">
-                No long-term contracts · Flexible plans · Fast onboarding
-              </motion.div>
-
-              <motion.div variants={fadeIn} className="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-500 items-center">
-                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> 98% CSAT</span>
-                <span className="hidden sm:inline text-slate-300">•</span>
-                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> 70% backlog reduction</span>
-                <span className="hidden sm:inline text-slate-300">•</span>
-                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> 24/7 coverage</span>
-                <span className="hidden sm:inline text-slate-300">•</span>
-                <span className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> SLA-driven workflows</span>
-              </motion.div>
+              Customer Support & <span className="text-primary">CX</span> That Your Customers Can Rely On
+            </motion.h1>
+            <motion.h3 
+              className="text-xl text-slate-600 mb-0 leading-relaxed font-light max-w-lg mx-auto lg:mx-0"
+              variants={fadeIn}
+            >
+              Run your customer support from India with 24x7 multichannel contact center teams. We handle inbound queries, complaints, account support and post-sale issues across voice, email, chat and WhatsApp – with strong QA and daily reporting.
+            </motion.h3>
+            
+            <motion.div 
+              className="flex flex-wrap gap-4 mt-6 justify-center lg:justify-start"
+              variants={fadeIn}
+            >
+              <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-blue-700 text-white font-bold rounded-lg px-8 h-14 text-lg shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
+                Talk to CX Specialist
+              </Button>
+              <Button variant="outline" size="lg" className="w-full sm:w-auto border-2 border-slate-300 text-slate-700 hover:border-slate-800 hover:bg-transparent font-bold rounded-lg px-8 h-14 text-lg shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
+                Get Support Proposal
+              </Button>
+            </motion.div>
+            
+            <motion.div variants={fadeIn} className="text-sm text-slate-500 my-4 font-medium">
+              No long-term contracts · Flexible plans · Fast onboarding
             </motion.div>
 
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-              className="relative hidden lg:block"
-            >
-              <div className="absolute inset-0 bg-blue-500/10 blur-3xl transform scale-110 -z-10 rounded-full"></div>
-               <div className="relative z-10 rounded-[24px] overflow-hidden shadow-2xl shadow-slate-200 border border-slate-100 bg-gradient-to-br from-blue-50 to-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
-                <img 
-                  src={heroImage} 
-                  alt="Customer Support Team" 
-                  className="w-full h-auto object-cover mix-blend-multiply"
-                />
-              </div>
-              <div className="absolute -bottom-6 -left-6 w-full h-full border-2 border-dashed border-primary/20 rounded-[24px] -z-10"></div>
+            <motion.div variants={fadeIn} className="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-500 items-center justify-center lg:justify-start">
+              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> 24x7 coverage across time zones</span>
+              <span className="hidden sm:inline text-slate-300">•</span>
+              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Multichannel voice · email · chat</span>
+              <span className="hidden sm:inline text-slate-300">•</span>
+              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> CSAT focused processes & QA</span>
             </motion.div>
-          </div>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="w-full lg:basis-[55%] lg:w-[55%] max-w-[720px] self-center relative"
+          >
+            <div className="absolute inset-0 bg-blue-500/10 blur-3xl transform scale-110 -z-10 rounded-full"></div>
+             <div className="relative z-10 rounded-[24px] overflow-hidden shadow-2xl shadow-slate-200 border border-slate-100 bg-gradient-to-br from-blue-50 to-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
+              <img 
+                src={heroImage} 
+                alt="Customer Support Team" 
+                className="w-full h-auto object-cover mix-blend-multiply"
+              />
+            </div>
+            <div className="absolute -bottom-6 -left-6 w-full h-full border-2 border-dashed border-primary/20 rounded-[24px] -z-10"></div>
+          </motion.div>
         </div>
       </section>
 
-      {/* SECTION 2 - PROBLEM -> SOLUTION */}
+      {/* SECTION 2 - CAPABILITIES GRID */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-slate-900 mb-6">Stop Struggling With Support — We Handle It End-to-End</h2>
-            <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            {/* Problems */}
-            <div className="bg-red-50/50 p-8 rounded-2xl border border-red-100">
-              <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-sm font-bold">✕</span>
-                The Struggle
-              </h3>
-              <ul className="space-y-4">
-                {[
-                  "Tickets piling up and customers waiting too long",
-                  "No weekend or night coverage",
-                  "High hiring costs and agent turnover",
-                  "Internal team overloaded with support work",
-                  "Training, QA and reporting taking too much time"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-slate-700">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-red-400 flex-shrink-0"></span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Solution */}
-            <div className="bg-blue-50/50 p-8 rounded-2xl border border-blue-100 shadow-sm">
-              <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 rounded-full bg-blue-100 text-primary flex items-center justify-center text-sm font-bold">✓</span>
-                Our Solution
-              </h3>
-              <ul className="space-y-4">
-                {[
-                  "Dedicated CX agents trained on your product and processes",
-                  "24/7 or extended-hours support for global customers",
-                  "SLA-backed response and resolution times",
-                  "We manage training, QA, reporting and performance",
-                  "Your team focuses on product and growth — we take care of support"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-slate-700">
-                    <Check className="w-5 h-5 text-primary shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <p className="text-slate-600 mb-4 font-medium">Want to reduce your ticket backlog and response times?</p>
-            <Button variant="outline" className="border-2 border-slate-300 text-slate-700 hover:border-slate-800 hover:bg-transparent font-bold rounded-full px-8 h-12 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
-              Talk to a CX Specialist
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 3 - FEATURE GRID */}
-      <section className="py-24 bg-slate-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">Everything You Need in an Outsourced CX Partner</h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {[
-              {
-                title: "Multichannel Support",
-                text: "Chat, email and voice support tailored for your customers.",
-                icon: Headphones
-              },
-              {
-                title: "SLA-Driven Ticket Management",
-                text: "Defined SLAs for response time, resolution time and escalation.",
-                icon: Clock
-              },
-              {
-                title: "Trained Support Specialists",
-                text: "Agents trained on your product, knowledge base and tone of voice.",
-                icon: GraduationCap
-              },
-              {
-                title: "24/7 Global Coverage",
-                text: "Around-the-clock support for SaaS, E-commerce, Travel and EdTech brands.",
-                icon: Globe
-              },
-              {
-                title: "Tools We Work With",
-                text: "Zendesk, Freshdesk, Intercom, Gorgias, Salesforce and other leading CX platforms.",
-                icon: Settings,
-                badges: ["Zendesk", "Freshdesk", "Intercom", "Gorgias", "Salesforce"]
-              },
-              {
-                title: "Reporting & Dashboards",
-                text: "Daily/weekly reports, KPIs, CSAT and QA insights.",
-                icon: BarChart3
-              },
-              {
-                title: "AI-Assisted Efficiency",
-                text: "Use AI for suggested replies, summaries and workflows to boost agent productivity.",
-                icon: Zap
-              }
-            ].map((feature, i) => (
-              <div key={i} className={`bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ${i === 6 ? 'md:col-span-2 lg:col-span-3 xl:col-span-1' : ''}`}>
-                <div className="w-12 h-12 rounded-lg bg-blue-50 text-primary flex items-center justify-center mb-6">
-                  <feature.icon className="w-6 h-6" />
-                </div>
-                <h3 className="text-xl font-heading font-bold text-slate-900 mb-3">{feature.title}</h3>
-                <p className="text-slate-600 leading-relaxed mb-4">{feature.text}</p>
-                {feature.badges && (
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    {feature.badges.map((badge, idx) => (
-                      <span key={idx} className="inline-flex items-center px-2 py-1 rounded bg-slate-100 text-slate-600 text-xs font-medium">
-                        {badge}
-                      </span>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 4 - METRICS STRIP */}
-      <section className="py-16 bg-blue-50 border-y border-blue-100">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            {[
-              { stat: "70%", label: "Reduction in email backlog" },
-              { stat: "98%", label: "CSAT across channels" },
-              { stat: "40%", label: "Faster ticket resolutions" },
-              { stat: "50k+", label: "Monthly customer interactions handled" }
-            ].map((item, i) => (
-              <div key={i} className={i === 4 ? "col-span-2 lg:col-span-1" : ""}>
-                <div className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-2">{item.stat}</div>
-                <div className="text-slate-600 font-medium uppercase tracking-wide text-sm">{item.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 5 - MINI CASE STUDY */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
-          <span className="text-primary font-bold uppercase tracking-widest text-sm mb-4 block">Success Story</span>
-          <h2 className="text-3xl font-heading font-bold text-slate-900 mb-8">Case Study: Clearing a 3-Week Backlog in 6 Weeks</h2>
-          <p className="text-xl text-slate-600 mb-12 leading-relaxed">
-            "A US-based travel company faced 2,000+ unresolved emails and rising complaints. Our CX team deployed within 7 days, implemented SLAs and workflow rules, and improved average response time from 48 hours to under 12 hours — while clearing the entire backlog in 6 weeks."
-          </p>
-          <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 relative">
-            <div className="text-sm font-semibold text-slate-500 mb-4 uppercase tracking-wide">Client: US Online Travel Company (Name Confidential)</div>
-            <div className="text-6xl text-blue-200 absolute top-8 left-6 font-serif">"</div>
-            <blockquote className="relative z-10 text-lg text-slate-800 italic mb-6 pt-2">
-              SaberTechs instantly felt like part of our internal team. They fixed our backlog and improved CSAT beyond expectations.
-            </blockquote>
-            <cite className="not-italic font-bold text-slate-900 block">— Growth Lead, Travel Company</cite>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 6 - HOW IT WORKS */}
-      <section className="py-24 bg-slate-900 text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-heading font-bold mb-4 text-white drop-shadow-[0_0_4px_rgba(0,0,0,0.4)]">How We Build and Run Your Support Team</h2>
-            <p className="text-[#F1F1F1] text-lg max-w-2xl mx-auto font-normal opacity-100 drop-shadow-[0_0_4px_rgba(0,0,0,0.4)]">
-              Our proven onboarding framework helps you launch CX operations in days, not months.
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-slate-900 mb-6">Multichannel Customer Support</h2>
+            <div className="w-20 h-1 bg-primary mx-auto rounded-full mb-6"></div>
+            <p className="text-lg text-slate-600">
+              We plug into your existing tools or help you set them up – running inbound and outbound customer contact programs with clear SLAs and simple, transparent reporting.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8 relative">
-            {/* Connecting Line */}
-            <div className="hidden md:block absolute top-[24px] left-[12.5%] right-[12.5%] h-0.5 bg-slate-700 z-0"></div>
-
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                step: "1",
-                title: "Discovery",
-                text: "We analyze ticket volumes, channels, tools and support expectations."
+                title: "Inbound & Outbound Calls",
+                label: "Voice",
+                text: "Customer queries, order status, complaints, call-backs and feedback calls handled by trained agents.",
+                pills: ["Inbound support", "Callbacks", "Complaint handling", "Retention calls"],
+                icon: Headphones
               },
               {
-                step: "2",
-                title: "Setup & Training",
-                text: "We build your support playbook, knowledge base and train agents."
+                title: "Email Support & Ticketing",
+                label: "Email",
+                text: "Structured responses, templates and SLAs for support inboxes, escalations and back-office resolution.",
+                pills: ["Ticket handling", "SLA tracking", "Templates", "Escalation support"],
+                icon: MessageSquare
               },
               {
-                step: "3",
-                title: "Go-Live",
-                text: "CX operations start with SLAs, QA checks and live reporting."
+                title: "Chat & WhatsApp Support",
+                label: "Chat · Messaging",
+                text: "Real-time support across website chat and WhatsApp for pre-sale questions and post-sale service.",
+                pills: ["Web chat", "WhatsApp", "Basic bot + agent", "Instant responses"],
+                icon: MessageSquare
               },
               {
-                step: "4",
-                title: "Continuous Improvement",
-                text: "We review CSAT, QA scores and optimize scripts and workflows."
+                title: "Social Media Response",
+                label: "Social",
+                text: "Handling customer queries, complaints and mentions on platforms like X, Facebook and Instagram.",
+                pills: ["DM responses", "Post comments", "Escalation routing"],
+                icon: Facebook
+              },
+              {
+                title: "L1 Troubleshooting",
+                label: "Tech Support",
+                text: "First-line product and basic technical support with clear scripts and knowledge base integration.",
+                pills: ["How-to support", "Simple troubleshooting", "Ticket routing"],
+                icon: Settings
+              },
+              {
+                title: "NPS & CSAT Programs",
+                label: "CX Programs",
+                text: "Outbound surveys and follow-ups to track customer satisfaction and recover unhappy customers.",
+                pills: ["CSAT surveys", "NPS calls", "Win-back offers"],
+                icon: BarChart3
               }
-            ].map((phase, i) => (
-              <div key={i} className="relative z-10 text-center group">
-                <div className="w-12 h-12 mx-auto bg-slate-800 border-2 border-slate-600 rounded-full flex items-center justify-center text-xl font-bold mb-6 text-white drop-shadow-[0_0_4px_rgba(0,0,0,0.4)] group-hover:bg-primary group-hover:border-primary transition-colors">
-                  {phase.step}
+            ].map((feature, i) => (
+              <div key={i} className="bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">{feature.label}</div>
+                    <h3 className="text-xl font-heading font-bold text-slate-900">{feature.title}</h3>
+                  </div>
+                  <div className="w-10 h-10 rounded-lg bg-blue-50 text-primary flex items-center justify-center shrink-0">
+                    <feature.icon className="w-5 h-5" />
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-white drop-shadow-[0_0_4px_rgba(0,0,0,0.4)]">{phase.title}</h3>
-                <p className="text-[#F1F1F1] text-sm leading-relaxed px-2 opacity-100 drop-shadow-[0_0_4px_rgba(0,0,0,0.4)]">{phase.text}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-16">
-            <Button size="lg" className="bg-white text-slate-900 hover:bg-blue-50 font-bold rounded-full px-8 h-12 shadow-lg transition-all hover:-translate-y-0.5">
-              Start Your CX Journey with SaberTechs
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 7 - INDUSTRIES */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-heading font-bold text-slate-900">Customer Support Expertise Across Industries</h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                name: "SaaS & Tech",
-                text: "Onboarding, troubleshooting and product support for software companies.",
-                icon: Monitor
-              },
-              {
-                name: "E-commerce & D2C",
-                text: "Order status, returns, refunds and pre-sales queries.",
-                icon: ShoppingBag
-              },
-              {
-                name: "Travel & Hospitality",
-                text: "Booking changes, cancellations and itinerary support.",
-                icon: Plane
-              },
-              {
-                name: "EdTech & Assessments",
-                text: "Student queries, login issues and exam support.",
-                icon: GraduationCap
-              }
-            ].map((industry, i) => (
-              <div key={i} className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:border-primary/50 transition-all hover:-translate-y-1">
-                <div className="flex items-center gap-3 mb-3">
-                  <industry.icon className="w-5 h-5 text-primary" />
-                  <h3 className="font-heading font-bold text-slate-900">{industry.name}</h3>
+                <p className="text-slate-600 leading-relaxed mb-6 text-sm">{feature.text}</p>
+                <div className="flex flex-wrap gap-2">
+                  {feature.pills.map((pill, j) => (
+                    <span key={j} className="text-xs font-medium px-2.5 py-1 rounded-full bg-slate-50 text-slate-600 border border-slate-100">
+                      {pill}
+                    </span>
+                  ))}
                 </div>
-                <p className="text-slate-600 text-sm leading-relaxed">{industry.text}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SECTION 8 - PRICING */}
+      {/* SECTION 3 - USE CASES */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">Flexible & Transparent Pricing for SMBs</h2>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">Customer Support Use Cases</h2>
+            <p className="text-lg text-slate-600">
+              Whether you are a startup or an established enterprise, we run focused support programs that match your business model and growth stage.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
-            {[
-              {
-                name: "Starter",
-                idealFor: "Ideal for early-stage teams",
-                features: ["1–2 dedicated agents", "Chat & email support", "Daily reporting"],
-                highlight: false
-              },
-              {
-                name: "Growth",
-                idealFor: "Ideal for scaling CX operations",
-                features: ["3–10 agents", "Multichannel support (chat, email, voice)", "Team lead + QA support", "SLA-based performance"],
-                highlight: true
-              },
-              {
-                name: "Scale",
-                idealFor: "Ideal for 24/7 or multi-region support",
-                features: ["10+ agents", "24/7 coverage", "AI + automation workflows", "Custom reporting & governance"],
-                highlight: false
-              }
-            ].map((plan, i) => (
-              <div key={i} className={`bg-white p-8 rounded-2xl shadow-sm border ${plan.highlight ? 'border-primary ring-2 ring-primary/10 relative' : 'border-slate-200'}`}>
-                {plan.highlight && (
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">
-                    Popular
-                  </div>
-                )}
-                <h3 className="text-2xl font-bold text-slate-900 mb-2 text-center">{plan.name}</h3>
-                <p className="text-sm text-slate-500 text-center mb-6 font-medium">{plan.idealFor}</p>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-3 text-slate-700 text-sm">
-                      <Check className="w-4 h-4 text-green-500 shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <div className="text-center">
-                  <Button variant={plan.highlight ? "default" : "outline"} className={`w-full ${plan.highlight ? "bg-primary hover:bg-blue-700" : "border-slate-300 text-slate-700"}`}>
-                    Inquire
-                  </Button>
-                </div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-primary">
+                <ShoppingBag className="w-6 h-6" />
               </div>
-            ))}
-          </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-6">Order, Booking & Service Support</h3>
+              <ul className="space-y-4">
+                {[
+                  "Order status updates, reschedules and delivery issues.",
+                  "Hotel & travel bookings, date changes and cancellations.",
+                  "Appointment confirmation and reminders for healthcare.",
+                  "Service request creation and progress updates."
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-slate-700">
+                    <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          <div className="text-center">
-             <p className="text-slate-500 text-sm mb-4">Pricing is customized by agent count, coverage hours and channels — transparent, with no hidden fees.</p>
-            <Button size="lg" className="bg-slate-900 text-white hover:bg-slate-800 font-bold rounded-full px-8">
-              Request Custom Pricing
-            </Button>
+            <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-primary">
+                <Users className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-6">Account, Policy & Subscription Support</h3>
+              <ul className="space-y-4">
+                {[
+                  "Account creation assistance and login issues.",
+                  "Policy information, renewal reminders and changes.",
+                  "Subscription upgrades, downgrades and cancellations.",
+                  "Billing doubts and payment confirmations."
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-slate-700">
+                    <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 9 - FAQ & CTA */}
+      {/* SECTION 4 - DELIVERY MODEL */}
       <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-heading font-bold text-slate-900">Customer Support Outsourcing FAQs</h2>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">How We Deliver Customer Support</h2>
+            <p className="text-lg text-slate-600">
+              A simple, predictable operating model so that you can focus on your product while we handle volumes, training and quality.
+            </p>
           </div>
 
-          <Accordion type="single" collapsible className="w-full mb-20">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+              <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                <Globe className="w-6 h-6 text-primary" />
+                Delivery Model
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  "India-based contact center teams trained on your brand playbook.",
+                  "24x7, business-hours or split shift coverage depending on region.",
+                  "Dedicated, shared or hybrid team structures as per budget.",
+                  "We can plug into your tools (Freshdesk, Zendesk, Zoho, etc.) or help set them up."
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-slate-700">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+              <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                <BarChart3 className="w-6 h-6 text-primary" />
+                Quality & Reporting
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  "QA scorecards customized to your processes and tone of voice.",
+                  "Call and ticket audits with coaching inputs for agents.",
+                  "Daily and weekly reports with volumes, SLAs and key reasons for contact.",
+                  "Simple dashboards highlighting trends and improvement areas."
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-slate-700">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5 - INDUSTRIES */}
+      <section className="py-24 bg-slate-900 text-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-heading font-bold mb-6">Industries We Support</h2>
+          <p className="text-slate-300 max-w-2xl mx-auto mb-12">
+            Our teams are trained for both domestic and international support across multiple verticals.
+          </p>
+          
+          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+            {[
+              "E-commerce & D2C",
+              "Travel & Hospitality",
+              "Telecom & Internet",
+              "Healthcare & Diagnostics",
+              "BFSI & Fintech",
+              "EdTech",
+              "SaaS & Software",
+              "Logistics & Last-mile"
+            ].map((industry, i) => (
+              <span key={i} className="px-6 py-3 rounded-full bg-slate-800 border border-slate-700 text-slate-200 font-medium hover:bg-primary hover:border-primary hover:text-white transition-all cursor-default">
+                {industry}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 6 - FAQ */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">Customer Support – FAQs</h2>
+            <p className="text-lg text-slate-600">
+              A few quick answers. We are happy to walk you through the model in more detail over a short call.
+            </p>
+          </div>
+
+          <Accordion type="single" collapsible className="w-full space-y-4">
             {[
               {
-                q: "What is outsourced customer support?",
-                a: "It's partnering with a specialized provider to handle your customer service operations, allowing you to focus on your core business while ensuring high-quality support."
+                q: "What is the minimum team size I can start with?",
+                a: "Many clients start with 2–5 agents and then ramp up after the first few weeks. We can support very small pilots as well as larger teams."
               },
               {
-                q: "How fast can you deploy a support team?",
-                a: "We can typically launch a dedicated support team in as little as 7-14 days, depending on the complexity of your requirements and training needs."
+                q: "Can you support both India and international customers?",
+                a: "Yes. We support domestic calls as well as international regions, depending on language, time-zone and compliance requirements."
               },
               {
-                q: "Do you offer 24/7 support or weekend coverage?",
-                a: "Yes, we provide 24/7 coverage, as well as after-hours and weekend support to ensure your customers are always taken care of."
+                q: "How do you charge for customer support services?",
+                a: "The commercial model can be per FTE (full-time equivalent), per hour or a structured package for shared teams. It depends on volumes, complexity and coverage hours."
               },
               {
-                q: "Which tools and platforms do you work with?",
-                a: "We are experienced with all major support platforms including Zendesk, Intercom, Freshdesk, Gorgias, Salesforce, and HubSpot."
-              },
-              {
-                q: "How do you ensure quality and CSAT?",
-                a: "We implement rigorous QA processes, regular coaching, and performance monitoring based on defined KPIs and SLAs to maintain high service standards."
-              },
-              {
-                q: "Can we scale up or down based on seasonality?",
-                a: "Absolutely. Our flexible staffing model allows you to scale your team size up or down to match your business fluctuations and seasonal peaks."
-              },
-              {
-                q: "How does outsourced support reduce our costs?",
-                a: "You save on hiring, training, benefits, software licenses, and management overhead. Outsourcing typically reduces support costs by 40-60% compared to in-house teams."
-              },
-              {
-                q: "What are your pricing models?",
-                a: "We offer flexible pricing options including hourly rates, monthly dedicated agent fees, and pay-per-ticket models depending on your needs."
+                q: "Can you integrate with our existing tools?",
+                a: "In most cases, yes. We work with popular CRMs and helpdesk tools like Freshdesk, Zendesk, Zoho, HubSpot and custom systems using your access and SOPs."
               }
             ].map((faq, i) => (
-              <AccordionItem key={i} value={`item-${i}`}>
-                <AccordionTrigger className="text-left text-lg font-medium text-slate-900 hover:text-primary">
+              <AccordionItem key={i} value={`item-${i}`} className="border border-slate-200 rounded-lg px-6 data-[state=open]:bg-slate-50 transition-colors">
+                <AccordionTrigger className="text-left font-bold text-slate-900 hover:text-primary py-6 text-lg">
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-slate-600 leading-relaxed">
+                <AccordionContent className="text-slate-600 leading-relaxed pb-6 text-base">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>
@@ -747,23 +619,23 @@ export default function CustomerSupportCX() {
         </div>
       </section>
 
-      {/* FINAL CTA BAND */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">Ready to Build Your Customer Support Team?</h2>
-          <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-            Get a tailored CX proposal within 24 hours. No hiring. No overhead. Just scalable support.
+      {/* SECTION 7 - FINAL CTA */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-900"></div>
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">Planning to Outsource Customer Support?</h2>
+          <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto font-light">
+            Share a brief about your support volumes, languages and channels. We’ll respond with a simple proposal – team structure, coverage, commercials and next steps.
           </p>
-          <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50 font-bold rounded-full px-10 h-14 text-lg shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 mb-6">
-            Book a Consultation
-          </Button>
-          
-          <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center text-blue-100 text-sm font-medium">
-            <span className="flex items-center gap-2"><Check className="w-4 h-4" /> Trusted by 50+ businesses</span>
-            <span className="hidden sm:inline opacity-50">•</span>
-            <span className="flex items-center gap-2"><Check className="w-4 h-4" /> 98% CSAT</span>
-            <span className="hidden sm:inline opacity-50">•</span>
-            <span className="flex items-center gap-2"><Check className="w-4 h-4" /> Onboarding in as little as 7 days</span>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50 font-bold rounded-full px-12 h-16 text-xl shadow-xl transition-transform hover:scale-105">
+              Email Your Requirement
+            </Button>
+            <Button size="lg" variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold rounded-full px-12 h-16 text-xl shadow-xl transition-transform hover:scale-105">
+              Chat on WhatsApp
+            </Button>
           </div>
         </div>
       </section>
