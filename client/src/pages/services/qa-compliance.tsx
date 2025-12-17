@@ -161,7 +161,7 @@ export default function QACompliance() {
                 </div>
               </div>
 
-              <a href="#" className={`text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors ${isScrolled ? "text-slate-600" : "text-slate-700"}`}>
+              <a href="/#why-us" className={`text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors ${isScrolled ? "text-slate-600" : "text-slate-700"}`}>
                 Why Us
               </a>
               <Link href="/contact">
@@ -287,7 +287,7 @@ export default function QACompliance() {
                   </AnimatePresence>
                 </div>
 
-                <a href="#" className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50">Why Us</a>
+                <a href="/#why-us" className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50">Why Us</a>
                 <Link href="/contact">
                   <span className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50 block cursor-pointer">Contact</span>
                 </Link>
