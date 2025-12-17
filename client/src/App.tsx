@@ -13,6 +13,7 @@ import BackOfficeOperations from "@/pages/services/back-office-operations";
 import GigWorkforce from "@/pages/services/gig-workforce";
 import QACompliance from "@/pages/services/qa-compliance";
 import AIAutomation from "@/pages/services/ai-automation";
+import Contact from "@/pages/contact";
 
 function Router() {
   return (
@@ -25,6 +26,7 @@ function Router() {
       <Route path="/services/qa-compliance" component={QACompliance} />
       <Route path="/services/ai-automation" component={AIAutomation} />
       <Route path="/services/gig-workforce" component={GigWorkforce} />
+      <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>
   );

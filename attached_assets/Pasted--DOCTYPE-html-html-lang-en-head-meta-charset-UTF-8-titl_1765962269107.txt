@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us | SaberTechs – Talk to Our Team</title>
+  <meta name="description" content="Contact SaberTechs for customer support outsourcing, inside sales, back office operations, QA & compliance, AI automation and gig workforce in India. Share your requirement and our team will respond with a simple plan." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0B1F3A;     /* Navy Blue */
+      --secondary: #22C55E;   /* Action Green */
+      --background: #F8FAFC;  /* Soft White */
+      --text-main: #1F2933;   /* Dark Charcoal */
+      --text-muted: #6B7280;  /* Grey */
+      --accent: #F59E0B;      /* Amber (rare) */
+      --border-soft: #E5E7EB;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
+
+      --radius-lg: 16px;
+      --radius-md: 10px;
+      --radius-pill: 999px;
+      --spacing-section: 64px;
+      --max-width: 1120px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--background);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 24px 16px 48px;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    /* Typography */
+
+    h1, h2, h3, h4 {
+      font-weight: 600;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: clamp(30px, 5vw, 40px);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: clamp(22px, 3vw, 26px);
+      margin-bottom: 6px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--text-main);
+    }
+
+    .text-muted {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* Layout / Sections */
+
+    .section {
+      margin-bottom: var(--spacing-section);
+    }
+
+    .section-header {
+      margin-bottom: 18px;
+    }
+
+    .section-header p {
+      max-width: 640px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    /* Hero */
+
+    .hero {
+      padding: 32px 0 32px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: rgba(34, 197, 94, 0.12);
+      color: var(--secondary);
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--secondary);
+    }
+
+    .hero-title {
+      font-size: clamp(30px, 5vw, 40px);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero-highlight {
+      color: var(--secondary);
+    }
+
+    .hero-subtitle {
+      max-width: 640px;
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .hero-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .metric-pill {
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-soft);
+      background: #FFFFFF;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .metric-pill span {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* Buttons */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: var(--radius-pill);
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #22C55E, #16A34A);
+      border-color: #16A34A;
+      color: #022C22;
+      box-shadow: 0 10px 30px rgba(34, 197, 94, 0.35);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.04);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: #FFFFFF;
+      border-color: var(--border-soft);
+      color: var(--primary);
+    }
+
+    .btn-outline:hover {
+      border-color: #CBD5F5;
+      background-color: #F9FAFB;
+    }
+
+    /* Cards & Pills */
+
+    .card {
+      background-color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 18px 18px 16px;
+      border: 1px solid #E5E7EB;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .card-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .card-text {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .pill {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: var(--radius-pill);
+      border: 1px solid #E5E7EB;
+      background: #F9FAFB;
+      color: var(--text-muted);
+    }
+
+    /* Form */
+
+    .form-card {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 18px;
+      border: 1px solid #E5E7EB;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .form-field {
+      flex: 1 1 220px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 10px;
+    }
+
+    .form-label {
+      font-size: 13px;
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      border-radius: var(--radius-md);
+      border: 1px solid #D1D5DB;
+      padding: 8px 10px;
+      font-size: 14px;
+      font-family: inherit;
+      background-color: #FFFFFF;
+      color: var(--text-main);
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--secondary);
+      box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.25);
+    }
+
+    .hint {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* FAQ */
+
+    .faq-item {
+      border-bottom: 1px solid var(--border-soft);
+      padding: 10px 0;
+    }
+
+    .faq-q {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    .faq-a {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* CTA Footer (small) */
+
+    .cta-footer {
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: var(--radius-lg);
+      border: 1px dashed rgba(148, 163, 184, 0.7);
+      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.08), #FFFFFF 50%);
+    }
+
+    .cta-footer-title {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--primary);
+    }
+
+    .cta-footer-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        padding: 18px 14px 32px;
+      }
+
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <main class="container" id="contact-page">
+
+      <!-- HERO -->
+      <section class="hero">
+        <span class="badge">
+          <span class="badge-dot"></span>
+          Contact · SaberTechs
+        </span>
+
+        <h1 class="hero-title">
+          Let’s Talk About <span class="hero-highlight">Work You Want to Get Done</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Whether you’re looking for customer support, inside sales, back office operations, QA, AI automation or gig workforce in India, share a few details and we’ll respond with a simple, practical plan.
+        </p>
+
+        <div class="hero-metrics">
+          <div class="metric-pill"><span>Business enquiries</span> – India & global</div>
+          <div class="metric-pill"><span>Response time</span> – usually within 1 business day</div>
+          <div class="metric-pill"><span>Engagements</span> – pilots, projects & long-term teams</div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="scrollToForm()">Share Your Requirement</button>
+          <button class="btn btn-outline" onclick="openWhatsApp()">
+            Chat on WhatsApp
+          </button>
+        </div>
+      </section>
+
+      <!-- CONTACT OPTIONS (CARDS) -->
+      <section class="section">
+        <div class="section-header">
+          <h2>How Would You Like to Connect?</h2>
+          <p>
+            Pick what fits you best. A short email with a few lines about your requirement is often the fastest way to get started.
+          </p>
+        </div>
+
+        <div class="grid grid-2">
+          <!-- Business Enquiries -->
+          <div class="card">
+            <h3 class="card-title">Business, Projects & Partnerships</h3>
+            <p class="card-text">
+              For customer support, revenue & inside sales, back office, QA & compliance, AI automation and gig workforce requirements.
+            </p>
+            <div class="pill-list">
+              <span class="pill">India & International</span>
+              <span class="pill">Pilots & Projects</span>
+              <span class="pill">Long-term teams</span>
+            </div>
+            <div style="margin-top: 12px; font-size: 14px;">
+              <div><strong>Email:</strong> <a href="mailto:info@sabertechs.com">info@sabertechs.com</a></div>
+              <div><strong>WhatsApp:</strong> <a href="https://wa.me/919999999999" target="_blank">+91-99999-99999</a></div>
+            </div>
+          </div>
+
+          <!-- Careers / Gig -->
+          <div class="card">
+            <h3 class="card-title">Careers & Gig Workforce</h3>
+            <p class="card-text">
+              For people who want to work with us full-time or as a gig worker (proctors, field work, calling, audits and more).
+            </p>
+            <div class="pill-list">
+              <span class="pill">Freelance proctors</span>
+              <span class="pill">Gig workers</span>
+              <span class="pill">Full-time roles</span>
+            </div>
+            <div style="margin-top: 12px; font-size: 14px;">
+              <div><strong>Email:</strong> <a href="mailto:careers@sabertechs.com">careers@sabertechs.com</a></div>
+              <div class="hint">Mention your city, experience and what kind of work you’re looking for.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MAIN CONTACT FORM -->
+      <section class="section" id="contact-form">
+        <div class="section-header">
+          <h2>Tell Us What You Need Help With</h2>
+          <p>
+            A short form so that we understand your context before we speak. You don’t have to fill everything – just what you know today.
+          </p>
+        </div>
+
+        <div class="form-card">
+          <form onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-field">
+                <label class="form-label">Your Name</label>
+                <input type="text" name="name" placeholder="Full name" required />
+              </div>
+              <div class="form-field">
+                <label class="form-label">Company / Organisation</label>
+                <input type="text" name="company" placeholder="Company or project name" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label class="form-label">Work Email</label>
+                <input type="email" name="email" placeholder="you@example.com" required />
+              </div>
+              <div class="form-field">
+                <label class="form-label">Phone / WhatsApp</label>
+                <input type="tel" name="phone" placeholder="+91..." />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label class="form-label">What are you interested in?</label>
+                <select name="service">
+                  <option value="">Select a service</option>
+                  <option>Customer Support & CX</option>
+                  <option>Revenue & Inside Sales</option>
+                  <option>Back Office Operations</option>
+                  <option>QA & Compliance</option>
+                  <option>AI Automation</option>
+                  <option>Gig Workforce</option>
+                  <option>Multiple services / Not sure</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label class="form-label">Region / Market</label>
+                <select name="region">
+                  <option value="">Select region</option>
+                  <option>India</option>
+                  <option>USA / North America</option>
+                  <option>UK / Europe</option>
+                  <option>Middle East</option>
+                  <option>Other / Multiple</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label class="form-label">Approximate Volumes (if known)</label>
+                <input type="text" name="volumes" placeholder="e.g. 2,000 calls/month, 5 agents, 300 orders/day" />
+                <span class="hint">Share any rough idea. We’ll refine it together.</span>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label class="form-label">Tell us a bit about your requirement</label>
+              <textarea name="requirement" placeholder="Example: We are looking for a small team to handle customer support for our D2C brand in India and the US. We currently get 200–300 tickets per day across chat, email and calls."></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label class="form-label">How should we contact you?</label>
+                <select name="contact_preference">
+                  <option value="">Select preference</option>
+                  <option>Email only</option>
+                  <option>Phone / WhatsApp</option>
+                  <option>Either email or phone</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label class="form-label">Preferred time to connect (India time)</label>
+                <input type="text" name="time" placeholder="e.g. 11:00 am – 6:00 pm IST" />
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+              Send Details via Email
+            </button>
+            <span class="hint" style="margin-left:8px;">This will open an email draft with your inputs.</span>
+          </form>
+        </div>
+      </section>
+
+      <!-- LOCATIONS & AVAILABILITY -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Where We Operate</h2>
+          <p>
+            We are based in India and support clients across India, the US and other regions, with teams that can work across different time zones.
+          </p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <h3 class="card-title">India (Primary Operations)</h3>
+            <p class="card-text">
+              Our core delivery teams for customer support, sales, back office, QA and gig workforce are based in India.
+            </p>
+            <div class="pill-list">
+              <span class="pill">India time zone coverage</span>
+              <span class="pill">English & regional languages</span>
+              <span class="pill">On-ground gig workforce</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Serving Global Clients</h3>
+            <p class="card-text">
+              We support clients serving customers in India as well as those targeting US and other international markets.
+            </p>
+            <div class="pill-list">
+              <span class="pill">US hours</span>
+              <span class="pill">Blend of shifts</span>
+              <span class="pill">Remote delivery</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SHORT FAQ -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Contact – FAQs</h2>
+          <p>
+            A few questions people ask when they reach out for the first time.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="faq-item">
+            <div class="faq-q">What information should we share in the first message?</div>
+            <div class="faq-a">
+              Even a simple note with your industry, what you want to outsource, and rough volumes (if known) is enough to start. We can figure out the rest together on a quick call.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Do you work with small teams or only large setups?</div>
+            <div class="faq-a">
+              We work with both. Many engagements start small – a few agents or a limited-scope project – and then grow once the model is stable.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Can we start with a pilot?</div>
+            <div class="faq-a">
+              Yes. Pilots are a good way to validate fit, quality and economics before scaling. We can jointly define a small, time-bound pilot scope.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">How soon can a project go live?</div>
+            <div class="faq-a">
+              It depends on the complexity of your process. For simple, clearly defined work, we can usually move from discussion to a small live setup quite quickly after commercials are aligned.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="cta-footer">
+        <h2 class="cta-footer-title">Ready When You Are</h2>
+        <p class="cta-footer-text">
+          You can fill the form, email us, or just send a short WhatsApp message. We’ll come back with a straightforward, no-jargon conversation about what’s possible.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="scrollToForm()">Fill the Contact Form</button>
+          <button class="btn btn-outline" onclick="openContactEmail()">
+            Email Us Directly
+          </button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    function scrollToForm() {
+      const el = document.getElementById("contact-form");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+
+    function openWhatsApp() {
+      // Replace with your business WhatsApp number in international format
+      const phone = "919999999999"; // TODO: update this
+      const text = encodeURIComponent("Hi, I’d like to discuss outsourcing / gig / operations with your team.");
+      window.open("https://wa.me/" + phone + "?text=" + text, "_blank");
+    }
+
+    function openContactEmail() {
+      // Change this to your main contact email
+      window.location.href = "mailto:info@sabertechs.com?subject=Contact%20SaberTechs&body=Hi%20Team,%0D%0A%0D%0AWe%20would%20like%20to%20discuss%20a%20requirement.%20Here%20are%20some%20quick%20details:%0D%0A%0D%0A-%20Industry%3A%0D%0A-%20Type%20of%20work%20%28support%2Fsales%2Fback%20office%2FQA%2Fautomation%2Fgig%29%3A%0D%0A-%20Approx.%20volumes%20per%20day%2Fmonth%3A%0D%0A-%20Regions%20%2F%20time%20zones%3A%0D%0A%0D%0ARegards,%0D%0A";
+    }
+
+    // When form is submitted, open mailto with filled values
+    function handleSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+
+      const name = encodeURIComponent(form.name.value || "");
+      const company = encodeURIComponent(form.company.value || "");
+      const email = encodeURIComponent(form.email.value || "");
+      const phone = encodeURIComponent(form.phone.value || "");
+      const service = encodeURIComponent(form.service.value || "");
+      const region = encodeURIComponent(form.region.value || "");
+      const volumes = encodeURIComponent(form.volumes.value || "");
+      const requirement = encodeURIComponent(form.requirement.value || "");
+      const contactPref = encodeURIComponent(form.contact_preference.value || "");
+      const time = encodeURIComponent(form.time.value || "");
+
+      const subject = "Contact form submission – SaberTechs website";
+      const body =
+        "Hi Team,%0D%0A%0D%0AHere are the details from the contact form:%0D%0A%0D%0A" +
+        "Name: " + name + "%0D%0A" +
+        "Company: " + company + "%0D%0A" +
+        "Email: " + email + "%0D%0A" +
+        "Phone/WhatsApp: " + phone + "%0D%0A" +
+        "Service interested in: " + service + "%0D%0A" +
+        "Region/Market: " + region + "%0D%0A" +
+        "Approx. volumes: " + volumes + "%0D%0A" +
+        "Requirement details: " + requirement + "%0D%0A" +
+        "Contact preference: " + contactPref + "%0D%0A" +
+        "Preferred time to connect (IST): " + time + "%0D%0A%0D%0A" +
+        "Regards,%0D%0A" + name;
+
+      const mailto = "mailto:info@sabertechs.com"
+        + "?subject=" + encodeURIComponent(subject)
+        + "&body=" + body;
+
+      window.location.href = mailto;
+    }
+  </script>
+</body>
+</html>
