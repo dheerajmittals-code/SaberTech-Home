@@ -23,7 +23,10 @@ import {
   Menu,
   X,
   Phone,
-  ChevronDown
+  ChevronDown,
+  Globe,
+  Network,
+  FileBarChart
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -424,49 +427,64 @@ export default function Home() {
       </section>
 
       {/* SECTION 3 — WHY SABERTECHS (Light Grey Section) */}
-      <section className="pt-32 pb-40 bg-slate-50 relative overflow-hidden">
+      <section className="pt-32 pb-40 bg-slate-50 relative overflow-hidden" id="why-us">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-[0.018]" style={{ backgroundImage: 'radial-gradient(#000000 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-primary font-bold uppercase tracking-widest text-sm mb-2 block">Why Choose Us</span>
-            <h2 className="text-3xl font-heading font-bold text-slate-900 sm:text-4xl">Why Companies Choose SaberTechs</h2>
+            <h2 className="text-3xl font-heading font-bold text-slate-900 sm:text-4xl">Why Work With Us</h2>
+            <p className="mt-4 text-lg text-slate-600 leading-relaxed">
+              We combine human teams, practical automation and simple, transparent reporting so that you can move work to us with confidence.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
              {[
                {
-                 title: "Start Small, Scale Anytime",
-                 description: "Begin with 1–2 agents and expand as your business grows.",
-                 icon: Scaling,
+                 title: "Human-First, Quiet Use of AI",
+                 description: "Our core strength is well-trained human teams for support, sales, back office and QA. We use AI only where it actually helps – reducing repeat work, speeding up answers and keeping costs under control, without compromising on empathy.",
+                 icon: Users,
                  color: "text-blue-600 bg-blue-50"
                },
                {
-                 title: "CX + Ops + Sales",
-                 description: "One partner for support, back-office, sales & gig workforce.",
+                 title: "One Partner for Multiple Workstreams",
+                 description: "Customer support, inside sales, back office operations, QA & compliance and gig workforce – all under one roof. You don’t have to juggle multiple vendors or worry about gaps between teams.",
                  icon: Layers,
                  color: "text-purple-600 bg-purple-50"
                },
                {
-                 title: "AI-Enhanced Efficiency",
-                 description: "Automated workflows, routing & knowledge-base responses.",
-                 icon: Zap,
+                 title: "India Operations, Built for India + Global",
+                 description: "Our delivery is based in India, but our processes are designed for both Indian and international customers. We can run India-only, US-hours or blended models depending on your markets and budgets.",
+                 icon: Globe,
+                 color: "text-indigo-600 bg-indigo-50"
+               },
+               {
+                 title: "Experience With Large, Distributed Teams",
+                 description: "From contact center teams to thousands of freelance exam proctors, we know how to run large, distributed operations with clear SOPs, checklists, reporting and escalation paths.",
+                 icon: Network,
+                 color: "text-emerald-600 bg-emerald-50"
+               },
+               {
+                 title: "Transparent Reporting, No Jargon",
+                 description: "You get simple, regular views: volumes, SLAs, quality scores, major reasons for contact and what we are improving next. Easy to understand, easy to present to your leadership or clients.",
+                 icon: FileBarChart,
                  color: "text-amber-600 bg-amber-50"
                },
                {
-                 title: "Fast Deployment",
-                 description: "Launch customer support operations in as little as 72 hours.",
-                 icon: Clock,
-                 color: "text-emerald-600 bg-emerald-50"
+                 title: "Start Small, Scale in Phases",
+                 description: "Many engagements start with a small pilot or a single process. Once the model is working well and the economics are clear, we scale teams and scope in a planned way instead of rushing.",
+                 icon: Scaling,
+                 color: "text-rose-600 bg-rose-50"
                }
              ].map((feature, i) => (
-               <div key={i} className="flex flex-col items-center text-center p-6 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300 group border border-transparent hover:border-slate-100">
-                 <div className={`w-16 h-16 rounded-full ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                   <feature.icon className="w-8 h-8 stroke-[1.5]" />
+               <div key={i} className="flex flex-col items-start text-left p-8 rounded-xl bg-white shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group border border-slate-100 h-full">
+                 <div className={`w-14 h-14 rounded-xl ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                   <feature.icon className="w-7 h-7 stroke-[1.5]" />
                  </div>
-                 <h3 className="text-lg font-heading font-bold text-slate-900 mb-3">{feature.title}</h3>
-                 <p className="text-slate-600 text-sm leading-relaxed">{feature.description}</p>
+                 <h3 className="text-xl font-heading font-bold text-slate-900 mb-4">{feature.title}</h3>
+                 <p className="text-slate-600 text-base leading-relaxed">{feature.description}</p>
                </div>
              ))}
           </div>

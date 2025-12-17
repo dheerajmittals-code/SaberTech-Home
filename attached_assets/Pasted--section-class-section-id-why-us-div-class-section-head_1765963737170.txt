@@ -1,0 +1,52 @@
+<section class="section" id="why-us">
+  <div class="section-header">
+    <h2>Why Work With Us</h2>
+    <p>
+      We combine human teams, practical automation and simple, transparent reporting so that you can move work to us with confidence.
+    </p>
+  </div>
+
+  <div class="grid grid-2">
+    <div class="card">
+      <h3 class="card-title">Human-First, Quiet Use of AI</h3>
+      <p class="card-text">
+        Our core strength is well-trained human teams for support, sales, back office and QA. We use AI only where it actually helps – reducing repeat work, speeding up answers and keeping costs under control, without compromising on empathy.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">One Partner for Multiple Workstreams</h3>
+      <p class="card-text">
+        Customer support, inside sales, back office operations, QA & compliance and gig workforce – all under one roof. You don’t have to juggle multiple vendors or worry about gaps between teams.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">India Operations, Built for India + Global</h3>
+      <p class="card-text">
+        Our delivery is based in India, but our processes are designed for both Indian and international customers. We can run India-only, US-hours or blended models depending on your markets and budgets.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">Experience With Large, Distributed Teams</h3>
+      <p class="card-text">
+        From contact center teams to thousands of freelance exam proctors, we know how to run large, distributed operations with clear SOPs, checklists, reporting and escalation paths.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">Transparent Reporting, No Jargon</h3>
+      <p class="card-text">
+        You get simple, regular views: volumes, SLAs, quality scores, major reasons for contact and what we are improving next. Easy to understand, easy to present to your leadership or clients.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3 class="card-title">Start Small, Scale in Phases</h3>
+      <p class="card-text">
+        Many engagements start with a small pilot or a single process. Once the model is working well and the economics are clear, we scale teams and scope in a planned way instead of rushing.
+      </p>
+    </div>
+  </div>
+</section>
