@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Back Office Operations Services | Data, Catalog, Admin & Support Ops</title>
+  <meta name="description" content="Outsource back office operations to our India-based team. Data entry, order processing, catalog management, content moderation, finance support, ticket back-end and reporting with strong quality controls." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0B1F3A;     /* Navy Blue */
+      --secondary: #22C55E;   /* Action Green */
+      --background: #F8FAFC;  /* Soft White */
+      --text-main: #1F2933;   /* Dark Charcoal */
+      --text-muted: #6B7280;  /* Grey */
+      --accent: #F59E0B;      /* Amber (rare) */
+      --border-soft: #E5E7EB;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
+
+      --radius-lg: 16px;
+      --radius-md: 10px;
+      --radius-pill: 999px;
+      --spacing-section: 64px;
+      --max-width: 1120px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--background);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 24px 16px 48px;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    /* Typography */
+
+    h1, h2, h3, h4 {
+      font-weight: 600;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: clamp(30px, 5vw, 40px);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: clamp(22px, 3vw, 26px);
+      margin-bottom: 6px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--text-main);
+    }
+
+    .text-muted {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* Layout / Sections */
+
+    .section {
+      margin-bottom: var(--spacing-section);
+    }
+
+    .section-header {
+      margin-bottom: 18px;
+    }
+
+    .section-header p {
+      max-width: 640px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    /* Hero */
+
+    .hero {
+      padding: 32px 0 32px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: rgba(34, 197, 94, 0.12);
+      color: var(--secondary);
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--secondary);
+    }
+
+    .hero-title {
+      font-size: clamp(30px, 5vw, 40px);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero-highlight {
+      color: var(--secondary);
+    }
+
+    .hero-subtitle {
+      max-width: 640px;
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .hero-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .metric-pill {
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-soft);
+      background: #FFFFFF;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .metric-pill span {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* Buttons */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: var(--radius-pill);
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #22C55E, #16A34A);
+      border-color: #16A34A;
+      color: #022C22;
+      box-shadow: 0 10px 30px rgba(34, 197, 94, 0.35);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.04);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: #FFFFFF;
+      border-color: var(--border-soft);
+      color: var(--primary);
+    }
+
+    .btn-outline:hover {
+      border-color: #CBD5F5;
+      background-color: #F9FAFB;
+    }
+
+    /* Cards & Pills */
+
+    .card {
+      background-color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 18px 18px 16px;
+      border: 1px solid #E5E7EB;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .card-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+
+    .card-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .card-text {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .pill {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: var(--radius-pill);
+      border: 1px solid #E5E7EB;
+      background: #F9FAFB;
+      color: var(--text-muted);
+    }
+
+    /* Lists */
+
+    .bullet-list {
+      list-style: none;
+      padding-left: 0;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .bullet-list li {
+      margin-bottom: 6px;
+      position: relative;
+      padding-left: 14px;
+    }
+
+    .bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--secondary);
+      font-size: 14px;
+    }
+
+    /* FAQ */
+
+    .faq-item {
+      border-bottom: 1px solid var(--border-soft);
+      padding: 10px 0;
+    }
+
+    .faq-q {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    .faq-a {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* CTA Footer */
+
+    .cta-footer {
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: var(--radius-lg);
+      border: 1px dashed rgba(148, 163, 184, 0.7);
+      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.08), #FFFFFF 50%);
+    }
+
+    .cta-footer-title {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--primary);
+    }
+
+    .cta-footer-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        padding: 18px 14px 32px;
+      }
+
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <main class="container" id="back-office-ops">
+
+      <!-- HERO -->
+      <section class="hero">
+        <span class="badge">
+          <span class="badge-dot"></span>
+          Services · Back Office Operations
+        </span>
+
+        <h1 class="hero-title">
+          Back Office <span class="hero-highlight">Operations</span> That Keep Your Business Moving
+        </h1>
+
+        <p class="hero-subtitle">
+          Shift repetitive, high-volume work to an India-based back office team. We handle data, catalog, order processing, content checks, finance support and ticket back-end so your core team can focus on growth.
+        </p>
+
+        <div class="hero-metrics">
+          <div class="metric-pill"><span>Data</span> & catalog operations</div>
+          <div class="metric-pill"><span>Orders</span> & transaction processing</div>
+          <div class="metric-pill"><span>99%+</span> accuracy targets with QA</div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="scrollToContact()">Discuss Back Office Scope</button>
+          <button class="btn btn-outline" onclick="scrollToContact()">Get Cost Estimate</button>
+        </div>
+      </section>
+
+      <!-- CORE WORKSTREAMS -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Core Back Office Workstreams</h2>
+          <p>
+            We pick up the processes that are critical but repeatable – with clear SOPs, checklists and SLAs – and run them at scale from India.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Data & Content Entry -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-label">Data</div>
+                <h3 class="card-title">Data Entry & Content Updates</h3>
+              </div>
+            </div>
+            <p class="card-text">
+              Structured entry and updates of customer, product, transaction and content data into your systems.
+            </p>
+            <div class="pill-list">
+              <span class="pill">CRM data</span>
+              <span class="pill">Spreadsheet work</span>
+              <span class="pill">Form digitisation</span>
+            </div>
+          </article>
+
+          <!-- Catalog Management -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-label">E-commerce</div>
+                <h3 class="card-title">Product & Catalog Management</h3>
+              </div>
+            </div>
+            <p class="card-text">
+              Creating and maintaining product listings, attributes, pricing and images across marketplaces and your own store.
+            </p>
+            <div class="pill-list">
+              <span class="pill">SKU creation</span>
+              <span class="pill">Attribute mapping</span>
+              <span class="pill">Price & stock updates</span>
+            </div>
+          </article>
+
+          <!-- Order & Transaction -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-label">Orders</div>
+                <h3 class="card-title">Order & Transaction Processing</h3>
+              </div>
+            </div>
+            <p class="card-text">
+              Back-end checks, approvals and updates for orders, refunds, cancellations and policy requests.
+            </p>
+            <div class="pill-list">
+              <span class="pill">Refund workflows</span>
+              <span class="pill">Cancellations</span>
+              <span class="pill">Exception handling</span>
+            </div>
+          </article>
+
+          <!-- Content Review -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-label">Content</div>
+                <h3 class="card-title">Content Review & Moderation</h3>
+              </div>
+            </div>
+            <p class="card-text">
+              Manual checks on user-generated content, listings, profiles, comments and reviews as per your guidelines.
+            </p>
+            <div class="pill-list">
+              <span class="pill">Profile checks</span>
+              <span class="pill">Review moderation</span>
+              <span class="pill">Listing approvals</span>
+            </div>
+          </article>
+
+          <!-- Finance & Admin -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-label">Finance</div>
+                <h3 class="card-title">Finance & Admin Support</h3>
+              </div>
+            </div>
+            <p class="card-text">
+              Support for basic finance operations like invoice checks, reconciliation prep and payout lists.
+            </p>
+            <div class="pill-list">
+              <span class="pill">Invoice validation</span>
+              <span class="pill">Reconciliation prep</span>
+              <span class="pill">Payout files</span>
+            </div>
+          </article>
+
+          <!-- Ticket Back-end -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-label">Support Ops</div>
+                <h3 class="card-title">Ticket Back-End & Case Work</h3>
+              </div>
+            </div>
+            <p class="card-text">
+              Behind-the-scenes work on tickets – verifying documents, updating systems and closing cases.
+            </p>
+            <div class="pill-list">
+              <span class="pill">Case checks</span>
+              <span class="pill">Status updates</span>
+              <span class="pill">SLA chasing</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- USE CASES -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Back Office Use Cases</h2>
+          <p>
+            A few examples of how clients use our back office teams. Your exact process can be mapped and customized.
+          </p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <h3 class="card-title">E-commerce & Marketplace Ops</h3>
+            <ul class="bullet-list">
+              <li>Bulk catalog uploads and regular price / stock updates.</li>
+              <li>Seller onboarding checks and KYC document verification.</li>
+              <li>Order exception handling – address issues, COD checks, high-risk orders.</li>
+              <li>Returns and refund processing in coordination with support and finance.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Service & Subscription Businesses</h3>
+            <ul class="bullet-list">
+              <li>Plan change processing and back-end updates in systems.</li>
+              <li>Document checks for policy issuance, loans or service eligibility.</li>
+              <li>Basic QA on forms submitted by customers and partners.</li>
+              <li>Backlog clean-up and data hygiene projects.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- DELIVERY MODEL -->
+      <section class="section">
+        <div class="section-header">
+          <h2>How We Run Your Back Office</h2>
+          <p>
+            A simple, documented operating model – so that work gets done everyday without you having to chase tasks.
+          </p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <h3 class="card-title">Process & SOPs</h3>
+            <ul class="bullet-list">
+              <li>We start by mapping your current process, tools and edge cases.</li>
+              <li>Clear SOPs and checklists are created jointly with your team.</li>
+              <li>Work is batched into queues with defined SLAs and priorities.</li>
+              <li>We use your systems or shared trackers, as per your preference.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Quality & Controls</h3>
+            <ul class="bullet-list">
+              <li>Sampling-based QA with accuracy targets defined per process.</li>
+              <li>Exception logs and error feedback loops for agents.</li>
+              <li>Daily productivity reports – items processed, backlogs, exceptions.</li>
+              <li>Simple dashboards to track trends and turnaround times.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- INDUSTRIES -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Who Uses Our Back Office Teams</h2>
+          <p>
+            Our back office model works well for both digital-first and traditional businesses that need steady, reliable support.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="pill-list">
+            <span class="pill">E-commerce & Marketplaces</span>
+            <span class="pill">Fintech & NBFCs</span>
+            <span class="pill">Insurance & Broking</span>
+            <span class="pill">Telecom & ISP</span>
+            <span class="pill">Healthcare & Diagnostics</span>
+            <span class="pill">EdTech</span>
+            <span class="pill">Real Estate & Property</span>
+            <span class="pill">B2B Services & Agencies</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Back Office Operations – FAQs</h2>
+          <p>
+            Some common questions before starting. We can show sample SOPs and reports on a quick call.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="faq-item">
+            <div class="faq-q">What kind of back office work is a good fit?</div>
+            <div class="faq-a">
+              Any repeatable process with clear steps, rules and tools is usually a good fit – data entry, catalog, order checks, document verification, ticket back-end, finance support and more.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">How do you ensure data security?</div>
+            <div class="faq-a">
+              We work within your systems wherever possible, use restricted access, NDAs and process-level controls. For sensitive work, we can follow your infosec guidelines.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Can you work in our tools and CRMs?</div>
+            <div class="faq-a">
+              Yes. Our teams are used to learning new tools. We typically train on your sandbox or test environment first, then move to live work once approved.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Can we start with a small pilot?</div>
+            <div class="faq-a">
+              Absolutely. Many clients start with a 2–4 week pilot on one or two processes before expanding the scope and team size.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FOOTER -->
+      <section class="cta-footer" id="bo-contact">
+        <h2 class="cta-footer-title">Want to Shift Back Office Work Off Your Plate?</h2>
+        <p class="cta-footer-text">
+          Share the processes you are considering for outsourcing. We’ll respond with a simple view of what can be moved, team size, SLAs and commercials.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="openContactEmail()">
+            Email Your Processes
+          </button>
+          <button class="btn btn-outline" onclick="openWhatsApp()">
+            Chat on WhatsApp
+          </button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    function scrollToContact() {
+      const el = document.getElementById("bo-contact");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+
+    function openContactEmail() {
+      // change this to your real email
+      window.location.href = "mailto:info@sabertechs.com?subject=Back%20Office%20Operations%20Outsourcing&body=Hi%20Team,%0D%0A%0D%0AWe%20are%20exploring%20outsourcing%20some%20back%20office%20processes.%20Here%20are%20some%20details:%0D%0A%0D%0A-%20Type%20of%20processes%3A%0D%0A-%20Approx.%20volume%20per%20day%2Fmonth%3A%0D%0A-%20Tools%20currently%20used%3A%0D%0A-%20Any%20specific%20SLAs%3A%0D%0A%0D%0ARegards,%0D%0A";
+    }
+
+    function openWhatsApp() {
+      // Replace with your business WhatsApp number in international format
+      const phone = "919999999999";
+      const text = encodeURIComponent("Hi, I want to discuss outsourcing our back office operations.");
+      window.open("https://wa.me/" + phone + "?text=" + text, "_blank");
+    }
+  </script>
+</body>
+</html>
