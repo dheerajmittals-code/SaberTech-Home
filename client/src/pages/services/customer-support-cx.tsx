@@ -95,17 +95,17 @@ export default function CustomerSupportCX() {
             {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center gap-8">
               <Link href="/">
-                <a className={`text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors ${isScrolled ? "text-slate-600" : "text-slate-700"}`}>
+                <span className={`text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors cursor-pointer ${isScrolled ? "text-slate-600" : "text-slate-700"}`}>
                   Home
-                </a>
+                </span>
               </Link>
               
               {/* Services Dropdown */}
               <div className="relative group">
                 <Link href="/services">
-                  <a className={`flex items-center gap-1 text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors ${isScrolled ? "text-slate-600" : "text-slate-700"}`}>
+                  <span className={`flex items-center gap-1 text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors cursor-pointer ${isScrolled ? "text-slate-600" : "text-slate-700"}`}>
                     Services <ChevronDown className="w-4 h-4" />
-                  </a>
+                  </span>
                 </Link>
                 
                 {/* Dropdown Menu */}
@@ -136,9 +136,9 @@ export default function CustomerSupportCX() {
               {/* Industries Dropdown */}
               <div className="relative group">
                 <Link href="/industries">
-                  <a className={`flex items-center gap-1 text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors ${isScrolled ? "text-slate-600" : "text-slate-700"}`}>
+                  <span className={`flex items-center gap-1 text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors cursor-pointer ${isScrolled ? "text-slate-600" : "text-slate-700"}`}>
                     Industries <ChevronDown className="w-4 h-4" />
-                  </a>
+                  </span>
                 </Link>
                 
                 {/* Dropdown Menu */}
@@ -194,14 +194,14 @@ export default function CustomerSupportCX() {
             >
               <div className="container mx-auto px-4 py-6 flex flex-col gap-4">
                 <Link href="/">
-                  <a className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50">Home</a>
+                  <span className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50 block cursor-pointer">Home</span>
                 </Link>
 
                 {/* Mobile Services Accordion */}
                 <div className="border-b border-slate-50">
                   <div className="flex items-center justify-between py-2">
                     <Link href="/services">
-                      <a className="text-lg font-medium text-slate-800 flex-1">Services</a>
+                      <span className="text-lg font-medium text-slate-800 flex-1 cursor-pointer block">Services</span>
                     </Link>
                     <button 
                       onClick={(e) => {
@@ -231,9 +231,9 @@ export default function CustomerSupportCX() {
                           { name: "Gig Workforce (On-Demand)", link: "/services/gig-workforce" }
                         ].map((service) => (
                           <Link key={service.name} href={service.link}>
-                            <a className="block py-3 text-slate-600 hover:text-primary text-base border-b border-slate-100 last:border-0">
+                            <span className="block py-3 text-slate-600 hover:text-primary text-base border-b border-slate-100 last:border-0 cursor-pointer">
                               {service.name}
-                            </a>
+                            </span>
                           </Link>
                         ))}
                       </motion.div>
@@ -245,7 +245,7 @@ export default function CustomerSupportCX() {
                 <div className="border-b border-slate-50">
                   <div className="flex items-center justify-between py-2">
                     <Link href="/industries">
-                      <a className="text-lg font-medium text-slate-800 flex-1">Industries</a>
+                      <span className="text-lg font-medium text-slate-800 flex-1 cursor-pointer block">Industries</span>
                     </Link>
                     <button 
                       onClick={(e) => {
@@ -273,9 +273,9 @@ export default function CustomerSupportCX() {
                           { name: "EdTech & Assessments", link: "/industries/edtech-assessments" }
                         ].map((industry) => (
                           <Link key={industry.name} href={industry.link}>
-                            <a className="block py-3 text-slate-600 hover:text-primary text-base border-b border-slate-100 last:border-0">
+                            <span className="block py-3 text-slate-600 hover:text-primary text-base border-b border-slate-100 last:border-0 cursor-pointer">
                               {industry.name}
-                            </a>
+                            </span>
                           </Link>
                         ))}
                       </motion.div>
