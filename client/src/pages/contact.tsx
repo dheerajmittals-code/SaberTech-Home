@@ -216,7 +216,7 @@ export default function Contact() {
                 </span>
               </Link>
 
-              <Button className="bg-primary hover:bg-blue-700 text-white font-bold rounded-full px-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
+              <Button onClick={scrollToForm} className="bg-primary hover:bg-blue-700 text-white font-bold rounded-full px-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
                 Get a Quote
               </Button>
             </nav>
@@ -336,7 +336,7 @@ export default function Contact() {
                   <span className="text-lg font-medium text-primary py-2 border-b border-slate-50 block">Contact</span>
                 </Link>
                 
-                <Button className="w-full bg-primary text-white mt-4">Get a Quote</Button>
+                <Button onClick={scrollToForm} className="w-full bg-primary text-white mt-4">Get a Quote</Button>
               </div>
             </motion.div>
           )}

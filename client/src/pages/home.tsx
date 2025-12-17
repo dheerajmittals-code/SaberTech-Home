@@ -150,13 +150,17 @@ export default function Home() {
               <a href="#" className={`text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors ${isScrolled ? "text-slate-600" : "text-slate-700"}`}>
                 Why Us
               </a>
-              <a href="#" className={`text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors ${isScrolled ? "text-slate-600" : "text-slate-700"}`}>
-                Contact
-              </a>
+              <Link href="/contact">
+                <span className={`text-sm font-semibold uppercase tracking-wider hover:text-primary transition-colors cursor-pointer ${isScrolled ? "text-slate-600" : "text-slate-700"}`}>
+                  Contact
+                </span>
+              </Link>
 
-              <Button className="bg-primary hover:bg-blue-700 text-white font-bold rounded-full px-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
-                Get a Quote
-              </Button>
+              <Link href="/contact">
+                <Button className="bg-primary hover:bg-blue-700 text-white font-bold rounded-full px-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
+                  Get a Quote
+                </Button>
+              </Link>
             </nav>
 
             {/* Mobile Toggle */}
@@ -270,9 +274,13 @@ export default function Home() {
                 </div>
 
                 <a href="#" className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50">Why Us</a>
-                <a href="#" className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50">Contact</a>
+                <Link href="/contact">
+                  <span className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50 block cursor-pointer">Contact</span>
+                </Link>
                 
-                <Button className="w-full bg-primary text-white mt-4">Get a Quote</Button>
+                <Link href="/contact">
+                  <Button className="w-full bg-primary text-white mt-4">Get a Quote</Button>
+                </Link>
               </div>
             </motion.div>
           )}
@@ -310,9 +318,11 @@ export default function Home() {
                 className="flex flex-wrap gap-4"
                 variants={fadeIn}
               >
-                <Button size="lg" className="bg-primary hover:bg-blue-700 text-white font-bold rounded-lg px-8 h-14 text-lg shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
-                  Book Consultation
-                </Button>
+                <Link href="/contact">
+                  <Button size="lg" className="bg-primary hover:bg-blue-700 text-white font-bold rounded-lg px-8 h-14 text-lg shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
+                    Book Consultation
+                  </Button>
+                </Link>
                 <Button variant="outline" size="lg" className="border-2 border-slate-300 text-slate-700 hover:border-slate-800 hover:bg-transparent font-bold rounded-lg px-8 h-14 text-lg shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
                   See Our Services
                 </Button>
