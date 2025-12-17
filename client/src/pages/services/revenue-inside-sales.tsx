@@ -28,7 +28,10 @@ import {
   Mail,
   Calendar,
   RefreshCw,
-  PieChart
+  PieChart,
+  Filter,
+  TrendingUp,
+  Share2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
@@ -306,16 +309,16 @@ export default function RevenueInsideSales() {
             className="w-full lg:basis-[45%] lg:w-[45%] text-center lg:text-left mt-8 lg:mt-0"
           >
             <motion.h1 
-              className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-slate-900 leading-[1.1] mb-4 max-w-[520px] mx-auto lg:mx-0"
+              className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-slate-900 leading-[1.1] mb-4 max-w-[540px] mx-auto lg:mx-0"
               variants={fadeIn}
             >
-              Build a High-Performance Inside Sales Team in 7 Days — <span className="text-primary">Without Hiring</span>
+              Revenue & <span className="text-primary">Inside Sales</span> Teams That Sell Every Day
             </motion.h1>
             <motion.h3 
               className="text-xl text-slate-600 mb-0 leading-relaxed font-light max-w-lg mx-auto lg:mx-0"
               variants={fadeIn}
             >
-              Lead qualification, demo scheduling, renewals, win-back campaigns and pipeline acceleration — managed by trained Inside Sales Specialists.
+              Build an India-based inside sales engine that generates qualified opportunities, books demos, runs upsell & cross-sell campaigns and recovers churned customers – with clear targets and daily reporting.
             </motion.h3>
             
             <motion.div 
@@ -323,10 +326,10 @@ export default function RevenueInsideSales() {
               variants={fadeIn}
             >
               <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-blue-700 text-white font-bold rounded-lg px-8 h-14 text-lg shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
-                Book a Free Sales Consultation
+                Talk to Sales Lead
               </Button>
               <Button variant="outline" size="lg" className="w-full sm:w-auto border-2 border-slate-300 text-slate-700 hover:border-slate-800 hover:bg-transparent font-bold rounded-lg px-8 h-14 text-lg shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
-                See Pricing & Plans
+                Get Inside Sales Plan
               </Button>
             </motion.div>
             
@@ -335,13 +338,11 @@ export default function RevenueInsideSales() {
             </motion.div>
 
             <motion.div variants={fadeIn} className="flex flex-wrap gap-x-6 gap-y-2 text-sm font-medium text-slate-500 items-center justify-center lg:justify-start">
-              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> 3× more qualified leads</span>
+              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Outbound sales & pipeline building</span>
               <span className="hidden sm:inline text-slate-300">•</span>
-              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> 40% faster follow-ups</span>
+              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Qualified meetings for your team</span>
               <span className="hidden sm:inline text-slate-300">•</span>
-              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> 65% higher conversion on warm leads</span>
-              <span className="hidden sm:inline text-slate-300">•</span>
-              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Fully managed team</span>
+              <span className="flex items-center gap-2"><Check className="w-4 h-4 text-green-500" /> Win-back & upsell programs</span>
             </motion.div>
           </motion.div>
 
@@ -364,370 +365,255 @@ export default function RevenueInsideSales() {
         </div>
       </section>
 
-      {/* SECTION 2 - PROBLEM -> SOLUTION */}
+      {/* SECTION 2 - CORE PROGRAMS GRID */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-slate-900 mb-6">Stop Losing Revenue — We Build and Run Your Inside Sales Engine</h2>
-            <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            {/* Problems */}
-            <div className="bg-red-50/50 p-8 rounded-2xl border border-red-100">
-              <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center text-sm font-bold">✕</span>
-                The Struggle
-              </h3>
-              <ul className="space-y-4">
-                {[
-                  "Leads not being followed up quickly",
-                  "Pipeline stagnation and low sales bandwidth",
-                  "Reps spending too much time on admin work",
-                  "Missed demos, missed opportunities",
-                  "No predictable outbound engine",
-                  "High hiring and training costs"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-slate-700">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-red-400 flex-shrink-0"></span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Solution */}
-            <div className="bg-blue-50/50 p-8 rounded-2xl border border-blue-100 shadow-sm">
-              <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3">
-                <span className="w-8 h-8 rounded-full bg-blue-100 text-primary flex items-center justify-center text-sm font-bold">✓</span>
-                Our Solution
-              </h3>
-              <ul className="space-y-4">
-                {[
-                  "Trained Inside Sales Executives dedicated to your brand",
-                  "Fast follow-ups within 15–60 minutes",
-                  "Lead qualification using BANT, CHAMP or your custom framework",
-                  "Demo scheduling and calendar management",
-                  "Renewal and win-back campaigns",
-                  "Scripts, CRM updates and analytics included"
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-3 text-slate-700">
-                    <Check className="w-5 h-5 text-primary shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <Button variant="outline" className="border-2 border-slate-300 text-slate-700 hover:border-slate-800 hover:bg-transparent font-bold rounded-full px-8 h-12 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
-              Talk to a Sales Specialist
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 3 - FEATURE GRID */}
-      <section className="py-24 bg-slate-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">Everything You Need in a High-Velocity Inside Sales Team</h2>
+            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-slate-900 mb-6">Core Revenue & Inside Sales Programs</h2>
+            <div className="w-20 h-1 bg-primary mx-auto rounded-full mb-6"></div>
+            <p className="text-lg text-slate-600">
+              We design calling and outreach programs around your ideal customer profile, product, ticket size and markets. You choose the programs that match your current growth stage.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Inbound Lead Qualification",
-                text: "We respond instantly to incoming leads, qualify them, and route them to your closers.",
-                icon: Filter
-              },
-              {
-                title: "Outbound Prospecting",
-                text: "Structured outreach through email, LinkedIn and calls to build your sales pipeline.",
+                title: "Lead Generation & Cold Calling",
+                label: "Top of Funnel",
+                text: "Structured outbound calls to new prospects with simple, clear scripts focused on generating interest and capturing basic qualification data.",
+                pills: ["List calling", "Event follow-ups", "Campaign follow-through"],
                 icon: Phone
               },
               {
-                title: "Demo Scheduling",
-                text: "We coordinate time zones, calendars, reminders and sales handoffs.",
+                title: "Lead Qualification Calls",
+                label: "Qualification",
+                text: "We qualify inbound and marketing-generated leads based on your BANT or custom framework and only pass warm opportunities to your closers.",
+                pills: ["Inbound lead follow-up", "BANT-style qualification", "Handoff to AEs"],
+                icon: Filter
+              },
+              {
+                title: "Demo & Appointment Setting",
+                label: "Meetings",
+                text: "Inside sales reps who focus on booking demos, discovery calls and product walkthroughs for your founders or sales team.",
+                pills: ["Calendar booking", "No-show follow-up", "Reschedules"],
                 icon: Calendar
               },
               {
-                title: "CRM & Pipeline Hygiene",
-                text: "Daily updates in HubSpot, Salesforce, Zoho, Pipedrive and other CRMs.",
-                icon: Database
+                title: "Upsell & Cross-Sell Campaigns",
+                label: "Expansion",
+                text: "Calling campaigns to existing customers to move them to higher plans, add-on services or repeat purchases.",
+                pills: ["Plan upgrades", "Add-on sales", "Repeat purchase nudges"],
+                icon: TrendingUp
               },
               {
-                title: "Renewal & Win-Back Campaigns",
-                text: "Automated and manual workflows to re-activate dormant or at-risk customers.",
+                title: "Win-Back & Churn Recovery",
+                label: "Retention",
+                text: "Structured outreach to lapsed customers or cancelled subscribers with offers and conversations to bring them back.",
+                pills: ["Lapsed customers", "Churn reasons", "Win-back offers"],
                 icon: RefreshCw
               },
               {
-                title: "Sales Analytics & Reporting",
-                text: "Daily and weekly reports with lead quality, funnel movement and conversion insights.",
-                icon: PieChart
+                title: "Channel & Partner Development",
+                label: "Channels",
+                text: "Outreach and nurturing of distributors, resellers and partners to keep your channel active and productive.",
+                pills: ["Partner onboarding", "Partner activation", "Performance check-ins"],
+                icon: Share2
               }
             ].map((feature, i) => (
               <div key={i} className="bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <div className="w-12 h-12 rounded-lg bg-blue-50 text-primary flex items-center justify-center mb-6">
-                  <feature.icon className="w-6 h-6" />
+                <div className="flex justify-between items-start mb-4">
+                  <div>
+                    <div className="text-xs font-bold text-primary uppercase tracking-widest mb-1">{feature.label}</div>
+                    <h3 className="text-xl font-heading font-bold text-slate-900">{feature.title}</h3>
+                  </div>
+                  <div className="w-10 h-10 rounded-lg bg-blue-50 text-primary flex items-center justify-center shrink-0">
+                    <feature.icon className="w-5 h-5" />
+                  </div>
                 </div>
-                <h3 className="text-xl font-heading font-bold text-slate-900 mb-3">{feature.title}</h3>
-                <p className="text-slate-600 leading-relaxed mb-4">{feature.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 4 - METRICS STRIP */}
-      <section className="py-16 bg-blue-50 border-y border-blue-100">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            {[
-              { stat: "70%", label: "Faster response time to inbound leads" },
-              { stat: "3×", label: "Increase in qualified demos" },
-              { stat: "40%", label: "Increase in qualified pipeline" },
-              { stat: "50k+", label: "Monthly outreach interactions handled" }
-            ].map((item, i) => (
-              <div key={i} className="">
-                <div className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-2">{item.stat}</div>
-                <div className="text-slate-600 font-medium uppercase tracking-wide text-sm">{item.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 5 - CASE STUDY */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl text-center">
-          <span className="text-primary font-bold uppercase tracking-widest text-sm mb-4 block">Success Story</span>
-          <h2 className="text-3xl font-heading font-bold text-slate-900 mb-8">Case Study: 3× Increase in Qualified Pipeline in 45 Days</h2>
-          <p className="text-xl text-slate-600 mb-12 leading-relaxed">
-            "A SaaS company needed a scalable inside sales engine. We deployed a team in 7 days, improved follow-up speed from 24 hours to under 60 minutes, and increased qualified demos by 320% in just 45 days."
-          </p>
-          <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 relative">
-            <div className="text-6xl text-blue-200 absolute top-8 left-6 font-serif">"</div>
-            <blockquote className="relative z-10 text-lg text-slate-800 italic mb-6 pt-2">
-              'SaberTechs acted like our in-house SDR team. Our pipeline exploded within weeks.'
-            </blockquote>
-            <cite className="not-italic font-bold text-slate-900 block">— VP Sales, B2B SaaS Company (Name Confidential)</cite>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 6 - HOW IT WORKS */}
-      <section className="py-24 bg-slate-900 text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-heading font-bold mb-4 text-white drop-shadow-[0_0_4px_rgba(0,0,0,0.4)]">How We Build and Run Your Inside Sales Team</h2>
-            <p className="text-[#F1F1F1] text-lg max-w-2xl mx-auto font-normal opacity-100 drop-shadow-[0_0_4px_rgba(0,0,0,0.4)]">
-              Our proven onboarding framework launches sales operations in days, not months.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8 relative">
-            {/* Connecting Line */}
-            <div className="hidden md:block absolute top-[24px] left-[12.5%] right-[12.5%] h-0.5 bg-slate-700 z-0"></div>
-
-            {[
-              {
-                step: "1",
-                title: "Discovery",
-                text: "We analyze leads, CRM setup, ICP, scripts and current funnel performance."
-              },
-              {
-                step: "2",
-                title: "Setup & Training",
-                text: "We build cadences, scripts, CRM workflows and train your dedicated SDR team."
-              },
-              {
-                step: "3",
-                title: "Go-Live",
-                text: "Full inside sales operations: inbound qualification, outbound outreach and follow-ups."
-              },
-              {
-                step: "4",
-                title: "Optimization",
-                text: "Weekly reviews, message testing, funnel optimization and reporting."
-              }
-            ].map((phase, i) => (
-              <div key={i} className="relative z-10 text-center group">
-                <div className="w-12 h-12 mx-auto bg-slate-800 border-2 border-slate-600 rounded-full flex items-center justify-center text-xl font-bold mb-6 text-white drop-shadow-[0_0_4px_rgba(0,0,0,0.4)] group-hover:bg-primary group-hover:border-primary transition-colors">
-                  {phase.step}
+                <p className="text-slate-600 leading-relaxed mb-6 text-sm">{feature.text}</p>
+                <div className="flex flex-wrap gap-2">
+                  {feature.pills.map((pill, j) => (
+                    <span key={j} className="text-xs font-medium px-2.5 py-1 rounded-full bg-slate-50 text-slate-600 border border-slate-100">
+                      {pill}
+                    </span>
+                  ))}
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-white drop-shadow-[0_0_4px_rgba(0,0,0,0.4)]">{phase.title}</h3>
-                <p className="text-[#F1F1F1] text-sm leading-relaxed px-2 opacity-100 drop-shadow-[0_0_4px_rgba(0,0,0,0.4)]">{phase.text}</p>
               </div>
             ))}
-          </div>
-
-          <div className="text-center mt-16">
-            <Button size="lg" className="bg-white text-slate-900 hover:bg-blue-50 font-bold rounded-full px-8 h-12 shadow-lg transition-all hover:-translate-y-0.5">
-              Start Your Sales Journey with SaberTechs
-            </Button>
           </div>
         </div>
       </section>
 
-      {/* SECTION 7 - INDUSTRIES */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-heading font-bold text-slate-900">Inside Sales Expertise Across Industries</h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {[
-              {
-                name: "SaaS & Tech",
-                text: "Demo scheduling, product qualification and inbound response for software companies.",
-                icon: Monitor
-              },
-              {
-                name: "E-commerce & D2C",
-                text: "Abandoned cart recovery, reactivation campaigns and upsells.",
-                icon: ShoppingBag
-              },
-              {
-                name: "Travel & Hospitality",
-                text: "Package inquiries, lead conversion and outbound follow-ups.",
-                icon: Plane
-              },
-              {
-                name: "EdTech & Training",
-                text: "Student admissions, demo booking and course counseling.",
-                icon: GraduationCap
-              }
-            ].map((industry, i) => (
-              <div key={i} className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:border-primary/50 transition-all hover:-translate-y-1">
-                <div className="flex items-center gap-3 mb-3">
-                  <industry.icon className="w-5 h-5 text-primary" />
-                  <h3 className="font-heading font-bold text-slate-900">{industry.name}</h3>
-                </div>
-                <p className="text-slate-600 text-sm leading-relaxed">{industry.text}</p>
-              </div>
-            ))}
-          </div>
-          
-          <div className="text-center">
-            <p className="text-slate-600">
-              Need customer support with your sales team? <Link href="/services/customer-support-cx"><a className="text-primary font-bold hover:underline">Check out our Customer Support & CX solutions.</a></Link>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 8 - PRICING */}
+      {/* SECTION 3 - USE CASES */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">Flexible & Transparent Pricing for SMBs</h2>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">B2B & B2C Sales Use Cases</h2>
+            <p className="text-lg text-slate-600">
+              Our inside sales teams work for both B2B and B2C businesses. We adapt scripts, objection handling and follow-up frequency to your market.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
-            {[
-              {
-                name: "Starter",
-                idealFor: "Ideal for early-stage sales teams",
-                features: ["1–2 SDRs", "Inbound lead qualification", "CRM updates & basic reporting"],
-                highlight: false
-              },
-              {
-                name: "Growth",
-                idealFor: "Ideal for scaling pipeline",
-                features: ["3–10 SDRs", "Outbound + inbound sales support", "Team lead + QA", "Multi-channel outreach (email, calls, LinkedIn)"],
-                highlight: true
-              },
-              {
-                name: "Scale",
-                idealFor: "Ideal for multi-region and 24/7 coverage",
-                features: ["10+ SDRs", "US/UK time-zone coverage", "Custom cadences & playbooks", "Governance, analytics and reporting"],
-                highlight: false
-              }
-            ].map((plan, i) => (
-              <div key={i} className={`bg-white p-8 rounded-2xl shadow-sm border ${plan.highlight ? 'border-primary ring-2 ring-primary/10 relative' : 'border-slate-200'}`}>
-                {plan.highlight && (
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-primary text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full">
-                    Popular
-                  </div>
-                )}
-                <h3 className="text-2xl font-bold text-slate-900 mb-2 text-center">{plan.name}</h3>
-                <p className="text-sm text-slate-500 text-center mb-6 font-medium">{plan.idealFor}</p>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-3 text-slate-700 text-sm">
-                      <Check className="w-4 h-4 text-green-500 shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <div className="text-center">
-                  <Button variant={plan.highlight ? "default" : "outline"} className={`w-full ${plan.highlight ? "bg-primary hover:bg-blue-700" : "border-slate-300 text-slate-700"}`}>
-                    Inquire
-                  </Button>
-                </div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-primary">
+                <Target className="w-6 h-6" />
               </div>
-            ))}
-          </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-6">B2B Inside Sales</h3>
+              <ul className="space-y-4">
+                {[
+                  "Cold calling decision makers in target industries and geographies.",
+                  "Following up on marketing leads from events, webinars and downloads.",
+                  "Booking demos for founders, AEs and solution consultants.",
+                  "Reactivating old customers or dormant accounts."
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-slate-700">
+                    <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          <div className="text-center">
-             <p className="text-slate-500 text-sm mb-4">Pricing is customized by SDR count, markets, languages and coverage hours — transparent, with no hidden fees.</p>
-            <Button size="lg" className="bg-slate-900 text-white hover:bg-slate-800 font-bold rounded-full px-8">
-              Request Custom Pricing
-            </Button>
+            <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+              <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center mb-6 text-primary">
+                <Users className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-6">B2C Revenue Programs</h3>
+              <ul className="space-y-4">
+                {[
+                  "Lead follow-up for education, finance, healthcare and real estate.",
+                  "Plan upgrades for telecom, OTT, fintech and SaaS subscriptions.",
+                  "Payment reminders, renewals and limited-period offers.",
+                  "Win-back campaigns for cancelled or inactive users."
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-slate-700">
+                    <Check className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 9 - FAQ & CTA */}
+      {/* SECTION 4 - DELIVERY MODEL */}
       <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-heading font-bold text-slate-900">Revenue & Inside Sales Outsourcing FAQs</h2>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">How We Run Your Inside Sales Engine</h2>
+            <p className="text-lg text-slate-600">
+              A disciplined operating rhythm that keeps your pipeline active while giving you full visibility into what’s happening every day.
+            </p>
           </div>
 
-          <Accordion type="single" collapsible className="w-full mb-20">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+              <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                <Settings className="w-6 h-6 text-primary" />
+                Operating Model
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  "Dedicated or shared inside sales reps aligned to your product line or region.",
+                  "Sales playbook and calling scripts created jointly with your team.",
+                  "Dialer and CRM integration using your tools or our stack.",
+                  "Simple daily targets – attempts, connects, qualified leads, meetings booked."
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-slate-700">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100">
+              <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                <BarChart3 className="w-6 h-6 text-primary" />
+                Reporting & Metrics
+              </h3>
+              <ul className="space-y-4">
+                {[
+                  "Daily and weekly reports with attempts, connects, qualified leads and meetings.",
+                  "Reason codes for 'no interest', 'call later' and 'wrong contact'.",
+                  "Pipeline snapshot from first touch to meeting / proposal stage.",
+                  "Recordings and talk tracks for coaching and script improvements."
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-slate-700">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5 - INDUSTRIES */}
+      <section className="py-24 bg-slate-900 text-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-heading font-bold mb-6">Who Uses Our Inside Sales Teams</h2>
+          <p className="text-slate-300 max-w-2xl mx-auto mb-12">
+            We work with startups, scale-ups and established businesses that need a flexible sales engine without building a large in-house team.
+          </p>
+          
+          <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+            {[
+              "SaaS & Software",
+              "EdTech & Training",
+              "Fintech & NBFCs",
+              "Real Estate & Housing",
+              "Healthcare & Diagnostics",
+              "Telecom & ISP",
+              "D2C & E-commerce",
+              "B2B Services & Agencies"
+            ].map((industry, i) => (
+              <span key={i} className="px-6 py-3 rounded-full bg-slate-800 border border-slate-700 text-slate-200 font-medium hover:bg-primary hover:border-primary hover:text-white transition-all cursor-default">
+                {industry}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 6 - FAQ */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">Revenue & Inside Sales – FAQs</h2>
+            <p className="text-lg text-slate-600">
+              Some common questions clients ask before starting. We can walk you through sample reports and call flows on a quick call.
+            </p>
+          </div>
+
+          <Accordion type="single" collapsible className="w-full space-y-4">
             {[
               {
-                q: "What is inside sales outsourcing?",
-                a: "It's hiring a dedicated external team to handle remote sales activities like lead qualification, appointment setting, and closing deals, integrating seamlessly with your internal processes."
+                q: "Do you only do cold calling or also handle inbound leads?",
+                a: "We do both. Many clients start with inbound and warm lead follow-up, and then add structured cold calling once scripts and ICP are clear."
               },
               {
-                q: "How fast can you deploy a sales team?",
-                a: "We can typically launch a dedicated inside sales team in as little as 7-14 days, fully trained on your product and sales playbook."
+                q: "Can you book meetings directly on our calendars?",
+                a: "Yes. We typically integrate with Google Calendar, Outlook or your scheduling tool so that reps can book demos and discovery calls for your team."
               },
               {
-                q: "Do you support both outbound and inbound?",
-                a: "Yes, we handle both inbound lead qualification/response and proactive outbound prospecting campaigns via email, phone, and social channels."
+                q: "How do you charge for inside sales services?",
+                a: "Pricing can be per FTE, per hour or outcome-linked (for example – per qualified meeting). The model depends on your volumes, markets and complexity."
               },
               {
-                q: "Which CRMs do you work with?",
-                a: "We are proficient in all major CRMs including HubSpot, Salesforce, Pipedrive, Zoho, and can adapt to your specific tech stack."
-              },
-              {
-                q: "How do you ensure lead quality and qualification?",
-                a: "We use proven frameworks like BANT or CHAMP, customized to your ideal customer profile (ICP), ensuring only high-quality, sales-ready leads are passed to your closers."
-              },
-              {
-                q: "Can we scale up or down based on campaigns or seasonality?",
-                a: "Absolutely. Our flexible model allows you to easily scale your SDR team up for product launches or busy seasons and adjust as needed."
-              },
-              {
-                q: "Do you support US, UK and other time zones?",
-                a: "Yes, we provide coverage across major global time zones including US (EST/PST), UK/Europe (GMT/CET), and APAC to support your international growth."
-              },
-              {
-                q: "How is pricing structured for SDRs?",
-                a: "We offer transparent pricing models typically based on monthly dedicated SDR rates or performance-based hybrid models, customized to your specific requirements."
+                q: "Can we start small and scale if it works?",
+                a: "Yes. You can start with a small pod (for example, 1–3 reps) as a pilot and then scale up in phases as the process proves itself."
               }
             ].map((faq, i) => (
-              <AccordionItem key={i} value={`item-${i}`}>
-                <AccordionTrigger className="text-left text-lg font-medium text-slate-900 hover:text-primary">
+              <AccordionItem key={i} value={`item-${i}`} className="border border-slate-200 rounded-lg px-6 data-[state=open]:bg-slate-50 transition-colors">
+                <AccordionTrigger className="text-left font-bold text-slate-900 hover:text-primary py-6 text-lg">
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-slate-600 leading-relaxed">
+                <AccordionContent className="text-slate-600 leading-relaxed pb-6 text-base">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>
@@ -736,19 +622,23 @@ export default function RevenueInsideSales() {
         </div>
       </section>
 
-      {/* FINAL CTA BAND */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white text-center">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">Ready to Build a Scalable Inside Sales Engine?</h2>
-          <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
-            Get a tailored sales proposal within 24 hours. No hiring. No overhead. Just predictable pipeline.
+      {/* SECTION 7 - FINAL CTA */}
+      <section className="py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-900"></div>
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-20"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
+          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6">Want to Add an Inside Sales Engine?</h2>
+          <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto font-light">
+            Share a brief about your product, target market and current sales process. We’ll come back with a simple inside sales plan – team size, scope, KPIs and commercials.
           </p>
-          <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50 font-bold rounded-full px-10 h-14 text-lg shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 mb-6">
-            Book a Consultation
-          </Button>
-          
-          <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center text-blue-100 text-sm font-medium">
-            <span className="flex items-center gap-2"><Check className="w-4 h-4" /> Trusted by growing SaaS, E-commerce, Travel and EdTech brands.</span>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button size="lg" className="bg-white text-blue-700 hover:bg-blue-50 font-bold rounded-full px-12 h-16 text-xl shadow-xl transition-transform hover:scale-105">
+              Email Your Requirement
+            </Button>
+            <Button size="lg" variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-bold rounded-full px-12 h-16 text-xl shadow-xl transition-transform hover:scale-105">
+              Chat on WhatsApp
+            </Button>
           </div>
         </div>
       </section>
