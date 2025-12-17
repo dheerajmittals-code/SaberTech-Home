@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QA & Compliance Services | Call Quality, Process Audits & CX Governance</title>
+  <meta name="description" content="Independent QA & Compliance services for customer support, sales and back office operations. Call quality audits, process checks, SOP compliance and simple reporting to keep your teams on track." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0B1F3A;     /* Navy Blue */
+      --secondary: #22C55E;   /* Action Green */
+      --background: #F8FAFC;  /* Soft White */
+      --text-main: #1F2933;   /* Dark Charcoal */
+      --text-muted: #6B7280;  /* Grey */
+      --accent: #F59E0B;      /* Amber (rare) */
+      --border-soft: #E5E7EB;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
+
+      --radius-lg: 16px;
+      --radius-md: 10px;
+      --radius-pill: 999px;
+      --spacing-section: 64px;
+      --max-width: 1120px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--background);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 24px 16px 48px;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    /* Typography */
+
+    h1, h2, h3, h4 {
+      font-weight: 600;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: clamp(30px, 5vw, 40px);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: clamp(22px, 3vw, 26px);
+      margin-bottom: 6px;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--text-main);
+    }
+
+    .text-muted {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* Layout / Sections */
+
+    .section {
+      margin-bottom: var(--spacing-section);
+    }
+
+    .section-header {
+      margin-bottom: 18px;
+    }
+
+    .section-header p {
+      max-width: 640px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    /* Hero */
+
+    .hero {
+      padding: 32px 0 32px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: rgba(34, 197, 94, 0.12);
+      color: var(--secondary);
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--secondary);
+    }
+
+    .hero-title {
+      font-size: clamp(30px, 5vw, 40px);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero-highlight {
+      color: var(--secondary);
+    }
+
+    .hero-subtitle {
+      max-width: 640px;
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .hero-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .metric-pill {
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-soft);
+      background: #FFFFFF;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .metric-pill span {
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* Buttons */
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: var(--radius-pill);
+      font-size: 14px;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #22C55E, #16A34A);
+      border-color: #16A34A;
+      color: #022C22;
+      box-shadow: 0 10px 30px rgba(34, 197, 94, 0.35);
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.04);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: #FFFFFF;
+      border-color: var(--border-soft);
+      color: var(--primary);
+    }
+
+    .btn-outline:hover {
+      border-color: #CBD5F5;
+      background-color: #F9FAFB;
+    }
+
+    /* Cards & Pills */
+
+    .card {
+      background-color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 18px 18px 16px;
+      border: 1px solid #E5E7EB;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .card-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+
+    .card-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--secondary);
+      font-weight: 600;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .card-text {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .pill {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: var(--radius-pill);
+      border: 1px solid #E5E7EB;
+      background: #F9FAFB;
+      color: var(--text-muted);
+    }
+
+    /* Lists */
+
+    .bullet-list {
+      list-style: none;
+      padding-left: 0;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .bullet-list li {
+      margin-bottom: 6px;
+      position: relative;
+      padding-left: 14px;
+    }
+
+    .bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--secondary);
+      font-size: 14px;
+    }
+
+    /* FAQ */
+
+    .faq-item {
+      border-bottom: 1px solid var(--border-soft);
+      padding: 10px 0;
+    }
+
+    .faq-q {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    .faq-a {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* CTA Footer */
+
+    .cta-footer {
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: var(--radius-lg);
+      border: 1px dashed rgba(148, 163, 184, 0.7);
+      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.08), #FFFFFF 50%);
+    }
+
+    .cta-footer-title {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--primary);
+    }
+
+    .cta-footer-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 900px) {
+      .grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        padding: 18px 14px 32px;
+      }
+
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <main class="container" id="qa-compliance">
+
+      <!-- HERO -->
+      <section class="hero">
+        <span class="badge">
+          <span class="badge-dot"></span>
+          Services · QA & Compliance
+        </span>
+
+        <h1 class="hero-title">
+          QA & <span class="hero-highlight">Compliance</span> for Calls, Tickets & Processes
+        </h1>
+
+        <p class="hero-subtitle">
+          Independent quality and compliance audits for your customer support, sales and back office teams. We listen to calls, read tickets and review processes against clear scorecards – then share simple, actionable feedback.
+        </p>
+
+        <div class="hero-metrics">
+          <div class="metric-pill"><span>Call</span> & digital channel QA</div>
+          <div class="metric-pill"><span>Process</span> & SOP compliance checks</div>
+          <div class="metric-pill"><span>Clear</span> dashboards & coaching inputs</div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="scrollToContact()">Discuss QA Scope</button>
+          <button class="btn btn-outline" onclick="scrollToContact()">Request Sample Report</button>
+        </div>
+      </section>
+
+      <!-- CORE QA SERVICES -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Core QA & Compliance Services</h2>
+          <p>
+            We work as an independent layer between your operations and your customers – checking how well your teams follow scripts, policies and brand guidelines.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Call Quality Audits -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-label">Voice</div>
+                <h3 class="card-title">Call Quality Audits</h3>
+              </div>
+            </div>
+            <p class="card-text">
+              Sampling-based listening of inbound and outbound calls for support, collections and sales programs.
+            </p>
+            <div class="pill-list">
+              <span class="pill">Greeting & verification</span>
+              <span class="pill">Script adherence</span>
+              <span class="pill">Empathy & tone</span>
+              <span class="pill">Closure & next steps</span>
+            </div>
+          </article>
+
+          <!-- Digital QA -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-label">Digital</div>
+                <h3 class="card-title">Email, Chat & Ticket QA</h3>
+              </div>
+            </div>
+            <p class="card-text">
+              Review of written responses for accuracy, completeness, brand tone and TAT compliance.
+            </p>
+            <div class="pill-list">
+              <span class="pill">Email responses</span>
+              <span class="pill">Chat transcripts</span>
+              <span class="pill">Ticket notes</span>
+            </div>
+          </article>
+
+          <!-- Process Compliance -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-label">Process</div>
+                <h3 class="card-title">Process & SOP Compliance</h3>
+              </div>
+            </div>
+            <p class="card-text">
+              Checks on whether agents and teams are following the defined steps, thresholds and approval flows.
+            </p>
+            <div class="pill-list">
+              <span class="pill">SOP adherence</span>
+              <span class="pill">Documentation checks</span>
+              <span class="pill">Exception tagging</span>
+            </div>
+          </article>
+
+          <!-- Regulatory / Policy -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-label">Policy</div>
+                <h3 class="card-title">Policy & Regulatory Alignment</h3>
+              </div>
+            </div>
+            <p class="card-text">
+              Basic checks that communication and actions are aligned with your internal policies and sector guidelines.
+            </p>
+            <div class="pill-list">
+              <span class="pill">Script restrictions</span>
+              <span class="pill">Do-not-call checks</span>
+              <span class="pill">Documentation requirements</span>
+            </div>
+          </article>
+
+          <!-- Mystery Checks (Ops) -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-label">Ops</div>
+                <h3 class="card-title">Mystery Calls & Process Checks</h3>
+              </div>
+            </div>
+            <p class="card-text">
+              Mystery calls and scenarios to see how your teams respond to typical and edge-case customer situations.
+            </p>
+            <div class="pill-list">
+              <span class="pill">Scenario testing</span>
+              <span class="pill">Escalation behaviour</span>
+              <span class="pill">Real-world coverage</span>
+            </div>
+          </article>
+
+          <!-- Vendor Monitoring -->
+          <article class="card">
+            <div class="card-header-row">
+              <div>
+                <div class="card-label">Vendors</div>
+                <h3 class="card-title">Vendor QA Monitoring</h3>
+              </div>
+            </div>
+            <p class="card-text">
+              Independent audits on your outsourced partners, so that you have a neutral view of performance.
+            </p>
+            <div class="pill-list">
+              <span class="pill">Partner scorecards</span>
+              <span class="pill">Comparative views</span>
+              <span class="pill">Penalty & bonus inputs</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- SCORECARDS & REPORTS -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Scorecards, Reports & Dashboards</h2>
+          <p>
+            We keep QA simple – clear scorecards, easy-to-read reports and a short list of actions for operations and training.
+          </p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <h3 class="card-title">Customised Scorecards</h3>
+            <ul class="bullet-list">
+              <li>Different checklists for support, sales, collections and back office processes.</li>
+              <li>Weighted parameters – critical, major and minor errors defined with you.</li>
+              <li>Separate metrics for compliance, soft skills and process steps.</li>
+              <li>Mapping of QA parameters to your KPIs (CSAT, conversion, AHT, etc.).</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Actionable Reporting</h3>
+            <ul class="bullet-list">
+              <li>Daily / weekly QA reports with scores by team, process and agent.</li>
+              <li>Top error types and real call / ticket examples for training.</li>
+              <li>Simple trends – improvement, decline and stable metrics.</li>
+              <li>Inputs for coaching sessions, calibration and process changes.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- HOW WE WORK -->
+      <section class="section">
+        <div class="section-header">
+          <h2>How QA & Compliance Engagement Works</h2>
+          <p>
+            We can support you whether you have an in-house team, outsourced partners or a mix of both.
+          </p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <h3 class="card-title">Engagement Models</h3>
+            <ul class="bullet-list">
+              <li>Ongoing QA for specific processes or lines of business.</li>
+              <li>Short-term audits to baseline quality before or after a change.</li>
+              <li>Pre-go-live process sign-off for new campaigns or partners.</li>
+              <li>Special projects – compliance drives, festival or peak period checks.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">Sampling & Volumes</h3>
+            <ul class="bullet-list">
+              <li>Sampling strategy defined based on total volume and risk level.</li>
+              <li>Random and targeted samples (new agents, new processes, escalations).</li>
+              <li>Flexible scale – from a few hundred to thousands of evaluations per month.</li>
+              <li>Calibration calls to align scoring between your team and ours.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- INDUSTRIES -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Where Our QA & Compliance Fits Best</h2>
+          <p>
+            Any setup with medium to high customer interaction or regulated processes benefits from an independent QA layer.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="pill-list">
+            <span class="pill">Telecom & ISP</span>
+            <span class="pill">BFSI & Fintech</span>
+            <span class="pill">E-commerce & Marketplaces</span>
+            <span class="pill">Travel & Hospitality</span>
+            <span class="pill">Healthcare & Diagnostics</span>
+            <span class="pill">EdTech & Training</span>
+            <span class="pill">Utilities & Govt-linked projects</span>
+            <span class="pill">BPO & Vendor Management</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section">
+        <div class="section-header">
+          <h2>QA & Compliance – FAQs</h2>
+          <p>
+            A few questions clients usually ask before starting. We can also share a redacted sample scorecard on request.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="faq-item">
+            <div class="faq-q">Do you replace our internal QA team?</div>
+            <div class="faq-a">
+              Not necessarily. Many clients use us as an additional, independent layer on top of their internal QA – especially for vendor monitoring or calibration.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">How many calls or tickets do you audit?</div>
+            <div class="faq-a">
+              It depends on your total volume and risk level. We typically define a sampling percentage together and review it after the first month.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Can you work directly in our systems?</div>
+            <div class="faq-a">
+              Yes. We usually access your dialer, recordings, helpdesk or CRM with limited, role-based access as per your infosec policies.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Can we start with a short audit first?</div>
+            <div class="faq-a">
+              Yes. You can start with a 2–4 week audit for specific queues or partners. Once you see value, we can convert it into a regular QA program.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FOOTER -->
+      <section class="cta-footer" id="qa-contact">
+        <h2 class="cta-footer-title">Want a Clear View of What Customers Actually Experience?</h2>
+        <p class="cta-footer-text">
+          Share details of your support, sales or back office processes. We’ll propose a simple QA & Compliance model – scope, sampling, reports and commercials.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="openContactEmail()">
+            Email Your Requirement
+          </button>
+          <button class="btn btn-outline" onclick="openWhatsApp()">
+            Chat on WhatsApp
+          </button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    function scrollToContact() {
+      const el = document.getElementById("qa-contact");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+
+    function openContactEmail() {
+      // change this to your real email
+      window.location.href = "mailto:info@sabertechs.com?subject=QA%20%26%20Compliance%20Services&body=Hi%20Team,%0D%0A%0D%0AWe%20are%20exploring%20QA%20%26%20Compliance%20support%20for%20our%20operations.%20Here%20are%20some%20quick%20details:%0D%0A%0D%0A-%20Type%20of%20processes%20(calls%2Ftickets%2Fback%20office)%3A%0D%0A-%20Approx.%20monthly%20volume%3A%0D%0A-%20In-house%20or%20vendor%20teams%3A%0D%0A-%20Any%20specific%20regulatory%20requirements%3A%0D%0A%0D%0ARegards,%0D%0A";
+    }
+
+    function openWhatsApp() {
+      // Replace with your business WhatsApp number in international format
+      const phone = "919999999999";
+      const text = encodeURIComponent("Hi, I want to discuss QA & Compliance support.");
+      window.open("https://wa.me/" + phone + "?text=" + text, "_blank");
+    }
+  </script>
+</body>
+</html>
