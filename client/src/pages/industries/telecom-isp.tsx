@@ -31,7 +31,7 @@ import { Link } from "wouter";
 
 import heroImage from "@assets/generated_images/isometric_contact_center_illustration.png";
 
-export default function RealEstate() {
+export default function TelecomISP() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesMobileOpen, setIsServicesMobileOpen] = useState(false);
@@ -129,14 +129,14 @@ export default function RealEstate() {
                 <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 w-[280px]">
                   <div className="bg-white rounded-xl shadow-[0_18px_45px_rgba(15,23,42,0.12)] border border-slate-100 overflow-hidden p-2">
                     {[
-                      { name: "SaaS & Technology", link: "/industries/saas-technology", icon: Monitor },
                       { name: "E-commerce & D2C", link: "/industries/ecommerce-d2c", icon: ShoppingBag },
                       { name: "Travel & Hospitality", link: "/industries/travel-hospitality", icon: Plane },
                       { name: "EdTech & Exams", link: "/industries/edtech-exams", icon: GraduationCap },
                       { name: "Telecom & ISPs", link: "/industries/telecom-isp", icon: Network },
-                      { name: "Fintech & Insurance", link: "/industries/fintech-insurance", icon: BadgeDollarSign },
                       { name: "Healthcare", link: "/industries/healthcare-diagnostics", icon: Stethoscope },
+                      { name: "Fintech & Insurance", link: "/industries/fintech-insurance", icon: BadgeDollarSign },
                       { name: "Logistics", link: "/industries/logistics-delivery", icon: Truck },
+                      { name: "SaaS & Technology", link: "/industries/saas-technology", icon: Monitor },
                       { name: "Real Estate", link: "/industries/real-estate", icon: Building2 }
                     ].map((industry) => (
                       <Link key={industry.name} href={industry.link}>
@@ -232,14 +232,14 @@ export default function RealEstate() {
                     {isIndustriesMobileOpen && (
                       <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden pl-4 pb-2 bg-slate-50/50 rounded-lg mb-2">
                         {[
-                          { name: "SaaS & Technology", link: "/industries/saas-technology" },
                           { name: "E-commerce & D2C", link: "/industries/ecommerce-d2c" },
                           { name: "Travel & Hospitality", link: "/industries/travel-hospitality" },
                           { name: "EdTech & Exams", link: "/industries/edtech-exams" },
                           { name: "Telecom & ISPs", link: "/industries/telecom-isp" },
-                          { name: "Fintech & Insurance", link: "/industries/fintech-insurance" },
                           { name: "Healthcare", link: "/industries/healthcare-diagnostics" },
+                          { name: "Fintech & Insurance", link: "/industries/fintech-insurance" },
                           { name: "Logistics", link: "/industries/logistics-delivery" },
+                          { name: "SaaS & Technology", link: "/industries/saas-technology" },
                           { name: "Real Estate", link: "/industries/real-estate" }
                         ].map((industry) => (
                           <Link key={industry.name} href={industry.link}>
@@ -279,13 +279,13 @@ export default function RealEstate() {
               className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-slate-900 leading-[1.1] mb-4"
               variants={fadeIn}
             >
-              Operations & CX for <span className="text-primary">Real Estate</span>
+              Support & Ops for <span className="text-primary">Telecom & ISPs</span>
             </motion.h1>
             <motion.h3 
               className="text-xl text-slate-600 mb-0 leading-relaxed font-light max-w-lg mx-auto lg:mx-0"
               variants={fadeIn}
             >
-              Lead qualification, appointment setting, and property management support for agencies and proptech.
+              Seamless customer support for telecom and internet providers. We handle billing, technical support, new connections, and field technician scheduling.
             </motion.h3>
             
             <motion.div 
@@ -309,7 +309,7 @@ export default function RealEstate() {
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-blue-100/50 border border-slate-100 bg-white">
               <img 
                 src={heroImage} 
-                alt="Real Estate" 
+                alt="Telecom and ISP" 
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -321,20 +321,20 @@ export default function RealEstate() {
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">Real Estate Support Capabilities</h2>
+            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">Telecom Operations Capabilities</h2>
             <p className="text-lg text-slate-600">
-              Driving sales and supporting tenants.
+              Reliable support for high-volume customer interactions.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
              {[
-               { title: "Lead Qualification", desc: "Screening inbound leads and nurturing prospects.", icon: BadgeDollarSign },
-               { title: "Appointment Setting", desc: "Booking tours and meetings for agents.", icon: MessageSquare },
-               { title: "Tenant Support", desc: "Handling maintenance requests and lease inquiries.", icon: Users },
-               { title: "Listing Management", desc: "Updating property details on MLS and portals.", icon: Database },
-               { title: "Lease Administration", desc: "Processing applications and renewals.", icon: ShieldCheck },
-               { title: "Virtual Assistants", desc: "Dedicated admin support for top producers.", icon: Monitor }
+               { title: "Technical Support", desc: "Troubleshooting connectivity issues, router setup, and speed problems.", icon: Monitor },
+               { title: "Billing & Payments", desc: "Handling invoice queries, payment processing, and plan upgrades.", icon: BadgeDollarSign },
+               { title: "New Connections", desc: "Processing new service requests and KYC verification.", icon: Users },
+               { title: "Retention & Win-back", desc: "Proactive calls to prevent churn and win back lost customers.", icon: MessageSquare },
+               { title: "Outage Management", desc: "Proactive communication during service disruptions to minimize ticket volume.", icon: Database },
+               { title: "Field Scheduling", desc: "Coordinating technician visits and installation appointments.", icon: Truck }
              ].map((item, i) => (
                <div key={i} className="bg-slate-50 p-6 rounded-xl border border-slate-100">
                  <item.icon className="w-10 h-10 text-primary mb-4" />
@@ -349,7 +349,7 @@ export default function RealEstate() {
       {/* SECTION 3 - CTA */}
       <section className="py-24 bg-white text-center border-t border-slate-100">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-6">Close More Deals</h2>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-6">Ready to Optimize Your Telecom Ops?</h2>
           <Link href="/contact">
             <Button size="lg" className="bg-primary hover:bg-blue-700 text-white font-bold rounded-full px-12 h-16 text-xl shadow-xl shadow-primary/20">
               Talk to Us <ArrowRight className="ml-2 w-6 h-6" />

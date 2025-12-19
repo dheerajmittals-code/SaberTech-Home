@@ -27,7 +27,8 @@ import {
   BarChart3,
   Globe,
   Settings,
-  HelpCircle
+  HelpCircle,
+  Network
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
@@ -145,10 +146,15 @@ export default function CustomerSupportCX() {
                 <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 w-[280px]">
                   <div className="bg-white rounded-xl shadow-[0_18px_45px_rgba(15,23,42,0.12)] border border-slate-100 overflow-hidden p-2">
                     {[
-                      { name: "SaaS & Tech", link: "/industries/saas-tech", icon: Monitor },
+                      { name: "SaaS & Technology", link: "/industries/saas-technology", icon: Monitor },
                       { name: "E-commerce & D2C", link: "/industries/ecommerce-d2c", icon: ShoppingBag },
                       { name: "Travel & Hospitality", link: "/industries/travel-hospitality", icon: Plane },
-                      { name: "EdTech & Assessments", link: "/industries/edtech-assessments", icon: GraduationCap }
+                      { name: "EdTech & Exams", link: "/industries/edtech-exams", icon: GraduationCap },
+                      { name: "Telecom & ISPs", link: "/industries/telecom-isp", icon: Network },
+                      { name: "Fintech & Insurance", link: "/industries/fintech-insurance", icon: BadgeDollarSign },
+                      { name: "Healthcare", link: "/industries/healthcare-diagnostics", icon: Stethoscope },
+                      { name: "Logistics", link: "/industries/logistics-delivery", icon: Truck },
+                      { name: "Real Estate", link: "/industries/real-estate", icon: Building2 }
                     ].map((industry) => (
                       <Link key={industry.name} href={industry.link}>
                         <span className="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-700 hover:bg-blue-50/80 hover:text-slate-900 transition-all group/item cursor-pointer">
@@ -271,10 +277,15 @@ export default function CustomerSupportCX() {
                         className="overflow-hidden pl-4 pb-2 bg-slate-50/50 rounded-lg mb-2"
                       >
                         {[
-                          { name: "SaaS & Tech", link: "/industries/saas-tech" },
+                          { name: "SaaS & Technology", link: "/industries/saas-technology" },
                           { name: "E-commerce & D2C", link: "/industries/ecommerce-d2c" },
                           { name: "Travel & Hospitality", link: "/industries/travel-hospitality" },
-                          { name: "EdTech & Assessments", link: "/industries/edtech-assessments" }
+                          { name: "EdTech & Exams", link: "/industries/edtech-exams" },
+                          { name: "Telecom & ISPs", link: "/industries/telecom-isp" },
+                          { name: "Fintech & Insurance", link: "/industries/fintech-insurance" },
+                          { name: "Healthcare", link: "/industries/healthcare-diagnostics" },
+                          { name: "Logistics", link: "/industries/logistics-delivery" },
+                          { name: "Real Estate", link: "/industries/real-estate" }
                         ].map((industry) => (
                           <Link key={industry.name} href={industry.link}>
                             <span className="block py-3 text-slate-600 hover:text-primary text-base border-b border-slate-100 last:border-0 cursor-pointer">

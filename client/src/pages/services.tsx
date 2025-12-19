@@ -29,7 +29,8 @@ import {
   BarChart3,
   Stethoscope,
   Truck,
-  Building2
+  Building2,
+  Network
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
@@ -144,6 +145,7 @@ export default function Services() {
                       { name: "E-commerce & D2C", link: "/industries/ecommerce-d2c", icon: ShoppingBag },
                       { name: "Travel & Hospitality", link: "/industries/travel-hospitality", icon: Plane },
                       { name: "EdTech & Exams", link: "/industries/edtech-exams", icon: GraduationCap },
+                      { name: "Telecom & ISPs", link: "/industries/telecom-isp", icon: Network },
                       { name: "Fintech & Insurance", link: "/industries/fintech-insurance", icon: BadgeDollarSign },
                       { name: "Healthcare", link: "/industries/healthcare-diagnostics", icon: Stethoscope },
                       { name: "Logistics", link: "/industries/logistics-delivery", icon: Truck },
@@ -274,6 +276,7 @@ export default function Services() {
                           { name: "E-commerce & D2C", link: "/industries/ecommerce-d2c" },
                           { name: "Travel & Hospitality", link: "/industries/travel-hospitality" },
                           { name: "EdTech & Exams", link: "/industries/edtech-exams" },
+                          { name: "Telecom & ISPs", link: "/industries/telecom-isp" },
                           { name: "Fintech & Insurance", link: "/industries/fintech-insurance" },
                           { name: "Healthcare", link: "/industries/healthcare-diagnostics" },
                           { name: "Logistics", link: "/industries/logistics-delivery" },

@@ -19,6 +19,7 @@ import SaasTechnology from "@/pages/industries/saas-technology";
 import EcommerceD2C from "@/pages/industries/ecommerce-d2c";
 import TravelHospitality from "@/pages/industries/travel-hospitality";
 import EdtechExams from "@/pages/industries/edtech-exams";
+import TelecomISP from "@/pages/industries/telecom-isp";
 import FintechInsurance from "@/pages/industries/fintech-insurance";
 import HealthcareDiagnostics from "@/pages/industries/healthcare-diagnostics";
 import LogisticsDelivery from "@/pages/industries/logistics-delivery";
@@ -40,6 +41,7 @@ function Router() {
       <Route path="/industries/ecommerce-d2c" component={EcommerceD2C} />
       <Route path="/industries/travel-hospitality" component={TravelHospitality} />
       <Route path="/industries/edtech-exams" component={EdtechExams} />
+      <Route path="/industries/telecom-isp" component={TelecomISP} />
       <Route path="/industries/fintech-insurance" component={FintechInsurance} />
       <Route path="/industries/healthcare-diagnostics" component={HealthcareDiagnostics} />
       <Route path="/industries/logistics-delivery" component={LogisticsDelivery} />
