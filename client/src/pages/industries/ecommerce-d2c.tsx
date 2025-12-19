@@ -22,14 +22,18 @@ import {
   Truck,
   Building2,
   Stethoscope,
-  Network
+  Network,
+  RefreshCcw,
+  BarChart,
+  MessageCircle
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
+import { Helmet } from "wouter/head";
 
-import heroImage from "@assets/generated_images/isometric_contact_center_illustration.png";
+import heroImage from "@assets/generated_images/ecommerce_d2c_operations.png";
 
 export default function EcommerceD2C() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -61,6 +65,12 @@ export default function EcommerceD2C() {
 
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">
+      {/* Meta Tags */}
+      <Helmet>
+        <title>E-commerce & D2C Support Services | SaberTechs</title>
+        <meta name="description" content="Customer support, back office, QA and gig workforce solutions for e-commerce and D2C brands operating in India and global markets." />
+      </Helmet>
+
       {/* HEADER - Sticky & Premium */}
       <header 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -279,22 +289,22 @@ export default function EcommerceD2C() {
               className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-slate-900 leading-[1.1] mb-4"
               variants={fadeIn}
             >
-              Operations & CX for <span className="text-primary">E-commerce & D2C</span>
+              E-commerce & D2C <span className="text-primary">Operations Support</span>
             </motion.h1>
             <motion.h3 
               className="text-xl text-slate-600 mb-0 leading-relaxed font-light max-w-lg mx-auto lg:mx-0"
               variants={fadeIn}
             >
-              Handle seasonal spikes, returns, and order inquiries seamlessly. We provide 24/7 support to keep your customers happy and buying.
+              We help e-commerce and D2C brands manage high-volume customer interactions, back office operations and seasonal spikes without building large internal teams.
             </motion.h3>
             
             <motion.div 
-              className="flex flex-wrap gap-4 mt-6 justify-center lg:justify-start"
+              className="flex flex-wrap gap-4 mt-8 justify-center lg:justify-start"
               variants={fadeIn}
             >
               <Link href="/contact">
                 <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-blue-700 text-white font-bold rounded-lg px-8 h-14 text-lg shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
-                  Get a Proposal
+                  Discuss Your Requirement
                 </Button>
               </Link>
             </motion.div>
@@ -309,7 +319,7 @@ export default function EcommerceD2C() {
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-blue-100/50 border border-slate-100 bg-white">
               <img 
                 src={heroImage} 
-                alt="E-commerce D2C" 
+                alt="E-commerce D2C Operations" 
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -317,26 +327,55 @@ export default function EcommerceD2C() {
         </div>
       </section>
 
-      {/* SECTION 2 - KEY CAPABILITIES */}
+      {/* SECTION 2 - CHALLENGES */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">Retail Support Capabilities</h2>
+            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">Key Challenges We Solve</h2>
             <p className="text-lg text-slate-600">
-              Supporting your brand from pre-sale to post-purchase.
+              Addressing the operational bottlenecks that slow down D2C growth.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+             {[
+               { title: "Query Volumes", desc: "Managing high volumes of customer inquiries across channels.", icon: MessageSquare },
+               { title: "Order Tracking", desc: "Handling complex order tracking, returns, and refunds.", icon: RefreshCcw },
+               { title: "Traffic Spikes", desc: "Managing peak season and flash sale traffic surges.", icon: BarChart },
+               { title: "Cost Pressure", desc: "Reducing operational costs while maintaining quality.", icon: BadgeDollarSign }
+             ].map((item, i) => (
+               <div key={i} className="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-blue-200 transition-colors">
+                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                   <item.icon className="w-6 h-6 text-primary" />
+                 </div>
+                 <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
+                 <p className="text-slate-600 text-sm">{item.desc}</p>
+               </div>
+             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3 - SERVICES */}
+      <section className="py-24 bg-slate-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">Services for E-commerce & D2C</h2>
+            <p className="text-lg text-slate-600">
+              Comprehensive support solutions tailored for online retail.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
              {[
-               { title: "Order Management", desc: "Handling order status inquiries, tracking updates, and modifications.", icon: ShoppingBag },
-               { title: "Returns & Refunds", desc: "Processing returns and refunds according to your policy.", icon: Database },
-               { title: "Pre-Sales Support", desc: "Answering product questions to drive conversion.", icon: MessageSquare },
-               { title: "Seasonal Scaling", desc: "Ramping up teams quickly for Black Friday and holiday peaks.", icon: Users },
-               { title: "Social Media Care", desc: "Responding to comments and DMs on Instagram and Facebook.", icon: Facebook },
-               { title: "Review Management", desc: "Monitoring and responding to customer reviews.", icon: ShieldCheck }
+               { title: "Customer Support", desc: "Voice, chat, and email support to resolve inquiries instantly.", icon: MessageSquare },
+               { title: "Back Office Processing", desc: "Efficient handling of orders, refunds, and cancellations.", icon: Database },
+               { title: "Quality Audits", desc: "Regular checks on customer interactions to ensure service quality.", icon: ShieldCheck },
+               { title: "Automation", desc: "WhatsApp and chat automation to handle common queries 24/7.", icon: MessageCircle },
+               { title: "Logistics Coordination", desc: "Last-mile coordination support to ensure timely deliveries.", icon: Truck },
+               { title: "Scalable Teams", desc: "Flexible staffing to handle seasonal demand fluctuations.", icon: Users }
              ].map((item, i) => (
-               <div key={i} className="bg-slate-50 p-6 rounded-xl border border-slate-100">
+               <div key={i} className="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
                  <item.icon className="w-10 h-10 text-primary mb-4" />
                  <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
                  <p className="text-slate-600">{item.desc}</p>
@@ -345,16 +384,72 @@ export default function EcommerceD2C() {
           </div>
         </div>
       </section>
+
+      {/* SECTION 4 - USE CASES & ENGAGEMENT */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16">
+            <div>
+              <h2 className="text-3xl font-heading font-bold text-slate-900 mb-8">Typical Use Cases</h2>
+              <div className="space-y-6">
+                {[
+                  "D2C brands scaling post-funding needing rapid support setup",
+                  "Marketplaces managing multiple sellers and complex queries",
+                  "Brands preparing for festival sales and flash campaigns"
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4">
+                    <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+                      <Check className="w-3.5 h-3.5 text-green-600" strokeWidth={3} />
+                    </div>
+                    <p className="text-lg text-slate-700">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-3xl font-heading font-bold text-slate-900 mb-8">Engagement Models</h2>
+              <div className="space-y-6">
+                {[
+                  { title: "Dedicated Support Teams", desc: "Full-time agents exclusively for your brand." },
+                  { title: "Shared Queues", desc: "Flexible resource allocation for variable volume." },
+                  { title: "Pilot → Scale Approach", desc: "Start small, validate results, then expand." }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4">
+                    <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center shrink-0 mt-0.5">
+                      <div className="w-2 h-2 rounded-full bg-primary" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-slate-900">{item.title}</h4>
+                      <p className="text-slate-600">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       
-      {/* SECTION 3 - CTA */}
-      <section className="py-24 bg-white text-center border-t border-slate-100">
+      {/* SECTION 5 - CTA */}
+      <section className="py-24 bg-slate-900 text-center text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-6">Scale Your Online Store Support</h2>
-          <Link href="/contact">
-            <Button size="lg" className="bg-primary hover:bg-blue-700 text-white font-bold rounded-full px-12 h-16 text-xl shadow-xl shadow-primary/20">
-              Talk to Us <ArrowRight className="ml-2 w-6 h-6" />
-            </Button>
-          </Link>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">Ready to Scale Your Operations?</h2>
+          <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
+            Partner with SaberTechs for reliable, scalable e-commerce support solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact">
+              <Button size="lg" className="bg-primary hover:bg-blue-600 text-white font-bold rounded-full px-12 h-16 text-xl">
+                Discuss Your Requirement <ArrowRight className="ml-2 w-6 h-6" />
+              </Button>
+            </Link>
+            <Link href="/industries">
+              <Button variant="outline" size="lg" className="border-slate-600 text-white hover:bg-slate-800 hover:text-white rounded-full px-8 h-16 text-lg">
+                ← Back to Industries
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 

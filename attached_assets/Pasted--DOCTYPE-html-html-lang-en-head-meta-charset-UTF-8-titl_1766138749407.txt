@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>E-commerce & D2C Support Services | SaberTechs</title>
+  <meta name="description" content="Customer support, back office, QA and gig workforce solutions for e-commerce and D2C brands operating in India and global markets." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: Inter, sans-serif; background:#F8FAFC; margin:0; color:#1F2933; }
+    .container { max-width:1120px; margin:auto; padding:48px 16px; }
+    h1,h2,h3 { color:#0B1F3A; }
+    .section { margin-bottom:48px; }
+    ul { padding-left:18px; }
+    .btn {
+      padding:12px 22px; border-radius:999px;
+      background:#22C55E; color:#022C22;
+      text-decoration:none; font-weight:600;
+      display:inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>E-commerce & D2C Operations Support</h1>
+    <p>
+      We help e-commerce and D2C brands manage high-volume customer interactions,
+      back office operations and seasonal spikes without building large internal teams.
+    </p>
+
+    <div class="section">
+      <h2>Key Challenges We Solve</h2>
+      <ul>
+        <li>High customer query volumes</li>
+        <li>Order tracking, returns & refunds</li>
+        <li>Peak season & sale traffic spikes</li>
+        <li>Cost pressure on support teams</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Services for E-commerce & D2C</h2>
+      <ul>
+        <li>Customer support (voice, chat, email)</li>
+        <li>Order & refund back office processing</li>
+        <li>Quality audits on customer interactions</li>
+        <li>WhatsApp & chat automation</li>
+        <li>Last-mile coordination support</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Typical Use Cases</h2>
+      <ul>
+        <li>D2C brands scaling post-funding</li>
+        <li>Marketplaces with multiple sellers</li>
+        <li>Festival sales & flash campaigns</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Engagement Models</h2>
+      <ul>
+        <li>Dedicated support teams</li>
+        <li>Shared queues for variable volume</li>
+        <li>Pilot → scale approach</li>
+      </ul>
+    </div>
+
+    <a href="contact.html" class="btn">Discuss Your Requirement</a>
+    &nbsp;&nbsp;
+    <a href="industries.html">← Back to Industries</a>
+
+  </div>
+</body>
+</html>
