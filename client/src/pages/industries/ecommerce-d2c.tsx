@@ -31,7 +31,6 @@ import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
-import { Helmet } from "wouter/head";
 
 import heroImage from "@assets/generated_images/ecommerce_d2c_operations.png";
 
@@ -65,12 +64,6 @@ export default function EcommerceD2C() {
 
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">
-      {/* Meta Tags */}
-      <Helmet>
-        <title>E-commerce & D2C Support Services | SaberTechs</title>
-        <meta name="description" content="Customer support, back office, QA and gig workforce solutions for e-commerce and D2C brands operating in India and global markets." />
-      </Helmet>
-
       {/* HEADER - Sticky & Premium */}
       <header 
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
