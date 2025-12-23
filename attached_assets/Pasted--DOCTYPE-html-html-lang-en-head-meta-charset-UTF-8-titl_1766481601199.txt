@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Healthcare & Diagnostics Support Services | SaberTechs</title>
+  <meta name="description" content="Appointment scheduling, patient support, report follow-ups, insurance documentation and back office operations for clinics, hospitals and diagnostic labs." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#0B1F3A; --secondary:#22C55E; --background:#F8FAFC;
+      --text-main:#1F2933; --text-muted:#6B7280; --border-soft:#E5E7EB;
+      --shadow-soft:0 18px 40px rgba(15,23,42,0.12);
+      --radius-lg:16px; --radius-pill:999px; --spacing-section:64px; --max-width:1120px;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:"Inter",system-ui,-apple-system,Segoe UI,sans-serif;background:var(--background);color:var(--text-main);line-height:1.6;-webkit-font-smoothing:antialiased;}
+    a{color:inherit;text-decoration:none;}
+    .site-header{position:sticky;top:0;z-index:40;background:rgba(248,250,252,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border-soft);}
+    .nav-container{max-width:var(--max-width);margin:0 auto;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+    .logo{display:inline-flex;align-items:center;gap:8px;}
+    .logo-mark{width:28px;height:28px;border-radius:999px;background:linear-gradient(135deg,#22C55E,#16A34A);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;color:#022C22;}
+    .logo-text{font-weight:600;font-size:16px;color:var(--primary);}
+    .main-nav{display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap;}
+    .main-nav a{font-size:14px;color:#4B5563;padding:6px 10px;border-radius:var(--radius-pill);transition:background .15s ease,color .15s ease;}
+    .main-nav a:hover{background:#E5F9EF;color:#065F46;}
+    .main-nav .nav-cta{background:linear-gradient(135deg,#22C55E,#16A34A);color:#022C22;box-shadow:0 10px 30px rgba(34,197,94,0.25);}
+    .main-nav .nav-cta:hover{filter:brightness(1.05);}
+    @media (max-width:720px){.nav-container{flex-direction:column;align-items:flex-start;}}
+    .page{min-height:100vh;padding:24px 16px 48px;}
+    .container{max-width:var(--max-width);margin:0 auto;}
+    h1,h2,h3{color:var(--primary);letter-spacing:-0.02em;}
+    h1{font-size:clamp(30px,5vw,40px);line-height:1.2;margin-bottom:8px;}
+    h2{font-size:clamp(22px,3vw,26px);margin-bottom:6px;}
+    h3{font-size:18px;margin-bottom:4px;}
+    .section{margin-bottom:var(--spacing-section);}
+    .section-header{margin-bottom:18px;}
+    .section-header p{max-width:780px;font-size:14px;color:var(--text-muted);}
+    .grid{display:grid;gap:18px;}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr));}
+    .hero{padding:32px 0 26px;}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:4px 10px;border-radius:var(--radius-pill);background:rgba(34,197,94,0.12);color:var(--secondary);font-size:12px;font-weight:500;margin-bottom:12px;}
+    .badge-dot{width:7px;height:7px;border-radius:50%;background:var(--secondary);}
+    .hero-title{font-weight:700;margin-bottom:10px;}
+    .hero-highlight{color:var(--secondary);}
+    .hero-subtitle{max-width:780px;font-size:15px;color:var(--text-muted);margin-bottom:18px;}
+    .hero-metrics{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px;}
+    .metric-pill{padding:6px 12px;border-radius:var(--radius-pill);border:1px solid var(--border-soft);background:#fff;font-size:12px;color:var(--text-muted);}
+    .metric-pill span{color:var(--secondary);font-weight:600;}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:10px;}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 18px;border-radius:var(--radius-pill);font-size:14px;font-weight:500;border:1px solid transparent;cursor:pointer;transition:all .15s ease;white-space:nowrap;}
+    .btn-primary{background:linear-gradient(135deg,#22C55E,#16A34A);border-color:#16A34A;color:#022C22;box-shadow:0 10px 30px rgba(34,197,94,0.35);}
+    .btn-primary:hover{filter:brightness(1.04);transform:translateY(-1px);}
+    .btn-outline{background:#fff;border-color:var(--border-soft);color:var(--primary);}
+    .btn-outline:hover{border-color:#CBD5F5;background:#F9FAFB;}
+    .card{background:#fff;border-radius:var(--radius-lg);padding:18px 18px 16px;border:1px solid var(--border-soft);box-shadow:var(--shadow-soft);}
+    .card-label{font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:var(--secondary);font-weight:600;margin-bottom:6px;}
+    .card-title{font-size:16px;font-weight:600;margin-bottom:6px;}
+    .card-text{font-size:13px;color:var(--text-muted);}
+    .pill-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
+    .pill{font-size:11px;padding:4px 8px;border-radius:var(--radius-pill);border:1px solid var(--border-soft);background:#F9FAFB;color:var(--text-muted);}
+    .bullet-list{list-style:none;padding-left:0;font-size:13px;color:var(--text-muted);}
+    .bullet-list li{margin-bottom:6px;position:relative;padding-left:14px;}
+    .bullet-list li::before{content:"•";position:absolute;left:0;color:var(--secondary);font-size:14px;}
+    .cta-footer{margin-top:16px;padding:16px;border-radius:var(--radius-lg);border:1px dashed rgba(148,163,184,0.7);background:radial-gradient(circle at top left, rgba(34,197,94,0.08), #fff 50%);}
+    .cta-footer-title{font-size:17px;font-weight:600;margin-bottom:6px;color:var(--primary);}
+    .cta-footer-text{font-size:13px;color:var(--text-muted);margin-bottom:10px;}
+    @media (max-width:900px){.grid-3{grid-template-columns:repeat(2,minmax(0,1fr));}}
+    @media (max-width:720px){.grid-2,.grid-3{grid-template-columns:1fr;}.hero-actions{flex-direction:column;align-items:flex-start;}}
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><span class="logo-mark">S</span><span class="logo-text">SaberTechs</span></a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="industries.html">Industries</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page">
+    <main class="container" id="healthcare-diagnostics">
+
+      <section class="hero">
+        <span class="badge"><span class="badge-dot"></span> Industries · Healthcare & Diagnostics</span>
+        <h1 class="hero-title">Reliable Support for <span class="hero-highlight">Healthcare & Diagnostics</span></h1>
+        <p class="hero-subtitle">
+          We help clinics, hospitals, and diagnostic labs manage patient communication, appointment coordination,
+          report follow-ups and documentation support—using calm, accurate and process-driven operations.
+        </p>
+
+        <div class="hero-metrics">
+          <div class="metric-pill"><span>Appointments</span> scheduling</div>
+          <div class="metric-pill"><span>Reports</span> follow-up</div>
+          <div class="metric-pill"><span>Insurance</span> documentation</div>
+          <div class="metric-pill"><span>Back office</span> processing</div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="goToContact()">Discuss Your Requirement</button>
+          <button class="btn btn-outline" onclick="window.location.href='industries.html'">Back to Industries</button>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Common Challenges in Healthcare Operations</h2>
+          <p>Healthcare support needs accuracy and empathy. We build stable workflows that reduce missed appointments and follow-up gaps.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="card-label">Coordination</div>
+            <h3 class="card-title">Scheduling Complexity</h3>
+            <p class="card-text">Doctor availability, test slots, reschedules and reminders need discipline.</p>
+          </article>
+          <article class="card">
+            <div class="card-label">Follow-up</div>
+            <h3 class="card-title">Reports & Status Calls</h3>
+            <p class="card-text">Patients want quick updates; delays create dissatisfaction and escalations.</p>
+          </article>
+          <article class="card">
+            <div class="card-label">Documentation</div>
+            <h3 class="card-title">Insurance / Paperwork</h3>
+            <p class="card-text">Basic paperwork support reduces burden on clinical staff and front desk teams.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>How We Support Healthcare & Diagnostics</h2>
+          <p>Pick a focused scope (appointments, reports, documentation) or run a complete patient support desk.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="card-label">Support</div>
+            <h3 class="card-title">Patient Support Desk</h3>
+            <p class="card-text">Inbound queries via phone/email/WhatsApp with clear SOPs and escalation.</p>
+            <div class="pill-list"><span class="pill">Voice / Email</span><span class="pill">Empathy scripts</span><span class="pill">Daily reporting</span></div>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Scheduling</div>
+            <h3 class="card-title">Appointment Booking & Reminders</h3>
+            <p class="card-text">Bookings, reschedules, reminders and coordination with facility staff.</p>
+            <div class="pill-list"><span class="pill">Reduced no-shows</span><span class="pill">TAT focused</span><span class="pill">Queue control</span></div>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Follow-up</div>
+            <h3 class="card-title">Report Follow-ups</h3>
+            <p class="card-text">Status updates, report readiness communication and next steps coordination.</p>
+            <div class="pill-list"><span class="pill">Status tracking</span><span class="pill">Exception handling</span><span class="pill">Escalation logic</span></div>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Back Office</div>
+            <h3 class="card-title">Data & Back Office Ops</h3>
+            <p class="card-text">Updating records, tagging cases, reconciliation prep, and process checks.</p>
+            <div class="pill-list"><span class="pill">Accuracy checks</span><span class="pill">Audit trail</span><span class="pill">SOP-driven</span></div>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Documentation</div>
+            <h3 class="card-title">Insurance Documentation Support</h3>
+            <p class="card-text">Basic support in collecting documents and guiding patients on required steps.</p>
+            <div class="pill-list"><span class="pill">Checklist based</span><span class="pill">TAT tracking</span><span class="pill">Clean handoff</span></div>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Quality</div>
+            <h3 class="card-title">QA & Process Audits</h3>
+            <p class="card-text">Sampling audits and coaching insights to keep communication consistent.</p>
+            <div class="pill-list"><span class="pill">Sampling QA</span><span class="pill">Scorecards</span><span class="pill">Process improvement</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Typical Use Cases</h2>
+          <p>Where healthcare and diagnostic teams see quick improvements in experience and operations.</p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <h3 class="card-title">Diagnostic Labs</h3>
+            <ul class="bullet-list">
+              <li>Appointment bookings and home-collection coordination.</li>
+              <li>Report readiness follow-ups and patient communication.</li>
+              <li>Escalation handling for delays and exceptions.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Clinics & Hospitals</h3>
+            <ul class="bullet-list">
+              <li>Inbound helpline for patient queries and scheduling.</li>
+              <li>Reminder calls to reduce no-shows.</li>
+              <li>Basic documentation and process support for front desk teams.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-footer">
+        <h2 class="cta-footer-title">Want a Calm, Reliable Patient Support Desk?</h2>
+        <p class="cta-footer-text">Share your daily call volume, operating hours and key workflows (appointments, reports, documentation). We’ll suggest a simple pilot plan.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="goToContact()">Contact Our Team</button>
+          <button class="btn btn-outline" onclick="window.location.href='services.html'">Explore Services</button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    function goToContact(){ window.location.href = "contact.html#contact-form"; }
+  </script>
+</body>
+</html>
