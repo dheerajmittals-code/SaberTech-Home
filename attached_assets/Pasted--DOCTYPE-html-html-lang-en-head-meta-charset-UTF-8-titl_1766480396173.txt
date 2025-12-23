@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Telecom & ISP Customer Support Services | SaberTechs</title>
+  <meta name="description" content="Tier-1 customer support, retention, win-back calling, QA & compliance audits and field verification support for telecom operators and ISPs." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#0B1F3A; --secondary:#22C55E; --background:#F8FAFC;
+      --text-main:#1F2933; --text-muted:#6B7280; --border-soft:#E5E7EB;
+      --shadow-soft:0 18px 40px rgba(15,23,42,0.12);
+      --radius-lg:16px; --radius-pill:999px; --spacing-section:64px; --max-width:1120px;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{font-family:"Inter",system-ui,-apple-system,Segoe UI,sans-serif;background:var(--background);color:var(--text-main);line-height:1.6;-webkit-font-smoothing:antialiased;}
+    a{color:inherit;text-decoration:none;}
+
+    .site-header{position:sticky;top:0;z-index:40;background:rgba(248,250,252,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border-soft);}
+    .nav-container{max-width:var(--max-width);margin:0 auto;padding:10px 16px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+    .logo{display:inline-flex;align-items:center;gap:8px;}
+    .logo-mark{width:28px;height:28px;border-radius:999px;background:linear-gradient(135deg,#22C55E,#16A34A);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;color:#022C22;}
+    .logo-text{font-weight:600;font-size:16px;color:var(--primary);}
+    .main-nav{display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap;}
+    .main-nav a{font-size:14px;color:#4B5563;padding:6px 10px;border-radius:var(--radius-pill);transition:background .15s ease,color .15s ease;}
+    .main-nav a:hover{background:#E5F9EF;color:#065F46;}
+    .main-nav .nav-cta{background:linear-gradient(135deg,#22C55E,#16A34A);color:#022C22;box-shadow:0 10px 30px rgba(34,197,94,0.25);}
+    .main-nav .nav-cta:hover{filter:brightness(1.05);}
+    @media (max-width:720px){.nav-container{flex-direction:column;align-items:flex-start;}}
+
+    .page{min-height:100vh;padding:24px 16px 48px;}
+    .container{max-width:var(--max-width);margin:0 auto;}
+    h1,h2,h3{color:var(--primary);letter-spacing:-0.02em;}
+    h1{font-size:clamp(30px,5vw,40px);line-height:1.2;margin-bottom:8px;}
+    h2{font-size:clamp(22px,3vw,26px);margin-bottom:6px;}
+    h3{font-size:18px;margin-bottom:4px;}
+    .section{margin-bottom:var(--spacing-section);}
+    .section-header{margin-bottom:18px;}
+    .section-header p{max-width:780px;font-size:14px;color:var(--text-muted);}
+
+    .grid{display:grid;gap:18px;}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr));}
+
+    .hero{padding:32px 0 26px;}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:4px 10px;border-radius:var(--radius-pill);background:rgba(34,197,94,0.12);color:var(--secondary);font-size:12px;font-weight:500;margin-bottom:12px;}
+    .badge-dot{width:7px;height:7px;border-radius:50%;background:var(--secondary);}
+    .hero-title{font-weight:700;margin-bottom:10px;}
+    .hero-highlight{color:var(--secondary);}
+    .hero-subtitle{max-width:780px;font-size:15px;color:var(--text-muted);margin-bottom:18px;}
+    .hero-metrics{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px;}
+    .metric-pill{padding:6px 12px;border-radius:var(--radius-pill);border:1px solid var(--border-soft);background:#fff;font-size:12px;color:var(--text-muted);}
+    .metric-pill span{color:var(--secondary);font-weight:600;}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:10px;}
+
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 18px;border-radius:var(--radius-pill);font-size:14px;font-weight:500;border:1px solid transparent;cursor:pointer;transition:all .15s ease;white-space:nowrap;}
+    .btn-primary{background:linear-gradient(135deg,#22C55E,#16A34A);border-color:#16A34A;color:#022C22;box-shadow:0 10px 30px rgba(34,197,94,0.35);}
+    .btn-primary:hover{filter:brightness(1.04);transform:translateY(-1px);}
+    .btn-outline{background:#fff;border-color:var(--border-soft);color:var(--primary);}
+    .btn-outline:hover{border-color:#CBD5F5;background:#F9FAFB;}
+
+    .card{background:#fff;border-radius:var(--radius-lg);padding:18px 18px 16px;border:1px solid var(--border-soft);box-shadow:var(--shadow-soft);}
+    .card-label{font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:var(--secondary);font-weight:600;margin-bottom:6px;}
+    .card-title{font-size:16px;font-weight:600;margin-bottom:6px;}
+    .card-text{font-size:13px;color:var(--text-muted);}
+    .pill-list{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
+    .pill{font-size:11px;padding:4px 8px;border-radius:var(--radius-pill);border:1px solid var(--border-soft);background:#F9FAFB;color:var(--text-muted);}
+
+    .bullet-list{list-style:none;padding-left:0;font-size:13px;color:var(--text-muted);}
+    .bullet-list li{margin-bottom:6px;position:relative;padding-left:14px;}
+    .bullet-list li::before{content:"•";position:absolute;left:0;color:var(--secondary);font-size:14px;}
+
+    .cta-footer{margin-top:16px;padding:16px;border-radius:var(--radius-lg);border:1px dashed rgba(148,163,184,0.7);background:radial-gradient(circle at top left, rgba(34,197,94,0.08), #fff 50%);}
+    .cta-footer-title{font-size:17px;font-weight:600;margin-bottom:6px;color:var(--primary);}
+    .cta-footer-text{font-size:13px;color:var(--text-muted);margin-bottom:10px;}
+
+    @media (max-width:900px){.grid-3{grid-template-columns:repeat(2,minmax(0,1fr));}}
+    @media (max-width:720px){.grid-2,.grid-3{grid-template-columns:1fr;}.hero-actions{flex-direction:column;align-items:flex-start;}}
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo"><span class="logo-mark">S</span><span class="logo-text">SaberTechs</span></a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="industries.html">Industries</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page">
+    <main class="container" id="telecom-isp">
+
+      <section class="hero">
+        <span class="badge"><span class="badge-dot"></span> Industries · Telecom & ISP</span>
+        <h1 class="hero-title">High-Volume Customer Operations for <span class="hero-highlight">Telecom & ISPs</span></h1>
+        <p class="hero-subtitle">
+          We run Tier-1 support, retention and QA operations for telecom and internet providers—built for multilingual customers,
+          strict compliance and fast resolution on billing, activation and network issues.
+        </p>
+
+        <div class="hero-metrics">
+          <div class="metric-pill"><span>Tier-1</span> support</div>
+          <div class="metric-pill"><span>Retention</span> win-back</div>
+          <div class="metric-pill"><span>QA</span> compliance</div>
+          <div class="metric-pill"><span>Multilingual</span> coverage</div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="goToContact()">Discuss Your Requirement</button>
+          <button class="btn btn-outline" onclick="window.location.href='industries.html'">Back to Industries</button>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Common Telecom & ISP Challenges</h2>
+          <p>Telecom operations need speed, consistency and compliance. We help reduce repeat contacts and stabilize SLAs.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="card-label">Volume</div>
+            <h3 class="card-title">High Ticket Loads</h3>
+            <p class="card-text">Billing, activation, service downtime and plan changes create constant volumes.</p>
+          </article>
+          <article class="card">
+            <div class="card-label">Churn</div>
+            <h3 class="card-title">Retention Pressure</h3>
+            <p class="card-text">Customers switch quickly. A good retention desk prevents avoidable churn.</p>
+          </article>
+          <article class="card">
+            <div class="card-label">Compliance</div>
+            <h3 class="card-title">Regulatory & QA</h3>
+            <p class="card-text">Scripts, disclosures, documentation and audit readiness must stay tight.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>How We Support Telecom & ISPs</h2>
+          <p>Pick one function (support/retention/QA) or run an integrated model with reporting and calibration.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="card-label">Support</div>
+            <h3 class="card-title">Tier-1 Customer Support</h3>
+            <p class="card-text">Inbound support for billing, activation, plan changes and service queries.</p>
+            <div class="pill-list"><span class="pill">Voice / Email</span><span class="pill">SLA focused</span><span class="pill">First-contact resolution</span></div>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Retention</div>
+            <h3 class="card-title">Win-back & Retention Desk</h3>
+            <p class="card-text">Outbound calling for cancellations, save offers, and churn prevention.</p>
+            <div class="pill-list"><span class="pill">Churn reduction</span><span class="pill">Disposition logic</span><span class="pill">CRM updates</span></div>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Quality</div>
+            <h3 class="card-title">QA & Compliance Audits</h3>
+            <p class="card-text">Scorecards, sampling audits, script adherence and coaching insights.</p>
+            <div class="pill-list"><span class="pill">Scorecards</span><span class="pill">Calibration</span><span class="pill">Audit readiness</span></div>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Back Office</div>
+            <h3 class="card-title">Case & Ticket Back Office</h3>
+            <p class="card-text">Ticket updates, documentation, follow-ups with internal teams and closures.</p>
+            <div class="pill-list"><span class="pill">Queue management</span><span class="pill">TAT tracking</span><span class="pill">Exception handling</span></div>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Field</div>
+            <h3 class="card-title">Verification via Gig Workforce</h3>
+            <p class="card-text">On-ground checks, address verification and audit visits (where needed).</p>
+            <div class="pill-list"><span class="pill">City coverage</span><span class="pill">Checklist based</span><span class="pill">Photo proof</span></div>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Automation</div>
+            <h3 class="card-title">FAQ & Status Automation</h3>
+            <p class="card-text">Simple chat/WhatsApp flows for common issues with human escalation.</p>
+            <div class="pill-list"><span class="pill">FAQ flows</span><span class="pill">Human handover</span><span class="pill">Lead capture</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Typical Use Cases</h2>
+          <p>Where telecom and ISP clients see quick impact after outsourcing specific workflows.</p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <h3 class="card-title">Customer Support Desk</h3>
+            <ul class="bullet-list">
+              <li>Billing queries, activation support, plan changes, service downtime triage.</li>
+              <li>Ticket creation, status updates and closure communication.</li>
+              <li>Daily reports: volumes, SLA, repeat contact reasons.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Retention & QA</h3>
+            <ul class="bullet-list">
+              <li>Win-back calling for cancellations and churn-risk cohorts.</li>
+              <li>QA scorecards + coaching feedback loops.</li>
+              <li>Compliance tracking for scripts and mandatory disclosures.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-footer">
+        <h2 class="cta-footer-title">Want to Improve SLA and Reduce Repeat Calls?</h2>
+        <p class="cta-footer-text">Share your channels (voice/email/chat), languages, daily volumes and top issue types. We’ll propose a pilot model with KPIs.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="goToContact()">Contact Our Team</button>
+          <button class="btn btn-outline" onclick="window.location.href='services.html'">Explore Services</button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    function goToContact(){ window.location.href = "contact.html#contact-form"; }
+  </script>
+</body>
+</html>

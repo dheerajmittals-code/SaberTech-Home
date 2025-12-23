@@ -1,28 +1,38 @@
-import { 
-  MessageSquare, 
-  BadgeDollarSign, 
-  Database, 
-  ShieldCheck, 
-  Bot, 
-  Users, 
-  Monitor, 
-  ShoppingBag, 
-  Plane, 
-  GraduationCap, 
-  ArrowRight, 
-  Check, 
-  Twitter, 
-  Linkedin, 
-  Facebook, 
-  Instagram, 
-  Menu, 
-  X, 
+import {
+  MessageSquare,
+  BadgeDollarSign,
+  Database,
+  ShieldCheck,
+  Bot,
+  Users,
+  Monitor,
+  ShoppingBag,
+  Plane,
+  GraduationCap,
+  ArrowRight,
+  Check,
+  Menu,
+  X,
   ChevronDown,
   Globe,
   Truck,
   Building2,
   Stethoscope,
-  Network
+  Network,
+  CalendarCheck,
+  FileX,
+  RefreshCcw,
+  AlertCircle,
+  TrendingUp,
+  Headphones,
+  FileText,
+  UserCheck,
+  BarChart,
+  MessageCircle,
+  Link as LinkIcon,
+  Phone,
+  Signal,
+  MapPin
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
@@ -62,7 +72,7 @@ export default function TelecomISP() {
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">
       {/* HEADER - Sticky & Premium */}
-      <header 
+      <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled ? "bg-white/95 backdrop-blur-md shadow-md py-3" : "bg-transparent py-6"
         }`}
@@ -129,14 +139,14 @@ export default function TelecomISP() {
                 <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 w-[280px]">
                   <div className="bg-white rounded-xl shadow-[0_18px_45px_rgba(15,23,42,0.12)] border border-slate-100 overflow-hidden p-2">
                     {[
+                      { name: "SaaS & Technology", link: "/industries/saas-technology", icon: Monitor },
                       { name: "E-commerce & D2C", link: "/industries/ecommerce-d2c", icon: ShoppingBag },
                       { name: "Travel & Hospitality", link: "/industries/travel-hospitality", icon: Plane },
                       { name: "EdTech & Exams", link: "/industries/edtech-exams", icon: GraduationCap },
                       { name: "Telecom & ISPs", link: "/industries/telecom-isp", icon: Network },
-                      { name: "Healthcare", link: "/industries/healthcare-diagnostics", icon: Stethoscope },
                       { name: "Fintech & Insurance", link: "/industries/fintech-insurance", icon: BadgeDollarSign },
+                      { name: "Healthcare", link: "/industries/healthcare-diagnostics", icon: Stethoscope },
                       { name: "Logistics", link: "/industries/logistics-delivery", icon: Truck },
-                      { name: "SaaS & Technology", link: "/industries/saas-technology", icon: Monitor },
                       { name: "Real Estate", link: "/industries/real-estate", icon: Building2 }
                     ].map((industry) => (
                       <Link key={industry.name} href={industry.link}>
@@ -232,14 +242,14 @@ export default function TelecomISP() {
                     {isIndustriesMobileOpen && (
                       <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden pl-4 pb-2 bg-slate-50/50 rounded-lg mb-2">
                         {[
+                          { name: "SaaS & Technology", link: "/industries/saas-technology" },
                           { name: "E-commerce & D2C", link: "/industries/ecommerce-d2c" },
                           { name: "Travel & Hospitality", link: "/industries/travel-hospitality" },
                           { name: "EdTech & Exams", link: "/industries/edtech-exams" },
                           { name: "Telecom & ISPs", link: "/industries/telecom-isp" },
-                          { name: "Healthcare", link: "/industries/healthcare-diagnostics" },
                           { name: "Fintech & Insurance", link: "/industries/fintech-insurance" },
+                          { name: "Healthcare", link: "/industries/healthcare-diagnostics" },
                           { name: "Logistics", link: "/industries/logistics-delivery" },
-                          { name: "SaaS & Technology", link: "/industries/saas-technology" },
                           { name: "Real Estate", link: "/industries/real-estate" }
                         ].map((industry) => (
                           <Link key={industry.name} href={industry.link}>
@@ -275,26 +285,50 @@ export default function TelecomISP() {
             variants={staggerContainer}
             className="w-full lg:basis-[50%] lg:w-[50%] text-center lg:text-left mt-8 lg:mt-0"
           >
+            <motion.div variants={fadeIn} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 text-green-700 text-xs font-medium mb-4 mx-auto lg:mx-0 border border-green-200">
+              <span className="w-2 h-2 rounded-full bg-green-500"></span>
+              Industries · Telecom & ISP
+            </motion.div>
+
             <motion.h1 
               className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-slate-900 leading-[1.1] mb-4"
               variants={fadeIn}
             >
-              Support & Ops for <span className="text-primary">Telecom & ISPs</span>
+              High-Volume Operations for <span className="text-primary">Telecom & ISPs</span>
             </motion.h1>
             <motion.h3 
               className="text-xl text-slate-600 mb-0 leading-relaxed font-light max-w-lg mx-auto lg:mx-0"
               variants={fadeIn}
             >
-              Seamless customer support for telecom and internet providers. We handle billing, technical support, new connections, and field technician scheduling.
+              We run Tier-1 support, retention and QA operations for telecom and internet providers—built for multilingual customers, strict compliance and fast resolution on billing, activation and network issues.
             </motion.h3>
+
+            <motion.div variants={fadeIn} className="flex flex-wrap gap-3 mt-6 justify-center lg:justify-start">
+              {[
+                { label: "Tier-1", desc: "support" },
+                { label: "Retention", desc: "win-back" },
+                { label: "QA", desc: "compliance" },
+                { label: "Multilingual", desc: "coverage" }
+              ].map((item, i) => (
+                <div key={i} className="px-3 py-1.5 rounded-full border border-slate-200 bg-white text-xs text-slate-600 shadow-sm flex items-center gap-1">
+                  <span className="font-semibold text-green-600">{item.label}</span>
+                  <span>{item.desc}</span>
+                </div>
+              ))}
+            </motion.div>
             
             <motion.div 
-              className="flex flex-wrap gap-4 mt-6 justify-center lg:justify-start"
+              className="flex flex-wrap gap-4 mt-8 justify-center lg:justify-start"
               variants={fadeIn}
             >
               <Link href="/contact">
                 <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-blue-700 text-white font-bold rounded-lg px-8 h-14 text-lg shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
-                  Get a Proposal
+                  Discuss Your Requirement
+                </Button>
+              </Link>
+              <Link href="/industries">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto border-slate-200 text-slate-600 hover:bg-slate-50 font-semibold rounded-lg px-8 h-14 text-lg">
+                  Back to Industries
                 </Button>
               </Link>
             </motion.div>
@@ -309,7 +343,7 @@ export default function TelecomISP() {
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-blue-100/50 border border-slate-100 bg-white">
               <img 
                 src={heroImage} 
-                alt="Telecom and ISP" 
+                alt="Telecom & ISP Support" 
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -317,44 +351,204 @@ export default function TelecomISP() {
         </div>
       </section>
 
-      {/* SECTION 2 - KEY CAPABILITIES */}
+      {/* SECTION 2 - CHALLENGES */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">Telecom Operations Capabilities</h2>
+            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">Common Telecom & ISP Challenges</h2>
             <p className="text-lg text-slate-600">
-              Reliable support for high-volume customer interactions.
+              Telecom operations need speed, consistency and compliance. We help reduce repeat contacts and stabilize SLAs.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
              {[
-               { title: "Technical Support", desc: "Troubleshooting connectivity issues, router setup, and speed problems.", icon: Monitor },
-               { title: "Billing & Payments", desc: "Handling invoice queries, payment processing, and plan upgrades.", icon: BadgeDollarSign },
-               { title: "New Connections", desc: "Processing new service requests and KYC verification.", icon: Users },
-               { title: "Retention & Win-back", desc: "Proactive calls to prevent churn and win back lost customers.", icon: MessageSquare },
-               { title: "Outage Management", desc: "Proactive communication during service disruptions to minimize ticket volume.", icon: Database },
-               { title: "Field Scheduling", desc: "Coordinating technician visits and installation appointments.", icon: Truck }
+               { 
+                 label: "Volume",
+                 title: "High Ticket Loads", 
+                 desc: "Billing, activation, service downtime and plan changes create constant volumes.", 
+                 icon: BarChart 
+               },
+               { 
+                 label: "Churn",
+                 title: "Retention Pressure", 
+                 desc: "Customers switch quickly. A good retention desk prevents avoidable churn.", 
+                 icon: RefreshCcw 
+               },
+               { 
+                 label: "Compliance",
+                 title: "Regulatory & QA", 
+                 desc: "Scripts, disclosures, documentation and audit readiness must stay tight.", 
+                 icon: ShieldCheck 
+               }
              ].map((item, i) => (
-               <div key={i} className="bg-slate-50 p-6 rounded-xl border border-slate-100">
-                 <item.icon className="w-10 h-10 text-primary mb-4" />
+               <div key={i} className="bg-white p-6 rounded-xl border border-slate-100 shadow-[0_18px_40px_rgba(15,23,42,0.12)]">
+                 <div className="text-[11px] uppercase tracking-wider font-semibold text-green-600 mb-2">{item.label}</div>
                  <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
-                 <p className="text-slate-600">{item.desc}</p>
+                 <p className="text-slate-600 text-sm">{item.desc}</p>
                </div>
              ))}
           </div>
         </div>
       </section>
-      
-      {/* SECTION 3 - CTA */}
-      <section className="py-24 bg-white text-center border-t border-slate-100">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-6">Ready to Optimize Your Telecom Ops?</h2>
-          <Link href="/contact">
-            <Button size="lg" className="bg-primary hover:bg-blue-700 text-white font-bold rounded-full px-12 h-16 text-xl shadow-xl shadow-primary/20">
-              Talk to Us <ArrowRight className="ml-2 w-6 h-6" />
-            </Button>
-          </Link>
+
+      {/* SECTION 3 - SERVICES */}
+      <section className="py-24 bg-slate-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">How We Support Telecom & ISPs</h2>
+            <p className="text-lg text-slate-600">
+              Pick one function (support/retention/QA) or run an integrated model with reporting and calibration.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+             {[
+               { 
+                 label: "Support",
+                 title: "Tier-1 Customer Support", 
+                 desc: "Inbound support for billing, activation, plan changes and service queries.", 
+                 pills: ["Voice / Email", "SLA focused", "First-contact resolution"],
+                 icon: Headphones 
+               },
+               { 
+                 label: "Retention",
+                 title: "Win-back & Retention Desk", 
+                 desc: "Outbound calling for cancellations, save offers, and churn prevention.", 
+                 pills: ["Churn reduction", "Disposition logic", "CRM updates"],
+                 icon: RefreshCcw 
+               },
+               { 
+                 label: "Quality",
+                 title: "QA & Compliance Audits", 
+                 desc: "Scorecards, sampling audits, script adherence and coaching insights.", 
+                 pills: ["Scorecards", "Calibration", "Audit readiness"],
+                 icon: Check 
+               },
+               {
+                 label: "Back Office",
+                 title: "Case & Ticket Back Office",
+                 desc: "Ticket updates, documentation, follow-ups with internal teams and closures.",
+                 pills: ["Queue management", "TAT tracking", "Exception handling"],
+                 icon: Database
+               },
+               {
+                 label: "Field",
+                 title: "Verification via Gig Workforce",
+                 desc: "On-ground checks, address verification and audit visits (where needed).",
+                 pills: ["City coverage", "Checklist based", "Photo proof"],
+                 icon: MapPin
+               },
+               {
+                 label: "Automation",
+                 title: "FAQ & Status Automation",
+                 desc: "Simple chat/WhatsApp flows for common issues with human escalation.",
+                 pills: ["FAQ flows", "Human handover", "Lead capture"],
+                 icon: MessageCircle
+               }
+             ].map((item, i) => (
+               <div key={i} className="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                 <div className="text-[11px] uppercase tracking-wider font-semibold text-green-600 mb-2">{item.label}</div>
+                 <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
+                 <p className="text-slate-600 mb-4">{item.desc}</p>
+                 <div className="flex flex-wrap gap-2">
+                   {item.pills.map((pill, idx) => (
+                     <span key={idx} className="text-[11px] px-2 py-1 rounded-full border border-slate-200 bg-slate-50 text-slate-600">
+                       {pill}
+                     </span>
+                   ))}
+                 </div>
+               </div>
+             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 4 - USE CASES & ENGAGEMENT */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 mb-20">
+            <div>
+              <h2 className="text-3xl font-heading font-bold text-slate-900 mb-8">Typical Use Cases</h2>
+              <p className="text-lg text-slate-600 mb-8">Where telecom and ISP clients see quick impact after outsourcing specific workflows.</p>
+              
+              <div className="grid gap-6">
+                {[
+                  {
+                    title: "Customer Support Desk",
+                    points: [
+                      "Billing queries, activation support, plan changes, service downtime triage.",
+                      "Ticket creation, status updates and closure communication.",
+                      "Daily reports: volumes, SLA, repeat contact reasons."
+                    ]
+                  },
+                  {
+                    title: "Retention & QA",
+                    points: [
+                      "Win-back calling for cancellations and churn-risk cohorts.",
+                      "QA scorecards + coaching feedback loops.",
+                      "Compliance tracking for scripts and mandatory disclosures."
+                    ]
+                  }
+                ].map((item, i) => (
+                  <div key={i} className="bg-slate-50 p-6 rounded-xl border border-slate-100">
+                    <h3 className="text-xl font-bold text-slate-900 mb-4">{item.title}</h3>
+                    <ul className="space-y-3">
+                      {item.points.map((point, idx) => (
+                        <li key={idx} className="flex gap-3 text-slate-700">
+                          <span className="text-green-600 font-bold">•</span>
+                          <span className="text-sm">{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-3xl font-heading font-bold text-slate-900 mb-8">Engagement Models</h2>
+              <p className="text-lg text-slate-600 mb-8">Start small and scale. Keep it simple, measurable and stable.</p>
+              
+              <div className="space-y-6">
+                {[
+                  { title: "Dedicated Team", desc: "A fixed team trained on your tools, tone and SOPs." },
+                  { title: "Retention Campaign", desc: "Project-based calling for win-back or upselling." },
+                  { title: "Field Verification", desc: "Gig-based on-ground checks across cities." }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4 p-6 bg-white rounded-xl border border-slate-100 shadow-sm">
+                    <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center shrink-0 mt-0.5">
+                      <div className="w-2 h-2 rounded-full bg-primary" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-slate-900">{item.title}</h4>
+                      <p className="text-slate-600 text-sm">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Box */}
+          <div className="bg-gradient-to-br from-green-50 to-white rounded-2xl border border-dashed border-slate-300 p-8 md:p-12 text-center max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-heading font-bold text-slate-900 mb-4">Want to Improve SLA and Reduce Repeat Calls?</h2>
+            <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
+              Share your channels (voice/email/chat), languages, daily volumes and top issue types. We’ll propose a pilot model with KPIs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact">
+                <Button size="lg" className="bg-primary hover:bg-blue-600 text-white font-bold rounded-full px-8 h-12 text-base shadow-lg shadow-primary/20">
+                  Contact Our Team
+                </Button>
+              </Link>
+              <Link href="/services">
+                <Button variant="outline" size="lg" className="bg-white border-slate-200 text-primary hover:bg-slate-50 rounded-full px-8 h-12 text-base">
+                  Explore Services
+                </Button>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
