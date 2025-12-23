@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Travel & Hospitality Support Services | SaberTechs</title>
+  <meta name="description" content="Customer support and back office operations for travel companies, hotels, resorts and OTAs. Booking changes, cancellations, refunds, guest coordination and escalation handling." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0B1F3A;     /* Navy Blue */
+      --secondary: #22C55E;   /* Action Green */
+      --background: #F8FAFC;  /* Soft White */
+      --text-main: #1F2933;   /* Dark Charcoal */
+      --text-muted: #6B7280;  /* Grey */
+      --border-soft: #E5E7EB;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
+
+      --radius-lg: 16px;
+      --radius-md: 10px;
+      --radius-pill: 999px;
+      --spacing-section: 64px;
+      --max-width: 1120px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, Segoe UI, sans-serif;
+      background-color: var(--background);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* Sticky Header / Nav */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(248, 250, 252, 0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .nav-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .logo-mark {
+      width: 28px; height: 28px; border-radius: 999px;
+      background: linear-gradient(135deg, #22C55E, #16A34A);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 16px; color: #022C22;
+    }
+    .logo-text { font-weight: 600; font-size: 16px; color: var(--primary); }
+    .main-nav { display: inline-flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .main-nav a {
+      font-size: 14px;
+      color: #4B5563;
+      padding: 6px 10px;
+      border-radius: var(--radius-pill);
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .main-nav a:hover { background: #E5F9EF; color: #065F46; }
+    .main-nav .nav-cta {
+      background: linear-gradient(135deg, #22C55E, #16A34A);
+      color: #022C22;
+      box-shadow: 0 10px 30px rgba(34, 197, 94, 0.25);
+    }
+    .main-nav .nav-cta:hover { filter: brightness(1.05); }
+
+    @media (max-width: 720px) {
+      .nav-container { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* Page */
+    .page { min-height: 100vh; padding: 24px 16px 48px; }
+    .container { max-width: var(--max-width); margin: 0 auto; }
+
+    h1, h2, h3 { color: var(--primary); letter-spacing: -0.02em; }
+    h1 { font-size: clamp(30px, 5vw, 40px); line-height: 1.2; margin-bottom: 8px; }
+    h2 { font-size: clamp(22px, 3vw, 26px); margin-bottom: 6px; }
+    h3 { font-size: 18px; margin-bottom: 4px; }
+
+    .section { margin-bottom: var(--spacing-section); }
+    .section-header { margin-bottom: 18px; }
+    .section-header p { max-width: 720px; font-size: 14px; color: var(--text-muted); }
+
+    .grid { display: grid; gap: 18px; }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    /* Hero */
+    .hero { padding: 32px 0 26px; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 4px 10px; border-radius: var(--radius-pill);
+      background: rgba(34, 197, 94, 0.12);
+      color: var(--secondary); font-size: 12px; font-weight: 500;
+      margin-bottom: 12px;
+    }
+    .badge-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--secondary); }
+    .hero-title { font-weight: 700; margin-bottom: 10px; }
+    .hero-highlight { color: var(--secondary); }
+    .hero-subtitle { max-width: 760px; font-size: 15px; color: var(--text-muted); margin-bottom: 18px; }
+    .hero-metrics { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+    .metric-pill {
+      padding: 6px 12px; border-radius: var(--radius-pill);
+      border: 1px solid var(--border-soft);
+      background: #FFFFFF;
+      font-size: 12px; color: var(--text-muted);
+    }
+    .metric-pill span { color: var(--secondary); font-weight: 600; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 10px 18px; border-radius: var(--radius-pill);
+      font-size: 14px; font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer; transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #22C55E, #16A34A);
+      border-color: #16A34A;
+      color: #022C22;
+      box-shadow: 0 10px 30px rgba(34, 197, 94, 0.35);
+    }
+    .btn-primary:hover { filter: brightness(1.04); transform: translateY(-1px); }
+    .btn-outline {
+      background: #FFFFFF;
+      border-color: var(--border-soft);
+      color: var(--primary);
+    }
+    .btn-outline:hover { border-color: #CBD5F5; background-color: #F9FAFB; }
+
+    /* Cards */
+    .card {
+      background: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 18px 18px 16px;
+      border: 1px solid var(--border-soft);
+      box-shadow: var(--shadow-soft);
+    }
+    .card-label {
+      font-size: 11px; text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--secondary);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .card-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+    .card-text { font-size: 13px; color: var(--text-muted); }
+
+    .pill-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+    .pill {
+      font-size: 11px; padding: 4px 8px; border-radius: var(--radius-pill);
+      border: 1px solid var(--border-soft);
+      background: #F9FAFB;
+      color: var(--text-muted);
+    }
+
+    /* Bullets */
+    .bullet-list { list-style: none; padding-left: 0; font-size: 13px; color: var(--text-muted); }
+    .bullet-list li { margin-bottom: 6px; position: relative; padding-left: 14px; }
+    .bullet-list li::before { content: "•"; position: absolute; left: 0; color: var(--secondary); font-size: 14px; }
+
+    /* CTA Footer */
+    .cta-footer {
+      margin-top: 16px;
+      padding: 16px;
+      border-radius: var(--radius-lg);
+      border: 1px dashed rgba(148, 163, 184, 0.7);
+      background: radial-gradient(circle at top left, rgba(34, 197, 94, 0.08), #FFFFFF 50%);
+    }
+    .cta-footer-title { font-size: 17px; font-weight: 600; margin-bottom: 6px; color: var(--primary); }
+    .cta-footer-text { font-size: 13px; color: var(--text-muted); margin-bottom: 10px; }
+
+    @media (max-width: 900px) {
+      .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 720px) {
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">SaberTechs</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="industries.html">Industries</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page">
+    <main class="container" id="travel-hospitality">
+
+      <!-- HERO -->
+      <section class="hero">
+        <span class="badge">
+          <span class="badge-dot"></span>
+          Industries · Travel & Hospitality
+        </span>
+
+        <h1 class="hero-title">
+          Support & Operations for <span class="hero-highlight">Travel, Hotels & OTAs</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          We handle booking queries, changes, cancellations, refunds and guest coordination across voice, email and chat.
+          Designed to perform during peak seasons and disruptions—without adding chaos or heavy overhead.
+        </p>
+
+        <div class="hero-metrics">
+          <div class="metric-pill"><span>Bookings</span> & amendments</div>
+          <div class="metric-pill"><span>Cancellations</span> & refunds</div>
+          <div class="metric-pill"><span>Escalations</span> & guest care</div>
+          <div class="metric-pill"><span>Surge-ready</span> seasonal support</div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="goToContact()">Discuss Your Requirement</button>
+          <button class="btn btn-outline" onclick="window.location.href='industries.html'">Back to Industries</button>
+        </div>
+      </section>
+
+      <!-- CHALLENGES -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Common Challenges in Travel Operations</h2>
+          <p>
+            Travel operations need speed, accuracy and calm communication—especially when plans change.
+            We add a reliable operations layer so your core team can focus on growth and partnerships.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="card-label">Complexity</div>
+            <h3 class="card-title">Multi-Partner Coordination</h3>
+            <p class="card-text">Airlines, hotels, agents, ground teams and OTAs—updates must stay in sync.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Volume</div>
+            <h3 class="card-title">Seasonal & Disruption Spikes</h3>
+            <p class="card-text">Holidays, weather, system issues and events can multiply query load overnight.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Experience</div>
+            <h3 class="card-title">Escalations & Sensitive Handling</h3>
+            <p class="card-text">Refund delays and disrupted plans require empathy + clear next steps.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SERVICES MAPPED -->
+      <section class="section">
+        <div class="section-header">
+          <h2>How We Support Travel & Hospitality Teams</h2>
+          <p>
+            Choose a focused scope (reservations, refunds, post-booking support) or run an end-to-end support desk.
+          </p>
+        </div>
+
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="card-label">Support</div>
+            <h3 class="card-title">Reservation & Post-Booking Support</h3>
+            <p class="card-text">Inbound support for queries, itinerary help, confirmations, changes and reschedules.</p>
+            <div class="pill-list">
+              <span class="pill">Voice / Email / Chat</span>
+              <span class="pill">SOP-driven</span>
+              <span class="pill">TAT focused</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Back Office</div>
+            <h3 class="card-title">Cancellations & Refund Coordination</h3>
+            <p class="card-text">Eligibility checks, documentation, partner follow-ups and customer updates.</p>
+            <div class="pill-list">
+              <span class="pill">Status updates</span>
+              <span class="pill">Partner follow-ups</span>
+              <span class="pill">Queue clean-up</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Experience</div>
+            <h3 class="card-title">Guest Care & Escalations</h3>
+            <p class="card-text">Complaint handling support with defined escalation paths and clear resolutions.</p>
+            <div class="pill-list">
+              <span class="pill">Empathy scripts</span>
+              <span class="pill">Escalation matrix</span>
+              <span class="pill">Resolution tracking</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Partners</div>
+            <h3 class="card-title">OTA / Vendor Coordination</h3>
+            <p class="card-text">Follow-ups with hotels, vendors and partner platforms to close open loops.</p>
+            <div class="pill-list">
+              <span class="pill">Email coordination</span>
+              <span class="pill">SLA tracking</span>
+              <span class="pill">Exception handling</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Quality</div>
+            <h3 class="card-title">QA & Calibration</h3>
+            <p class="card-text">Scorecards and sampling QA to improve tone, accuracy and compliance.</p>
+            <div class="pill-list">
+              <span class="pill">Scorecards</span>
+              <span class="pill">Coaching inputs</span>
+              <span class="pill">Trends report</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-label">Automation</div>
+            <h3 class="card-title">Light Automation for FAQs</h3>
+            <p class="card-text">Simple chat/WhatsApp flows for common queries, handover to humans for exceptions.</p>
+            <div class="pill-list">
+              <span class="pill">FAQ flows</span>
+              <span class="pill">Lead capture</span>
+              <span class="pill">Human handover</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- USE CASES -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Typical Use Cases</h2>
+          <p>Examples of where clients see quick impact after outsourcing a travel operations desk.</p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <h3 class="card-title">Hotels & Resorts</h3>
+            <ul class="bullet-list">
+              <li>Guest support desk for pre-arrival and post-stay queries.</li>
+              <li>Handling changes, confirmations, add-ons and escalations.</li>
+              <li>Daily reporting and exception list management.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title">OTAs, Agencies & Aggregators</h3>
+            <ul class="bullet-list">
+              <li>High-volume post-booking support during peak periods.</li>
+              <li>Refund coordination workflows and partner follow-ups.</li>
+              <li>Queue clean-up and “open loop” reduction.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ENGAGEMENT MODELS -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Engagement Models</h2>
+          <p>Start small and scale. Keep it simple, measurable and stable.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <h3 class="card-title">Dedicated Team</h3>
+            <p class="card-text">A fixed team trained on your tools, tone and SOPs.</p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Seasonal Surge Team</h3>
+            <p class="card-text">Flexible ramp-up for holidays, festivals and disruptions.</p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">Pilot → Scale</h3>
+            <p class="card-text">Begin with 2–4 weeks on one queue, then expand scope.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-footer" id="travel-contact">
+        <h2 class="cta-footer-title">Want to Stabilize Your Booking & Refund Workflows?</h2>
+        <p class="cta-footer-text">
+          Share your approximate monthly volumes and channels (calls/email/chat). We’ll propose a simple model with scope, SLAs and a pilot plan.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="goToContact()">Contact Our Team</button>
+          <button class="btn btn-outline" onclick="window.location.href='services.html'">Explore Services</button>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    function goToContact() {
+      window.location.href = "contact.html#contact-form";
+    }
+  </script>
+</body>
+</html>

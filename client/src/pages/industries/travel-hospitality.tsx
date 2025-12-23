@@ -1,28 +1,30 @@
-import { 
-  MessageSquare, 
-  BadgeDollarSign, 
-  Database, 
-  ShieldCheck, 
-  Bot, 
-  Users, 
-  Monitor, 
-  ShoppingBag, 
-  Plane, 
-  GraduationCap, 
-  ArrowRight, 
-  Check, 
-  Twitter, 
-  Linkedin, 
-  Facebook, 
-  Instagram, 
-  Menu, 
-  X, 
+import {
+  MessageSquare,
+  BadgeDollarSign,
+  Database,
+  ShieldCheck,
+  Bot,
+  Users,
+  Monitor,
+  ShoppingBag,
+  Plane,
+  GraduationCap,
+  ArrowRight,
+  Check,
+  Menu,
+  X,
   ChevronDown,
   Globe,
   Truck,
   Building2,
   Stethoscope,
-  Network
+  Network,
+  CalendarCheck,
+  FileX,
+  RefreshCcw,
+  AlertCircle,
+  TrendingUp,
+  Headphones
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
@@ -62,7 +64,7 @@ export default function TravelHospitality() {
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">
       {/* HEADER - Sticky & Premium */}
-      <header 
+      <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled ? "bg-white/95 backdrop-blur-md shadow-md py-3" : "bg-transparent py-6"
         }`}
@@ -279,22 +281,30 @@ export default function TravelHospitality() {
               className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-slate-900 leading-[1.1] mb-4"
               variants={fadeIn}
             >
-              Operations & CX for <span className="text-primary">Travel & Hospitality</span>
+              Travel & Hospitality <span className="text-primary">Operations Support</span>
             </motion.h1>
             <motion.h3 
               className="text-xl text-slate-600 mb-0 leading-relaxed font-light max-w-lg mx-auto lg:mx-0"
               variants={fadeIn}
             >
-              Manage reservations, cancellations, and disruptions 24/7. We help OTAs, airlines, and hotels deliver 5-star service at scale.
+              We support travel companies, hotels, resorts and online travel platforms with customer support and back office operations. From booking changes and cancellations to refund coordination and guest escalations, we help you manage high-volume queries efficiently.
             </motion.h3>
+
+            <motion.div variants={fadeIn} className="flex flex-wrap gap-2 mt-6 justify-center lg:justify-start">
+              {["Bookings & Amendments", "Cancellations & Refunds", "OTA Coordination", "Guest Escalations", "Seasonal Surge Support"].map((pill) => (
+                <span key={pill} className="px-3 py-1 rounded-full border border-slate-200 bg-white text-xs font-medium text-slate-600 shadow-sm">
+                  {pill}
+                </span>
+              ))}
+            </motion.div>
             
             <motion.div 
-              className="flex flex-wrap gap-4 mt-6 justify-center lg:justify-start"
+              className="flex flex-wrap gap-4 mt-8 justify-center lg:justify-start"
               variants={fadeIn}
             >
               <Link href="/contact">
                 <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-blue-700 text-white font-bold rounded-lg px-8 h-14 text-lg shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5">
-                  Get a Proposal
+                  Discuss Your Requirement
                 </Button>
               </Link>
             </motion.div>
@@ -309,7 +319,7 @@ export default function TravelHospitality() {
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl shadow-blue-100/50 border border-slate-100 bg-white">
               <img 
                 src={heroImage} 
-                alt="Travel & Hospitality" 
+                alt="Travel & Hospitality Support" 
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -317,26 +327,56 @@ export default function TravelHospitality() {
         </div>
       </section>
 
-      {/* SECTION 2 - KEY CAPABILITIES */}
+      {/* SECTION 2 - CHALLENGES */}
       <section className="py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">Travel Support Capabilities</h2>
+            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">Key Challenges We Solve</h2>
             <p className="text-lg text-slate-600">
-              Round-the-clock support for a global industry.
+              Reliable support during peak seasons, disruptions, and daily operations.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+             {[
+               { title: "Booking Amendments", desc: "Booking changes, reschedules and amendments across multiple partners.", icon: CalendarCheck },
+               { title: "Cancellations & Refunds", desc: "High cancellation and refund volumes during disruptions and peak season.", icon: FileX },
+               { title: "Guest Escalations", desc: "Guest dissatisfaction and escalations requiring quick, empathetic handling.", icon: AlertCircle },
+               { title: "Complex Coordination", desc: "Coordination with airlines, hotels, ground operators and OTAs.", icon: Network },
+               { title: "Seasonal Spikes", desc: "Spikes in queries during holidays, events, weather disruptions and system issues.", icon: TrendingUp }
+             ].map((item, i) => (
+               <div key={i} className="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-blue-200 transition-colors">
+                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                   <item.icon className="w-6 h-6 text-primary" />
+                 </div>
+                 <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
+                 <p className="text-slate-600 text-sm">{item.desc}</p>
+               </div>
+             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3 - SERVICES */}
+      <section className="py-24 bg-slate-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">Services for Travel & Hospitality</h2>
+            <p className="text-lg text-slate-600">
+              Specialized operational support for the travel industry.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
              {[
-               { title: "Booking & Reservations", desc: "Helping customers find and book flights, hotels, and tours.", icon: Plane },
-               { title: "Disruption Management", desc: "Rebooking and support during cancellations or delays.", icon: ShieldCheck },
-               { title: "Concierge Services", desc: "VIP support and special requests for high-value guests.", icon: Users },
-               { title: "Refund Processing", desc: "Handling complex refund policies and disputes.", icon: Database },
-               { title: "Loyalty Programs", desc: "Managing rewards, points, and member inquiries.", icon: BadgeDollarSign },
-               { title: "Multilingual Support", desc: "Serving travelers in their native languages.", icon: Globe }
+               { title: "Reservation Support", desc: "Voice, email and chat handling for bookings and changes.", icon: Headphones },
+               { title: "Cancellation & Refunds", desc: "Eligibility checks, documentation and coordination.", icon: RefreshCcw },
+               { title: "OTA Coordination", desc: "Managing partner communications and update loops.", icon: Globe },
+               { title: "Guest Escalation Handling", desc: "Complaint resolution support with defined escalation paths.", icon: ShieldCheck },
+               { title: "Back Office Operations", desc: "Booking audits, data updates, reconciliation prep and queue clean-up.", icon: Database },
+               { title: "QA & Compliance", desc: "Scorecards, sampling QA and coaching inputs for service quality.", icon: Check }
              ].map((item, i) => (
-               <div key={i} className="bg-slate-50 p-6 rounded-xl border border-slate-100">
+               <div key={i} className="bg-white p-8 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
                  <item.icon className="w-10 h-10 text-primary mb-4" />
                  <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
                  <p className="text-slate-600">{item.desc}</p>
@@ -345,16 +385,74 @@ export default function TravelHospitality() {
           </div>
         </div>
       </section>
+
+      {/* SECTION 4 - USE CASES & ENGAGEMENT */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16">
+            <div>
+              <h2 className="text-3xl font-heading font-bold text-slate-900 mb-8">Typical Use Cases</h2>
+              <div className="space-y-6">
+                {[
+                  "Hotels and resorts needing a dedicated support desk for guest queries",
+                  "Travel agencies and tour operators managing booking operations and coordination",
+                  "OTAs and aggregators handling refunds, reschedules, cancellations and partner updates",
+                  "Seasonal surge support during holidays, festivals and peak travel months"
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4">
+                    <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-0.5">
+                      <Check className="w-3.5 h-3.5 text-green-600" strokeWidth={3} />
+                    </div>
+                    <p className="text-lg text-slate-700">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-3xl font-heading font-bold text-slate-900 mb-8">Engagement Models</h2>
+              <div className="space-y-6">
+                {[
+                  { title: "Dedicated Team", desc: "A fixed team trained on your systems and processes." },
+                  { title: "Seasonal / Surge Team", desc: "Flexible ramp-up during peak periods and disruptions." },
+                  { title: "Shared Support Queue", desc: "Best when volumes vary and you want cost efficiency." },
+                  { title: "Pilot → Scale", desc: "Start small for 2–4 weeks and expand once KPIs are stable." }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4">
+                    <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center shrink-0 mt-0.5">
+                      <div className="w-2 h-2 rounded-full bg-primary" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-slate-900">{item.title}</h4>
+                      <p className="text-slate-600">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       
-      {/* SECTION 3 - CTA */}
-      <section className="py-24 bg-white text-center border-t border-slate-100">
+      {/* SECTION 5 - CTA */}
+      <section className="py-24 bg-slate-900 text-center text-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-6">Elevate Your Guest Experience</h2>
-          <Link href="/contact">
-            <Button size="lg" className="bg-primary hover:bg-blue-700 text-white font-bold rounded-full px-12 h-16 text-xl shadow-xl shadow-primary/20">
-              Talk to Us <ArrowRight className="ml-2 w-6 h-6" />
-            </Button>
-          </Link>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">Ready to Optimize Your Travel Operations?</h2>
+          <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
+            Partner with SaberTechs for reliable, scalable travel & hospitality support.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact">
+              <Button size="lg" className="bg-primary hover:bg-blue-600 text-white font-bold rounded-full px-12 h-16 text-xl">
+                Discuss Your Requirement <ArrowRight className="ml-2 w-6 h-6" />
+              </Button>
+            </Link>
+            <Link href="/industries">
+              <Button variant="outline" size="lg" className="border-slate-600 text-white hover:bg-slate-800 hover:text-white rounded-full px-8 h-16 text-lg">
+                ← Back to Industries
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 

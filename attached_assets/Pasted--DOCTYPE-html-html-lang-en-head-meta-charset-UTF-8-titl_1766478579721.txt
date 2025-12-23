@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel & Hospitality Support Services | SaberTechs</title>
+  <meta name="description" content="Customer support and back office operations for travel companies, hotels, resorts and OTAs. Booking changes, cancellations, refunds, guest coordination and escalation handling." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: Inter, sans-serif; background:#F8FAFC; margin:0; color:#1F2933; }
+    .container { max-width:1120px; margin:auto; padding:48px 16px; }
+    h1,h2,h3 { color:#0B1F3A; }
+    .section { margin-bottom:48px; }
+    ul { padding-left:18px; }
+    .btn {
+      padding:12px 22px; border-radius:999px;
+      background:#22C55E; color:#022C22;
+      text-decoration:none; font-weight:600;
+      display:inline-block;
+    }
+    .btn:hover { filter: brightness(1.04); }
+    .links-row { margin-top: 14px; display:flex; gap:14px; flex-wrap:wrap; }
+    .text-link { color:#0B1F3A; text-decoration:underline; font-weight:500; }
+    .pill-row { display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 0; }
+    .pill {
+      padding:6px 12px; border-radius:999px;
+      border:1px solid #E5E7EB; background:#fff;
+      font-size:12px; color:#6B7280;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>Travel & Hospitality Operations Support</h1>
+    <p>
+      We support travel companies, hotels, resorts and online travel platforms with customer support
+      and back office operations. From booking changes and cancellations to refund coordination and guest escalations,
+      we help you manage high-volume queries efficiently—especially during peak seasons and disruptions.
+    </p>
+
+    <div class="pill-row">
+      <span class="pill">Bookings & Amendments</span>
+      <span class="pill">Cancellations & Refunds</span>
+      <span class="pill">OTA Coordination</span>
+      <span class="pill">Guest Escalations</span>
+      <span class="pill">Seasonal Surge Support</span>
+    </div>
+
+    <div class="section">
+      <h2>Key Challenges We Solve</h2>
+      <ul>
+        <li>Booking changes, reschedules and amendments across multiple partners.</li>
+        <li>High cancellation and refund volumes during disruptions and peak season.</li>
+        <li>Guest dissatisfaction and escalations requiring quick, empathetic handling.</li>
+        <li>Complex coordination with airlines, hotels, ground operators and OTAs.</li>
+        <li>Spikes in queries during holidays, events, weather disruptions and system issues.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Services for Travel & Hospitality</h2>
+      <ul>
+        <li><strong>Reservation Support:</strong> voice, email and chat handling for bookings and changes.</li>
+        <li><strong>Cancellation & Refund Processing:</strong> eligibility checks, documentation and coordination.</li>
+        <li><strong>OTA Coordination:</strong> managing partner communications and update loops.</li>
+        <li><strong>Guest Escalation Handling:</strong> complaint resolution support with defined escalation paths.</li>
+        <li><strong>Back Office Operations:</strong> booking audits, data updates, reconciliation prep and queue clean-up.</li>
+        <li><strong>QA & Compliance (optional):</strong> scorecards, sampling QA and coaching inputs for service quality.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Typical Use Cases</h2>
+      <ul>
+        <li>Hotels and resorts needing a dedicated support desk for guest queries.</li>
+        <li>Travel agencies and tour operators managing booking operations and coordination.</li>
+        <li>OTAs and aggregators handling refunds, reschedules, cancellations and partner updates.</li>
+        <li>Seasonal surge support during holidays, festivals and peak travel months.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Engagement Models</h2>
+      <ul>
+        <li><strong>Dedicated Team:</strong> a fixed team trained on your systems and processes.</li>
+        <li><strong>Seasonal / Surge Team:</strong> flexible ramp-up during peak periods and disruptions.</li>
+        <li><strong>Shared Support Queue:</strong> best when volumes vary and you want cost efficiency.</li>
+        <li><strong>Pilot → Scale:</strong> start small for 2–4 weeks and expand once KPIs are stable.</li>
+      </ul>
+    </div>
+
+    <a href="contact.html" class="btn">Discuss Your Requirement</a>
+
+    <div class="links-row">
+      <a class="text-link" href="industries.html">← Back to Industries</a>
+      <a class="text-link" href="services.html">View Services</a>
+    </div>
+
+  </div>
+</body>
+</html>
