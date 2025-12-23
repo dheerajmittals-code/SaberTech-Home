@@ -78,12 +78,12 @@ export default function Careers() {
                     View Openings
                   </Button>
                 </a>
-                <a href="#gig">
+                <a href="https://sabertechs.base44.app/" target="_blank" rel="noopener noreferrer">
                    <Button variant="outline" size="lg" className="bg-white border-slate-200 text-primary hover:bg-slate-50 font-bold rounded-full px-8 h-12">
                     Join Gig Network
                   </Button>
                 </a>
-                 <a href="#apply">
+                 <a href="https://sabertechs.base44.app/" target="_blank" rel="noopener noreferrer">
                    <Button variant="outline" size="lg" className="bg-white border-slate-200 text-primary hover:bg-slate-50 font-bold rounded-full px-8 h-12">
                     Apply Now
                   </Button>
@@ -214,7 +214,7 @@ export default function Careers() {
                  <h3 className="text-xl font-bold text-slate-900 mb-2">Don’t see your role?</h3>
                  <p className="text-slate-600 mb-6">Apply anyway. If we find a fit, we’ll reach out when a matching role opens.</p>
                  <div className="flex flex-wrap justify-center gap-4">
-                   <a href="#apply">
+                   <a href="https://sabertechs.base44.app/" target="_blank" rel="noopener noreferrer">
                      <Button className="bg-primary hover:bg-blue-700 text-white font-bold rounded-lg">Apply Now</Button>
                    </a>
                    <a href="mailto:hr@sabertechs.com?subject=Inquiry">
@@ -280,14 +280,14 @@ export default function Careers() {
                 <div className="relative z-10">
                    <h3 className="text-xl font-bold mb-2">Want to get gig opportunities?</h3>
                    <p className="text-slate-300 mb-6">Apply using the form below and select “Gig Workforce”.</p>
-                   <div className="flex justify-center gap-4">
-                     <a href="#apply">
-                       <Button className="bg-white text-slate-900 hover:bg-slate-100 font-bold rounded-lg">Join Gig Network</Button>
-                     </a>
-                     <a href="#faq">
-                       <Button variant="outline" className="border-slate-700 text-white hover:bg-slate-800 hover:text-white bg-transparent">Read FAQs</Button>
-                     </a>
-                   </div>
+          <div className="cta-actions">
+            <a href="https://sabertechs.base44.app/" target="_blank" rel="noopener noreferrer">
+              <Button className="bg-primary hover:bg-blue-700 text-white font-bold rounded-lg">Join Gig Network</Button>
+            </a>
+            <a href="#faq">
+              <Button variant="outline" className="border-slate-700 text-white hover:bg-slate-800 hover:text-white bg-transparent">Read FAQs</Button>
+            </a>
+          </div>
                 </div>
              </div>
           </div>
@@ -320,78 +320,19 @@ export default function Careers() {
         </div>
       </section>
 
-      {/* APPLY FORM */}
+      {/* APPLY FORM (CTA Only) */}
       <section id="apply" className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
            <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="text-3xl font-heading font-bold text-slate-900 mb-4">Apply now</h2>
-            <p className="text-lg text-slate-600">
-              Fill the form. Our HR team will reach out if your profile matches an open requirement.
+            <p className="text-lg text-slate-600 mb-8">
+              Ready to start your journey with SaberTechs? Click below to submit your application.
             </p>
-          </div>
-
-          <div className="max-w-2xl mx-auto bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-lg">
-            <form onSubmit={handleApply} className="space-y-6">
-               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Full Name</Label>
-                    <Input id="name" required placeholder="Your name" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="phone">Mobile Number</Label>
-                    <Input id="phone" required type="tel" placeholder="+91..." />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="you@example.com" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="city">City</Label>
-                    <Input id="city" placeholder="Your city" />
-                  </div>
-               </div>
-
-               <div className="space-y-2">
-                 <Label htmlFor="role">Role Preference</Label>
-                 <Select required>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select one" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="customer-support">Customer Support Executive</SelectItem>
-                      <SelectItem value="inside-sales">Inside Sales / Lead Follow-up</SelectItem>
-                      <SelectItem value="back-office">Back Office Executive</SelectItem>
-                      <SelectItem value="qa">QA / Auditor</SelectItem>
-                      <SelectItem value="exam-ops">Exam Operations (Coordinator / Proctoring)</SelectItem>
-                      <SelectItem value="gig">Gig Workforce (On-demand)</SelectItem>
-                      <SelectItem value="internship">Internship</SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
-                    </SelectContent>
-                 </Select>
-               </div>
-
-               <div className="space-y-2">
-                 <Label htmlFor="summary">Experience Summary (optional)</Label>
-                 <Textarea id="summary" placeholder="Briefly describe your experience, skills, and availability." className="min-h-[120px]" />
-               </div>
-
-               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <Button type="submit" className="flex-1 bg-primary hover:bg-blue-700 text-white font-bold h-12 text-base">
-                    Submit Application
-                  </Button>
-               </div>
-               
-               <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
-                  <a href="mailto:hr@sabertechs.com?subject=Job%20Application%20-%20SaberTechs" className="text-sm text-slate-500 hover:text-primary font-medium">Email HR</a>
-                  <span className="hidden sm:inline text-slate-300">|</span>
-                  <a href="#" onClick={openWhatsAppHR} className="text-sm text-slate-500 hover:text-primary font-medium">WhatsApp HR</a>
-               </div>
-
-               <p className="text-xs text-slate-400 text-center mt-6">
-                 Note: Please do not share sensitive personal data (Aadhaar, PAN, bank details) at this stage.
-                 If shortlisted, we’ll request documents securely.
-               </p>
-            </form>
+            <a href="https://sabertechs.base44.app/" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-primary hover:bg-blue-700 text-white font-bold rounded-lg h-14 px-10 text-lg shadow-lg">
+                Go to Application Portal
+              </Button>
+            </a>
           </div>
         </div>
       </section>
