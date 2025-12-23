@@ -24,12 +24,14 @@ import {
   ListTodo,
   Scale,
   KeyRound,
-  Building2,
   BarChart3,
   ClipboardCheck,
   AlertCircle,
   FileText,
-  Network
+  Network,
+  Stethoscope,
+  Truck,
+  Building2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";

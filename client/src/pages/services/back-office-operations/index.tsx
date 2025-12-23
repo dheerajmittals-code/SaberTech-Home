@@ -24,7 +24,10 @@ import {
   Layers,
   CreditCard,
   Briefcase,
-  Network
+  Network,
+  Stethoscope,
+  Truck,
+  Building2
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
