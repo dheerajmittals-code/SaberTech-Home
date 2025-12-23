@@ -24,6 +24,8 @@ import FintechInsurance from "@/pages/industries/fintech-insurance";
 import HealthcareDiagnostics from "@/pages/industries/healthcare-diagnostics";
 import LogisticsDelivery from "@/pages/industries/logistics-delivery";
 import RealEstate from "@/pages/industries/real-estate";
+import Careers from "@/pages/careers";
+import WhyUs from "@/pages/why-us";
 
 function Router() {
   return (
@@ -46,6 +48,8 @@ function Router() {
       <Route path="/industries/healthcare-diagnostics" component={HealthcareDiagnostics} />
       <Route path="/industries/logistics-delivery" component={LogisticsDelivery} />
       <Route path="/industries/real-estate" component={RealEstate} />
+      <Route path="/careers" component={Careers} />
+      <Route path="/why-us" component={WhyUs} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>
