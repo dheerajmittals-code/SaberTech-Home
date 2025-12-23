@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Careers | SaberTechs</title>
+  <meta name="description" content="Explore careers at SaberTechs — full-time roles and on-demand gig opportunities in customer support, inside sales, back office, QA, and exam operations." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#0B1F3A;
+      --secondary:#22C55E;
+      --background:#F8FAFC;
+      --text-main:#1F2933;
+      --text-muted:#6B7280;
+      --border-soft:#E5E7EB;
+      --shadow-soft:0 18px 40px rgba(15,23,42,0.12);
+
+      --radius-lg:16px;
+      --radius-pill:999px;
+      --spacing-section:64px;
+      --max-width:1120px;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:"Inter",system-ui,-apple-system,Segoe UI,sans-serif;
+      background:var(--background);
+      color:var(--text-main);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit;text-decoration:none;}
+    .page{min-height:100vh;padding:24px 16px 48px;}
+    .container{max-width:var(--max-width);margin:0 auto;}
+
+    /* Header */
+    .site-header{
+      position:sticky;top:0;z-index:50;
+      background:rgba(248,250,252,0.97);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--border-soft);
+    }
+    .nav-container{
+      max-width:var(--max-width);
+      margin:0 auto;
+      padding:10px 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+    .logo{display:inline-flex;align-items:center;gap:10px;}
+    .logo-mark{
+      width:36px;height:36px;border-radius:10px;
+      background:linear-gradient(135deg,#2F6EEA,#1D4ED8);
+      display:inline-flex;align-items:center;justify-content:center;
+      font-weight:800;font-size:18px;color:#FFFFFF;
+    }
+    .logo-text{font-weight:700;font-size:18px;color:var(--primary);}
+    .main-nav{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+    .main-nav a{
+      font-size:14px;
+      color:#334155;
+      padding:8px 10px;
+      border-radius:var(--radius-pill);
+      transition:background .15s ease,color .15s ease;
+    }
+    .main-nav a:hover{background:#EAF2FF;color:#1D4ED8;}
+    .nav-cta{
+      background:linear-gradient(135deg,#2F6EEA,#1D4ED8);
+      color:#FFFFFF !important;
+      padding:10px 16px !important;
+      box-shadow:0 10px 26px rgba(29,78,216,0.25);
+    }
+    .nav-cta:hover{filter:brightness(1.05);}
+
+    @media (max-width:860px){
+      .nav-container{flex-direction:column;align-items:flex-start;}
+      .main-nav{gap:10px;}
+    }
+
+    /* Typography */
+    h1,h2,h3{color:var(--primary);letter-spacing:-0.02em;}
+    h1{font-size:clamp(30px,4.5vw,42px);line-height:1.15;margin-bottom:10px;}
+    h2{font-size:clamp(22px,3vw,26px);margin-bottom:8px;}
+    h3{font-size:18px;margin-bottom:6px;}
+    p{color:var(--text-muted);font-size:14px;}
+
+    .section{margin-bottom:var(--spacing-section);}
+    .section-header{margin-bottom:18px;}
+    .section-header p{max-width:820px;}
+
+    /* Hero */
+    .hero{padding:34px 0 28px;}
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:6px 12px;border-radius:var(--radius-pill);
+      background:rgba(29,78,216,0.10);
+      color:#1D4ED8;
+      font-size:12px;font-weight:600;
+      margin-bottom:14px;
+    }
+    .hero-subtitle{max-width:860px;font-size:15px;margin-bottom:18px;}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px;}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:10px 18px;border-radius:var(--radius-pill);
+      border:1px solid transparent;
+      font-size:14px;font-weight:600;
+      cursor:pointer;
+      transition:all .15s ease;
+      white-space:nowrap;
+    }
+    .btn-primary{
+      background:linear-gradient(135deg,#2F6EEA,#1D4ED8);
+      color:#fff;
+      box-shadow:0 10px 26px rgba(29,78,216,0.25);
+    }
+    .btn-primary:hover{filter:brightness(1.05);transform:translateY(-1px);}
+    .btn-outline{
+      background:#fff;
+      border-color:var(--border-soft);
+      color:var(--primary);
+    }
+    .btn-outline:hover{background:#F9FAFB;border-color:#CBD5E1;}
+
+    .hero-strip{
+      margin-top:18px;
+      display:flex;flex-wrap:wrap;gap:10px;
+    }
+    .strip-pill{
+      background:#fff;
+      border:1px solid var(--border-soft);
+      border-radius:var(--radius-pill);
+      padding:7px 12px;
+      font-size:12px;
+      color:#475569;
+    }
+
+    /* Cards */
+    .grid{display:grid;gap:18px;}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr));}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .card{
+      background:#fff;
+      border:1px solid var(--border-soft);
+      border-radius:var(--radius-lg);
+      padding:18px 18px 16px;
+      box-shadow:var(--shadow-soft);
+    }
+    .card-label{
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:0.12em;
+      color:#1D4ED8;
+      font-weight:700;
+      margin-bottom:8px;
+    }
+    .card-text{margin-top:6px;}
+    .pill-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;}
+    .pill{
+      font-size:11px;
+      padding:5px 10px;
+      border-radius:var(--radius-pill);
+      border:1px solid var(--border-soft);
+      background:#F9FAFB;
+      color:#475569;
+    }
+
+    /* Lists */
+    .bullet-list{list-style:none;padding-left:0;margin-top:6px;}
+    .bullet-list li{
+      position:relative;
+      padding-left:16px;
+      margin-bottom:8px;
+      color:var(--text-muted);
+      font-size:13px;
+    }
+    .bullet-list li::before{
+      content:"•";
+      position:absolute;
+      left:0;
+      color:#1D4ED8;
+      font-weight:900;
+    }
+
+    /* CTA block */
+    .cta-block{
+      margin-top:16px;
+      padding:18px;
+      border-radius:var(--radius-lg);
+      border:1px dashed rgba(148,163,184,0.7);
+      background:radial-gradient(circle at top left, rgba(29,78,216,0.10), #ffffff 55%);
+    }
+    .cta-title{font-size:18px;font-weight:700;color:var(--primary);margin-bottom:8px;}
+    .cta-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px;}
+
+    /* Form */
+    .form{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+      margin-top:14px;
+    }
+    .form .full{grid-column:1 / -1;}
+    label{display:block;font-size:12px;font-weight:600;color:#334155;margin-bottom:6px;}
+    input,select,textarea{
+      width:100%;
+      padding:11px 12px;
+      border-radius:12px;
+      border:1px solid var(--border-soft);
+      outline:none;
+      font-size:14px;
+      background:#fff;
+    }
+    textarea{min-height:110px;resize:vertical;}
+    input:focus,select:focus,textarea:focus{border-color:#93C5FD;box-shadow:0 0 0 4px rgba(147,197,253,0.35);}
+
+    .form-note{font-size:12px;color:#64748B;margin-top:8px;}
+    .form-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px;}
+
+    /* Footer note */
+    .small-note{font-size:12px;color:#64748B;margin-top:10px;}
+
+    @media (max-width:980px){
+      .grid-3{grid-template-columns:repeat(2,minmax(0,1fr));}
+    }
+    @media (max-width:760px){
+      .grid-2,.grid-3{grid-template-columns:1fr;}
+      .form{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">S</span>
+        <span class="logo-text">SaberTechs</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">HOME</a>
+        <a href="services.html">SERVICES</a>
+        <a href="industries.html">INDUSTRIES</a>
+        <a href="why-us.html">WHY US</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="careers.html">CAREERS</a>
+        <a href="contact.html#contact-form" class="nav-cta">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page">
+    <main class="container">
+
+      <!-- HERO -->
+      <section class="hero">
+        <div class="badge">Careers at SaberTechs</div>
+        <h1>Build your career with a <span style="color:#1D4ED8;">people-first</span> operations team.</h1>
+        <p class="hero-subtitle">
+          We run customer support, inside sales, back office, QA, and exam operations for growing businesses.
+          If you’re disciplined, polite, and dependable — we’d love to work with you.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#openings">View Openings</a>
+          <a class="btn btn-outline" href="#gig">Join Gig Network</a>
+          <a class="btn btn-outline" href="#apply">Apply Now</a>
+        </div>
+
+        <div class="hero-strip">
+          <div class="strip-pill">Structured training & SOPs</div>
+          <div class="strip-pill">Clear targets & reporting</div>
+          <div class="strip-pill">Work across multiple industries</div>
+          <div class="strip-pill">Long-term collaboration mindset</div>
+        </div>
+      </section>
+
+      <!-- WHY WORK WITH US -->
+      <section class="section">
+        <div class="section-header">
+          <h2>Why work with SaberTechs</h2>
+          <p>Professional processes, transparent expectations, and a culture focused on execution.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="card-label">Professional operations</div>
+            <h3>Clear SOPs & onboarding</h3>
+            <p class="card-text">We train teams on scripts, tools, escalation rules and quality benchmarks.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-label">Growth oriented</div>
+            <h3>Learn across functions</h3>
+            <p class="card-text">Customer support, inside sales, QA, back office — work that builds real skills.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-label">People first</div>
+            <h3>Respectful work culture</h3>
+            <p class="card-text">We value discipline, politeness, punctuality and team accountability.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- OPENINGS -->
+      <section class="section" id="openings">
+        <div class="section-header">
+          <h2>Open roles</h2>
+          <p>These are common roles we hire for. If your profile matches, apply and our HR team will contact you.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="card-label">Full-time</div>
+            <h3>Customer Support Executive</h3>
+            <p class="card-text">Voice / Email / Chat support. English + Hindi preferred. Rotational shifts possible.</p>
+            <div class="pill-list">
+              <span class="pill">Customer support</span><span class="pill">Communication</span><span class="pill">Ticketing tools</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-label">Full-time</div>
+            <h3>Inside Sales / Lead Follow-up</h3>
+            <p class="card-text">Lead qualification, demos scheduling, follow-ups, and CRM hygiene.</p>
+            <div class="pill-list">
+              <span class="pill">Calling</span><span class="pill">Follow-ups</span><span class="pill">CRM</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-label">Full-time</div>
+            <h3>QA / Auditor</h3>
+            <p class="card-text">Call audits, scorecards, feedback notes, and compliance reporting.</p>
+            <div class="pill-list">
+              <span class="pill">Quality</span><span class="pill">Scorecards</span><span class="pill">Reporting</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-label">Full-time</div>
+            <h3>Back Office Executive</h3>
+            <p class="card-text">Data updates, case tagging, verification checks, reporting and documentation.</p>
+            <div class="pill-list">
+              <span class="pill">Excel</span><span class="pill">Accuracy</span><span class="pill">SOP-driven</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-label">Project-based</div>
+            <h3>Exam Operations Coordinator</h3>
+            <p class="card-text">Center coordination, vendor follow-ups, logistics planning and reporting.</p>
+            <div class="pill-list">
+              <span class="pill">Coordination</span><span class="pill">Reporting</span><span class="pill">Execution</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-label">Anytime</div>
+            <h3>Internships (Ops / Sales / Admin)</h3>
+            <p class="card-text">Hands-on learning with real execution tasks. Duration: 4–12 weeks.</p>
+            <div class="pill-list">
+              <span class="pill">Learning</span><span class="pill">Operations</span><span class="pill">Support</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-block">
+          <div class="cta-title">Don’t see your role?</div>
+          <p>Apply anyway. If we find a fit, we’ll reach out when a matching role opens.</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="#apply">Apply Now</a>
+            <a class="btn btn-outline" href="contact.html#contact-form">Talk to HR</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- GIG NETWORK -->
+      <section class="section" id="gig">
+        <div class="section-header">
+          <h2>Join our Gig Network (On-demand)</h2>
+          <p>
+            We have a large freelance workforce used for exam proctoring & invigilation. We are expanding this network
+            for other on-demand tasks where reliability, reporting and basic training matters.
+          </p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="card-label">Gig roles</div>
+            <h3>What kind of gig work?</h3>
+            <ul class="bullet-list">
+              <li>Online proctoring / exam invigilation (online/offline)</li>
+              <li>Field verification / audit visits (checklist + photo proof)</li>
+              <li>Event & center coordination support</li>
+              <li>Survey visits / mystery audits (process-based)</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-label">Eligibility</div>
+            <h3>Who can join?</h3>
+            <ul class="bullet-list">
+              <li>Comfortable using smartphone apps (WhatsApp/Maps/Forms)</li>
+              <li>Professional behavior + punctuality</li>
+              <li>Basic reading/writing skills for reporting</li>
+              <li>Willingness to follow SOPs and submit proofs</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cta-block">
+          <div class="cta-title">Want to get gig opportunities?</div>
+          <p>Apply using the form below and select “Gig Workforce”.</p>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="#apply">Join Gig Network</a>
+            <a class="btn btn-outline" href="#faq">Read FAQs</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- HIRING PROCESS -->
+      <section class="section" id="process">
+        <div class="section-header">
+          <h2>Our hiring process</h2>
+          <p>Simple, transparent and fast — depending on role and project timelines.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="card-label">Step 1</div>
+            <h3>Apply</h3>
+            <p class="card-text">Submit the form with your role preference and contact details.</p>
+          </div>
+          <div class="card">
+            <div class="card-label">Step 2</div>
+            <h3>Screening call</h3>
+            <p class="card-text">A short call to verify communication, availability and basics.</p>
+          </div>
+          <div class="card">
+            <div class="card-label">Step 3</div>
+            <h3>Assessment & onboarding</h3>
+            <p class="card-text">Role-based assessment, training, SOP briefing and go-live.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- APPLY FORM -->
+      <section class="section" id="apply">
+        <div class="section-header">
+          <h2>Apply now</h2>
+          <p>Fill the form. Our HR team will reach out if your profile matches an open requirement.</p>
+        </div>
+
+        <div class="card">
+          <form class="form" onsubmit="return handleApply(event)">
+            <div>
+              <label>Full Name</label>
+              <input required type="text" name="name" placeholder="Your name" />
+            </div>
+            <div>
+              <label>Mobile Number</label>
+              <input required type="tel" name="phone" placeholder="+91..." />
+            </div>
+            <div>
+              <label>Email</label>
+              <input type="email" name="email" placeholder="you@example.com" />
+            </div>
+            <div>
+              <label>City</label>
+              <input type="text" name="city" placeholder="Your city" />
+            </div>
+
+            <div class="full">
+              <label>Role Preference</label>
+              <select required name="role">
+                <option value="">Select one</option>
+                <option>Customer Support Executive</option>
+                <option>Inside Sales / Lead Follow-up</option>
+                <option>Back Office Executive</option>
+                <option>QA / Auditor</option>
+                <option>Exam Operations (Coordinator / Proctoring)</option>
+                <option>Gig Workforce (On-demand)</option>
+                <option>Internship</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="full">
+              <label>Experience Summary (optional)</label>
+              <textarea name="summary" placeholder="Briefly describe your experience, skills, and availability."></textarea>
+            </div>
+
+            <div class="full form-actions">
+              <button class="btn btn-primary" type="submit">Submit Application</button>
+              <a class="btn btn-outline" href="mailto:hr@sabertechs.com?subject=Job%20Application%20-%20SaberTechs">Email HR</a>
+              <a class="btn btn-outline" href="#" onclick="openWhatsAppHR(event)">WhatsApp HR</a>
+            </div>
+
+            <div class="full">
+              <p class="form-note">
+                Note: Please do not share sensitive personal data (Aadhaar, PAN, bank details) at this stage.
+                If shortlisted, we’ll request documents securely.
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section" id="faq">
+        <div class="section-header">
+          <h2>FAQs</h2>
+          <p>Quick answers before you apply.</p>
+        </div>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Do you offer work-from-home?</h3>
+            <p class="card-text">Some roles and projects may be remote or hybrid depending on client requirements.</p>
+          </div>
+          <div class="card">
+            <h3>How does gig work payment happen?</h3>
+            <p class="card-text">Payment is project-based and depends on scope. Details are shared before confirmation.</p>
+          </div>
+          <div class="card">
+            <h3>Do you hire freshers?</h3>
+            <p class="card-text">Yes, for certain roles where communication and willingness to learn is strong.</p>
+          </div>
+          <div class="card">
+            <h3>How quickly will you respond?</h3>
+            <p class="card-text">If there is a matching requirement, HR usually responds within a few working days.</p>
+          </div>
+        </div>
+
+        <p class="small-note">
+          For business partnership enquiries, please use the <a href="contact.html" style="text-decoration:underline;color:#1D4ED8;">Contact</a> page.
+        </p>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    function openWhatsAppHR(e){
+      e.preventDefault();
+      // Replace with your HR WhatsApp number in international format, no '+' sign
+      const phone = "919999999999";
+      const text = encodeURIComponent("Hi SaberTechs HR, I want to apply. My name is ________. Role preference: ________. City: ________.");
+      window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
+    }
+
+    function handleApply(e){
+      e.preventDefault();
+
+      // This is a placeholder. For real submissions:
+      // - Connect this form to Google Forms / Formspree / Zoho Forms / HubSpot forms
+      // - Or post to your backend endpoint.
+
+      alert("Thanks! Your application has been submitted. Our HR team will connect if there is a suitable opening.");
+      e.target.reset();
+      return false;
+    }
+  </script>
+
+</body>
+</html>
