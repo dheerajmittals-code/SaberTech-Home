@@ -51,6 +51,14 @@ export default function FintechInsurance() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.title = "Fintech & Insurance Operations Support | SaberTechs";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute("content", "Tele-verification, KYC/document checks, onboarding support, servicing calls, payment reminders and QA & compliance audits for fintech and insurance firms.");
+    }
+  }, []);
+
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
