@@ -30,6 +30,9 @@ import { Link } from "wouter";
 
 import heroImage from "@assets/generated_images/isometric_contact_center_illustration.png";
 
+export default function Industries() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
 
   const fadeIn = {
@@ -49,7 +52,6 @@ import heroImage from "@assets/generated_images/isometric_contact_center_illustr
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">
       <Header />
-      </header>
 
       {/* SECTION 1 - HERO */}
       <section className="relative pt-[200px] pb-[120px] bg-slate-50 overflow-hidden">

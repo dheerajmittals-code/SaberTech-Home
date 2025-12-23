@@ -42,6 +42,9 @@ import { StickyCTA } from "@/components/StickyCTA";
 import heroImage from "@assets/generated_images/minimalist_isometric_support_team_illustration.png";
 
 // Reusing the same header/footer structure as Home for consistency
+export default function Services() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
 
   const fadeIn = {
@@ -61,7 +64,6 @@ import heroImage from "@assets/generated_images/minimalist_isometric_support_tea
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">
       <Header />
-      </header>
 
       {/* SECTION 1 — HERO */}
       <section className="relative pt-[200px] pb-[120px] bg-slate-50 overflow-hidden">
