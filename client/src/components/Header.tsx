@@ -83,7 +83,7 @@ export function Header() {
                     { name: "Back Office Operations", link: "/services/back-office-operations", icon: Database },
                     { name: "QA & Compliance", link: "/services/qa-compliance", icon: ShieldCheck },
                     { name: "AI Automation", link: "/services/ai-automation", icon: Bot },
-                    { name: "Gig Workforce (On-Demand)", link: "/services/gig-workforce", icon: Users }
+                    { name: "Gig Workforce", link: "/services/gig-workforce", icon: Users }
                   ].map((service, index, arr) => (
                     <div key={service.name}>
                       {index === arr.length - 1 && <div className="h-px bg-slate-100 my-1 mx-2" />}
@@ -117,7 +117,7 @@ export function Header() {
                     { name: "Telecom & ISPs", link: "/industries/telecom-isp", icon: Network },
                     { name: "Fintech & Insurance", link: "/industries/fintech-insurance", icon: BadgeDollarSign },
                     { name: "Healthcare", link: "/industries/healthcare-diagnostics", icon: Stethoscope },
-                    { name: "Logistics", link: "/industries/logistics-delivery", icon: Truck },
+                    { name: "Logistics & Delivery", link: "/industries/logistics-delivery", icon: Truck },
                     { name: "Real Estate", link: "/industries/real-estate", icon: Building2 }
                   ].map((industry) => (
                     <Link key={industry.name} href={industry.link}>
@@ -198,7 +198,7 @@ export function Header() {
                         { name: "Back Office Operations", link: "/services/back-office-operations" },
                         { name: "QA & Compliance", link: "/services/qa-compliance" },
                         { name: "AI Automation", link: "/services/ai-automation" },
-                        { name: "Gig Workforce (On-Demand)", link: "/services/gig-workforce" }
+                        { name: "Gig Workforce", link: "/services/gig-workforce" }
                       ].map((service) => (
                         <Link key={service.name} href={service.link}>
                           <span className="block py-3 text-slate-600 hover:text-primary text-base border-b border-slate-100 last:border-0 cursor-pointer">{service.name}</span>
@@ -229,7 +229,7 @@ export function Header() {
                         { name: "Telecom & ISPs", link: "/industries/telecom-isp" },
                         { name: "Fintech & Insurance", link: "/industries/fintech-insurance" },
                         { name: "Healthcare", link: "/industries/healthcare-diagnostics" },
-                        { name: "Logistics", link: "/industries/logistics-delivery" },
+                        { name: "Logistics & Delivery", link: "/industries/logistics-delivery" },
                         { name: "Real Estate", link: "/industries/real-estate" }
                       ].map((industry) => (
                         <Link key={industry.name} href={industry.link}>
