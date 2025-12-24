@@ -280,15 +280,22 @@ export default function Home() {
           
           <div className="flex flex-wrap justify-center gap-8">
             {[
-              { name: "SaaS & Tech", icon: Monitor },
-              { name: "E-commerce & D2C", icon: ShoppingBag },
-              { name: "Travel & Hospitality", icon: Plane },
-              { name: "EdTech & Assessments", icon: GraduationCap }
+              { name: "SaaS & Technology", icon: Monitor, link: "/industries/saas-technology" },
+              { name: "E-commerce & D2C", icon: ShoppingBag, link: "/industries/ecommerce-d2c" },
+              { name: "Travel & Hospitality", icon: Plane, link: "/industries/travel-hospitality" },
+              { name: "EdTech & Exams", icon: GraduationCap, link: "/industries/edtech-exams" },
+              { name: "Telecom & ISPs", icon: Network, link: "/industries/telecom-isp" },
+              { name: "Fintech & Insurance", icon: BadgeDollarSign, link: "/industries/fintech-insurance" },
+              { name: "Healthcare", icon: Stethoscope, link: "/industries/healthcare-diagnostics" },
+              { name: "Logistics & Delivery", icon: Truck, link: "/industries/logistics-delivery" },
+              { name: "Real Estate", icon: Building2, link: "/industries/real-estate" }
             ].map((industry, index) => (
-              <div key={index} className="flex items-center gap-4 bg-white border border-slate-200 rounded-full py-4 px-8 shadow-sm hover:shadow-md hover:border-primary/50 hover:text-primary transition-all cursor-default group min-w-[240px] justify-center hover:-translate-y-[3px]">
-                <industry.icon className="w-6 h-6 text-slate-400 group-hover:text-primary transition-colors" />
-                <span className="font-heading font-semibold text-slate-700 group-hover:text-primary transition-colors">{industry.name}</span>
-              </div>
+              <Link key={index} href={industry.link}>
+                <div className="flex items-center gap-4 bg-white border border-slate-200 rounded-full py-4 px-8 shadow-sm hover:shadow-md hover:border-primary/50 hover:text-primary transition-all cursor-pointer group min-w-[240px] justify-center hover:-translate-y-[3px]">
+                  <industry.icon className="w-6 h-6 text-slate-400 group-hover:text-primary transition-colors" />
+                  <span className="font-heading font-semibold text-slate-700 group-hover:text-primary transition-colors">{industry.name}</span>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
