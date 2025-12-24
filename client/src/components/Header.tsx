@@ -149,7 +149,7 @@ export function Header() {
               </span>
             </Link>
 
-            <Link href="/contact">
+            <Link href="/contact#contact-form">
               <Button className="bg-primary hover:bg-blue-700 text-white font-bold rounded-full px-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5">
                 Get a Quote
               </Button>
@@ -253,7 +253,7 @@ export function Header() {
                 <span className="text-lg font-medium text-slate-800 py-2 border-b border-slate-50 block cursor-pointer">Careers</span>
               </Link>
 
-              <Link href="/contact">
+              <Link href="/contact#contact-form">
                 <Button className="w-full bg-primary text-white mt-4">Get a Quote</Button>
               </Link>
             </div>
