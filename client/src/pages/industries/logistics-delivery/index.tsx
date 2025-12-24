@@ -1,5 +1,4 @@
 import { Header } from "@/components/Header";
-import { SaberBot } from "@/components/SaberBot";
 import { 
   MessageSquare, 
   BadgeDollarSign, 
@@ -158,7 +157,6 @@ export default function LogisticsDelivery() {
         </div>
       </section>
 
-      <SaberBot />
       {/* FOOTER */}
       <footer className="bg-slate-950 text-slate-400 pt-20 pb-10">
         <div className="container mx-auto px-4 text-center">

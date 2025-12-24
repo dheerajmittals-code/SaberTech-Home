@@ -57,7 +57,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { SaberBot } from "@/components/SaberBot";
 
 import heroImage from "@assets/generated_images/gig_workforce_on-demand_illustration.png";
 
@@ -641,7 +640,6 @@ export default function GigWorkforce() {
 
       {/* Sticky CTA & Chat Bot */}
       <StickyCTA />
-      <SaberBot />
     </div>
   );
 }

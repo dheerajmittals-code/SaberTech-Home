@@ -45,7 +45,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { SaberBot } from "@/components/SaberBot";
 
 import heroImage from "@assets/generated_images/isometric_qa_and_compliance_audit_illustration.png";
 
@@ -416,7 +415,6 @@ export default function QACompliance() {
       </section>
 
       <StickyCTA />
-      <SaberBot />
       
       {/* FOOTER - Identical to Services */}
       <footer className="bg-slate-950 text-slate-400 pt-20 pb-10">

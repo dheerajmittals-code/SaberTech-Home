@@ -45,7 +45,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { SaberBot } from "@/components/SaberBot";
 
 import heroImage from "@assets/generated_images/isometric_ai_automation_illustration.png";
 
@@ -564,7 +563,6 @@ export default function AIAutomation() {
 
       {/* Sticky CTA & Chatbot */}
       <StickyCTA />
-      <SaberBot />
     </div>
   );
 }

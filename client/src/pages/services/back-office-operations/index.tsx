@@ -41,7 +41,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { SaberBot } from "@/components/SaberBot";
 
 import heroImage from "@assets/generated_images/isometric_back_office_illustration.png";
 
@@ -475,7 +474,6 @@ export default function BackOfficeOperations() {
 
       {/* Sticky CTA & Chatbot */}
       <StickyCTA />
-      <SaberBot />
     </div>
   );
 }

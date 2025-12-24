@@ -49,7 +49,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { SaberBot } from "@/components/SaberBot";
 
 import heroImage from "@assets/generated_images/isometric_inside_sales_team_illustration_with_crm_dashboards.png";
 
@@ -420,7 +419,6 @@ export default function RevenueInsideSales() {
       </section>
 
       <StickyCTA />
-      <SaberBot />
       
       {/* FOOTER - Identical to Services */}
       <footer className="bg-slate-950 text-slate-400 pt-20 pb-10">

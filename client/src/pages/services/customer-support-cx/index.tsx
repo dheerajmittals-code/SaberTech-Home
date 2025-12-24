@@ -48,7 +48,6 @@ import {
 
 import heroImage from "@assets/generated_images/isometric_customer_support_team_illustration_with_soft_edges.png";
 
-import { SaberBot } from "@/components/SaberBot";
 
 export default function CustomerSupportCX() {
   const fadeIn = {
@@ -417,7 +416,6 @@ export default function CustomerSupportCX() {
       </section>
 
       <StickyCTA />
-      <SaberBot />
       
       {/* FOOTER - Identical to Services */}
       <footer className="bg-slate-950 text-slate-400 pt-20 pb-10">

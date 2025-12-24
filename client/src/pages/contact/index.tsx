@@ -576,7 +576,6 @@ export default function Contact() {
       
       {/* Sticky CTA & Chatbot */}
       <StickyCTA />
-      <SaberBot />
     </div>
   );
 }
