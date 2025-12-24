@@ -96,9 +96,11 @@ export default function Home() {
                     Book Consultation
                   </Button>
                 </Link>
-                <Button variant="outline" size="lg" className="border-2 border-slate-300 text-slate-700 hover:border-slate-800 hover:bg-transparent font-bold rounded-lg px-8 h-14 text-lg shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
-                  See Our Services
-                </Button>
+                <Link href="/services">
+                  <Button variant="outline" size="lg" className="border-2 border-slate-300 text-slate-700 hover:border-slate-800 hover:bg-transparent font-bold rounded-lg px-8 h-14 text-lg shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
+                    Explore Services
+                  </Button>
+                </Link>
               </motion.div>
             </motion.div>
 
