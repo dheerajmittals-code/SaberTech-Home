@@ -148,31 +148,37 @@ export default function Home() {
                 title: "Customer Support & CX",
                 description: "Fast, reliable chat, email & voice support for global SMBs.",
                 icon: MessageSquare,
+                link: "/services/customer-support-cx"
               },
               {
-                title: "Revenue & Sales",
+                title: "Revenue & Inside Sales",
                 description: "Lead qualification, demos, renewals & customer win-back.",
                 icon: BadgeDollarSign,
+                link: "/services/revenue-inside-sales"
               },
               {
-                title: "Back Office Ops",
+                title: "Back Office Operations",
                 description: "Product listings, data entry, refunds & CRM updates.",
                 icon: Database,
+                link: "/services/back-office-operations"
               },
               {
                 title: "QA & Compliance",
                 description: "Call QA, chat monitoring, mystery audits & SOP checks.",
                 icon: ShieldCheck,
+                link: "/services/qa-compliance"
               },
               {
                 title: "AI Automation",
                 description: "Chatbots, workflows, routing & automated replies.",
                 icon: Bot,
+                link: "/services/ai-automation"
               },
               {
                 title: "Gig Workforce",
                 description: "Flexible hourly or project-based staffing for CX, audits & ops.",
                 icon: Users,
+                link: "/services/gig-workforce"
               }
             ].map((service, index) => (
               <div key={index} className="group relative bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 overflow-hidden">
@@ -189,9 +195,11 @@ export default function Home() {
                   {service.description}
                 </p>
                 
-                <a href="#" className="inline-flex items-center text-sm font-bold uppercase tracking-wider text-slate-900 group-hover:text-primary transition-colors">
-                  Learn More <ArrowRight className="ml-2 w-4 h-4" />
-                </a>
+                <Link href={service.link}>
+                  <span className="inline-flex items-center text-sm font-bold uppercase tracking-wider text-slate-900 group-hover:text-primary transition-colors cursor-pointer">
+                    Learn More <ArrowRight className="ml-2 w-4 h-4" />
+                  </span>
+                </Link>
               </div>
             ))}
           </div>
