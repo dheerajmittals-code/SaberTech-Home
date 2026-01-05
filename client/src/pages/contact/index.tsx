@@ -47,10 +47,14 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { useToast } from "@/hooks/use-toast";
 
 import heroImage from "@assets/generated_images/isometric_contact_center_illustration.png";
 
 export default function Contact() {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   useEffect(() => {
     document.title = "Contact Us | SaberTechs – Talk to Our Team";
     const metaDescription = document.querySelector('meta[name="description"]');
@@ -73,26 +77,55 @@ export default function Contact() {
     }
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setIsSubmitting(true);
+    
     const form = event.currentTarget;
     const formData = new FormData(form);
     
-    const name = encodeURIComponent(formData.get("name") as string || "");
-    const company = encodeURIComponent(formData.get("company") as string || "");
-    const email = encodeURIComponent(formData.get("email") as string || "");
-    const phone = encodeURIComponent(formData.get("phone") as string || "");
-    const service = encodeURIComponent(formData.get("service") as string || "");
-    const region = encodeURIComponent(formData.get("region") as string || "");
-    const volumes = encodeURIComponent(formData.get("volumes") as string || "");
-    const requirement = encodeURIComponent(formData.get("requirement") as string || "");
-    const contactPreference = encodeURIComponent(formData.get("contact_preference") as string || "");
-    const time = encodeURIComponent(formData.get("time") as string || "");
+    const submissionData = {
+      name: formData.get("name") as string,
+      company: formData.get("company") as string || "",
+      email: formData.get("email") as string,
+      phone: formData.get("phone") as string || "",
+      service: formData.get("service") as string,
+      message: `Region: ${formData.get("region") || "Not specified"}\nVolumes: ${formData.get("volumes") || "Not specified"}\nRequirement: ${formData.get("requirement") || "No details provided"}\nContact Preference: ${formData.get("contact_preference") || "Not specified"}\nBest Time: ${formData.get("time") || "Not specified"}`
+    };
 
-    const subject = `New Inquiry from ${decodeURIComponent(name)}`;
-    const body = `Name: ${decodeURIComponent(name)}%0D%0ACompany: ${decodeURIComponent(company)}%0D%0AEmail: ${decodeURIComponent(email)}%0D%0APhone: ${decodeURIComponent(phone)}%0D%0AService: ${decodeURIComponent(service)}%0D%0ARegion: ${decodeURIComponent(region)}%0D%0AVolumes: ${decodeURIComponent(volumes)}%0D%0ARequirement: ${decodeURIComponent(requirement)}%0D%0APreference: ${decodeURIComponent(contactPreference)}%0D%0ATime: ${decodeURIComponent(time)}`;
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(submissionData),
+      });
 
-    window.location.href = `mailto:info@sabertechs.com?subject=${subject}&body=${body}`;
+      const result = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: "Success!",
+          description: result.message || "Thank you for contacting us! We'll get back to you soon.",
+        });
+        form.reset();
+      } else {
+        toast({
+          title: "Error",
+          description: result.message || "Something went wrong. Please try again.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to submit form. Please try again or email us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const scrollToForm = () => {
@@ -394,10 +427,16 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center gap-4 pt-4">
-                <Button type="submit" size="lg" className="bg-primary hover:bg-blue-700 text-white font-bold px-8">
-                  Send Details via Email
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  className="bg-primary hover:bg-blue-700 text-white font-bold px-8"
+                  disabled={isSubmitting}
+                  data-testid="button-submit-contact"
+                >
+                  {isSubmitting ? "Sending..." : "Submit Your Inquiry"}
                 </Button>
-                <span className="text-xs text-slate-500">This will open an email draft with your inputs.</span>
+                <span className="text-xs text-slate-500">We'll respond within 24 hours.</span>
               </div>
             </form>
           </div>
